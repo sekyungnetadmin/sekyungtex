@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight, Phone, Mail, MapPin, Factory, Award, Globe } from "lucide-react";
 import { motion } from "framer-motion";   // 
 import emailjs from "@emailjs/browser";
+import type { FormEvent } from "react";
  
 
 
@@ -316,22 +317,22 @@ function ContactSection() {
   const [loading, setLoading] = React.useState(false);
   const [status, setStatus] = React.useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {  // ★ 타입 지정
     e.preventDefault();
     setLoading(true);
     setStatus("");
 
     emailjs
       .send(
-        "service_3yirg7h",        // EmailJS 서비스 ID
-        "template_2c4pmnh",       // EmailJS 템플릿 ID
+        "service_3yirg7h",
+        "template_2c4pmnh",
         {
           name: form.name,
           phone: form.phone,
           message: form.message,
-          email: "sekyungnet@gmail.com", // 받는 이메일 주소
+          email: "sekyungnet@gmail.com",
         },
-        "-w_fPWNLiYzxocvMI"       // Public Key
+        "-w_fPWNLiYzxocvMI"
       )
       .then(
         () => {
