@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #20262A; /* 기본 텍스트 색 */
+}
+
+/* ---------------------------------------------------------
+   COLOR UTILITY — 오렌지 강조 색(text-accent)
+---------------------------------------------------------- */
+.text-accent.text-accent {
+  color: #F59E0B;
+}
+
+/* ---------------------------------------------------------
+   TYPOGRAPHY SYSTEM (전역 폰트)
+---------------------------------------------------------- */
+
+/* HERO TITLE (메인 헤드라인) */
+.text-hero {
+  @apply text-[40px] md:text-[48px] font-semibold leading-[1.15];
+}
+
+/* H2 (섹션 타이틀) */
+.text-h2 {
+  @apply text-[34px] md:text-[38px] font-bold tracking-tight text-brand;
+}
+
+/* H3 (카드 제목 / 소제목) */
+.text-h3 {
+  @apply text-[16px] md:text-[18px] font-semibold text-brand;
+}
+
+/* BODY */
+.text-body {
+  @apply text-[15px] md:text-[16px] leading-relaxed text-slate-600;
+}
+
+/* BODY SMALL */
+.text-body-sm {
+  @apply text-[14px] md:text-[15px] leading-relaxed text-slate-600;
+}
+
+/* LABEL (작은 텍스트)  */
+.text-label {
+  @apply text-[13px] md:text-[14px] tracking-wide;
+}
+
+
+/* HERO TITLE – H1 */
+.text-hero {
+  font-size: 32px;           /* 데스크탑 */
+  line-height: 1.22;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: 36px;         /* 큰 화면 */
+  }
+}
+
+/* H2 – 섹션 제목 */
+.text-h2 {
+  font-size: 26px; 
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .text-h2 {
+    font-size: 28px;
+  }
+}
+
+/* H3 – 소제목 */
+.text-h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Large Body */
+.text-body-lg {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* Body */
+.text-body {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Small Body */
+.text-body-sm {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Label */
+.text-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
