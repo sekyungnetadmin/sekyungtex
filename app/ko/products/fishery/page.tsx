@@ -25,7 +25,7 @@ export default function FisheryNetPage() {
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
             "/assets/products/fishery/fishing1.jpg",
-            "/assets/products/fishery/fishing2.png",
+            "/assets/products/fishery/fishing2.PNG",
             "/assets/products/fishery/fishing3.jpg",
           ].map((img, idx) => (
             <img
