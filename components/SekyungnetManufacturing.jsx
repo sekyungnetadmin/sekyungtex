@@ -242,7 +242,7 @@ const Feature = ({ title, children }) => (
 /* -------------------- PRODUCTS -------------------- */
 function Products() {
   const sportsImages = ["/assets/sports1.jpg", "/assets/sports2.jpg", "/assets/sports3.jpg"];
-  const fishingImages = ["/assets/fishing1.png", "/assets/fishing2.jpg", "/assets/fishing3.jpg"];
+  const fishingImages = ["/assets/fishing1.PNG", "/assets/fishing2.jpg", "/assets/fishing3.jpg"];
   const safetyImages = ["/assets/safety1.jpg", "/assets/safety2.jpg", "/assets/safety3.jpg"];
 
   const [current, setCurrent] = useState({ sports: 0, fishing: 0, safety: 0 });
