@@ -324,7 +324,7 @@ function ContactSection() {
 
     emailjs
       .send(
-        "service_3yirg7h",
+        "service_2bl3eup",
         "template_2c4pmnh",
         {
           name: form.name,
