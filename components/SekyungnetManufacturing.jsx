@@ -411,10 +411,17 @@ function Contact() {
     setStatus("");
 
     emailjs
-      .send("service_cho1qym", 
-	"template_jqjigqg",
-	form, 
-	"MbilfGOlyaYDfBgoc")
+      .send(
+        "service_cho1qym",
+        "template_jqjigqg",
+        {
+          name: form.name,
+          phone: form.phone,
+          message: form.message,
+          email: "info@sekyungtex.co.kr",
+        },
+        "MbilfGOlyaYDfBgoc"
+      )
       .then(
         () => {
           setStatus("Message sent successfully!");
