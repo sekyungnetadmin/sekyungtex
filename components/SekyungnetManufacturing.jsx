@@ -261,9 +261,18 @@ function Products() {
   return (
     <section id="products" className="pt-24 pb-16 bg-light">
       <div className="max-w-7xl mx-auto px-6">
-
+<div className="flex items-center gap-6 mb-2">
         <h2 className="text-h2 text-brand">Main Products</h2>
-        <div className="h-[2px] w-20 bg-brand/30 mt-3 mb-10" />
+  <a
+    href="/spec.pdf"
+    download
+    className="text-sm font-semibold hover:opacity-70 transition"
+  >
+    <span className="text-red-600">Download Available Specifications </span>
+    <span className="text-black ml-1">(PDF)</span>
+  </a>
+</div>
+<div className="h-[2px] w-20 bg-brand/30 mt-3 mb-10" />
 
         <div className="grid md:grid-cols-3 gap-8">
           {data.map((p, i) => (
