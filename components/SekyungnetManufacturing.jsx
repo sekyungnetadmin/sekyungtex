@@ -411,7 +411,10 @@ function Contact() {
     setStatus("");
 
     emailjs
-      .send("service_2bl3eup", "template_2c4pmnh", form, "-w_fPWNLiYzxocvMI")
+      .send("service_cho1qym", 
+	"template_jqjigqg",
+	form, 
+	"MbilfGOlyaYDfBgoc")
       .then(
         () => {
           setStatus("Message sent successfully!");

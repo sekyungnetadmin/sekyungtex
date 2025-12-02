@@ -324,15 +324,15 @@ function ContactSection() {
 
     emailjs
       .send(
-        "service_2bl3eup",
-        "template_2c4pmnh",
+        "service_cho1qym",
+        "template_jqjigqg",
         {
           name: form.name,
           phone: form.phone,
           message: form.message,
           email: "info@sekyungtex.co.kr",
         },
-        "-w_fPWNLiYzxocvMI"
+        "MbilfGOlyaYDfBgoc"
       )
       .then(
         () => {
