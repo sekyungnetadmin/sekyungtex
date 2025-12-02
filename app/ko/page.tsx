@@ -386,6 +386,7 @@ function ContactSection() {
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               className="w-full border p-3 rounded-md text-[15px]"
+	  required
             />
 
             <textarea
