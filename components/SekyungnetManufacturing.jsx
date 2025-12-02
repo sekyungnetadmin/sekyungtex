@@ -264,7 +264,7 @@ function Products() {
 <div className="flex items-center gap-6 mb-2">
         <h2 className="text-h2 text-brand">Main Products</h2>
   <a
-    href="files/spec.pdf"
+    href="files/spec.xlsx"
     download
     className="text-sm font-semibold hover:opacity-70 transition"
   >
