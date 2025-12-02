@@ -527,7 +527,7 @@ function Contact() {
                 <Phone className="h-4 w-4 rotate-90" /> FAX +82-051-262-5630
               </p>
               <p className="flex items-center gap-2 !text-white">
-                <Mail className="h-4 w-4" /> sekyungnet@gmail.com
+                <Mail className="h-4 w-4" /> info@sekyungtex.co.kr
               </p>
               <p className="flex items-start gap-2 leading-relaxed !text-white">
                 <MapPin className="h-4 w-4 mt-[2px]" />

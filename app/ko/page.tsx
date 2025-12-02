@@ -330,7 +330,7 @@ function ContactSection() {
           name: form.name,
           phone: form.phone,
           message: form.message,
-          email: "sekyungnet@gmail.com",
+          email: "info@sekyungtex.co.kr",
         },
         "-w_fPWNLiYzxocvMI"
       )
@@ -365,7 +365,7 @@ function ContactSection() {
             <div className="space-y-2 text-[15px] text-gray-800">
               <p>대표전화: 051-262-5631</p>
               <p>팩스: 051-262-5630</p>
-              <p>이메일: sekyungnet@gmail.com</p>
+              <p>이메일: info@sekyungtex.co.kr</p>
             </div>
           </div>
 
@@ -425,7 +425,7 @@ function KoFooter() {
     <footer className="bg-[#1F3B5D] text-white py-6">
       <div className="max-w-7xl mx-auto px-4 text-sm">
         <p>(주)세경네트 | 부산광역시 사하구 다산로 53번길 6</p>
-<p>T. 051-262-5631   F. 051-262-5630   E. sekyungnet@gmail.com</p>
+<p>T. 051-262-5631   F. 051-262-5630   E. info@sekyungtex.co.kr</p>
         <p className="mt-2 text-blue-200">© 2025 Sekyung Net. All rights reserved.</p>
       </div>
     </footer>
