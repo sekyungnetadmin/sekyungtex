@@ -6,6 +6,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://sekyungnet.vercel.app/sitemap.xml",
+    sitemap: "https://sekyungtex.co.kr/sitemap.xml",
   };
 }

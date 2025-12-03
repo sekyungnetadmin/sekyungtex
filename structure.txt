@@ -2,10 +2,14 @@
 볼륨 일련 번호는 9E60-3A7F입니다.
 C:.
 |   .gitignore
+|   allfiles.txt
 |   components.json
 |   eslint.config.mjs
+|   git
+|   main
 |   next-env.d.ts
 |   next.config.mjs
+|   objects.txt
 |   package-lock.json
 |   package.json
 |   postcss.config.js
@@ -13,6 +17,7 @@ C:.
 |   structure.txt
 |   tailwind.config.js
 |   tsconfig.json
+|   verify.txt
 |   
 +---.next
 |   |   app-build-manifest.json
@@ -22,6 +27,16 @@ C:.
 |   |   trace
 |   |   
 |   +---cache
+|   |   +---images
+|   |   |   +---JXfyiyK7arFOHpNT9mts84oiY2UHqWvva6m7rst3foQ=
+|   |   |   |       60.1764139611855.keViM5JrMuahXHmF-MACtrPqTLGNbNlUHLeVgwQ8Suk=.avif
+|   |   |   |       
+|   |   |   +---wGfS7GXDvhEEjLAwNJT5-VB2hgCWVTv1CrFanwmDD2E=
+|   |   |   |       60.1764139592623.y0pMewRxHNQmGb-aX7C2YpIdTGj1NBr1vxRypb1vu-Y=.avif
+|   |   |   |       
+|   |   |   \---YSwq+l0wWZ7u-AUP6T7NYURQ1OILTaC0C9G1p-HPyxA=
+|   |   |           60.1764139602829.xGpRykd2IPwb4kQi5z5EjLxdgYxYCHLtbPzIQyGVmQc=.avif
+|   |   |           
 |   |   +---swc
 |   |   |   \---plugins
 |   |   |       \---v7_windows_x86_64_0.106.15
@@ -29,13 +44,25 @@ C:.
 |   |       +---client-development
 |   |       |       0.pack.gz
 |   |       |       1.pack.gz
+|   |       |       10.pack.gz
+|   |       |       11.pack.gz
+|   |       |       12.pack.gz
+|   |       |       13.pack.gz
+|   |       |       14.pack.gz
+|   |       |       15.pack.gz
+|   |       |       16.pack.gz
+|   |       |       17.pack.gz
+|   |       |       18.pack.gz
+|   |       |       19.pack.gz
 |   |       |       2.pack.gz
+|   |       |       20.pack.gz
 |   |       |       3.pack.gz
 |   |       |       4.pack.gz
 |   |       |       5.pack.gz
 |   |       |       6.pack.gz
 |   |       |       7.pack.gz
 |   |       |       8.pack.gz
+|   |       |       9.pack.gz
 |   |       |       index.pack.gz
 |   |       |       index.pack.gz.old
 |   |       |       
@@ -50,6 +77,9 @@ C:.
 |   |               11.pack.gz
 |   |               12.pack.gz
 |   |               13.pack.gz
+|   |               14.pack.gz
+|   |               15.pack.gz
+|   |               16.pack.gz
 |   |               2.pack.gz
 |   |               3.pack.gz
 |   |               4.pack.gz
@@ -75,24 +105,30 @@ C:.
 |   |   |   webpack-runtime.js
 |   |   |   
 |   |   +---app
+|   |   |   |   page.js
+|   |   |   |   page_client-reference-manifest.js
+|   |   |   |   
+|   |   |   +---en
+|   |   |   |       page.js
+|   |   |   |       page_client-reference-manifest.js
+|   |   |   |       
 |   |   |   +---favicon.ico
 |   |   |   |       route.js
 |   |   |   |       
-|   |   |   +---ko
-|   |   |   |   \---products
-|   |   |   |       \---golf
-|   |   |   |               page.js
-|   |   |   |               page_client-reference-manifest.js
-|   |   |   |               
 |   |   |   \---_not-found
 |   |   |           page.js
 |   |   |           page_client-reference-manifest.js
 |   |   |           
 |   |   \---vendor-chunks
+|   |           @emailjs.js
 |   |           @radix-ui.js
 |   |           @swc.js
 |   |           class-variance-authority.js
 |   |           clsx.js
+|   |           framer-motion.js
+|   |           lucide-react.js
+|   |           motion-dom.js
+|   |           motion-utils.js
 |   |           next.js
 |   |           tailwind-merge.js
 |   |           
@@ -105,20 +141,20 @@ C:.
 |   |   |   |   
 |   |   |   \---app
 |   |   |       |   layout.js
+|   |   |       |   page.js
 |   |   |       |   
-|   |   |       +---ko
-|   |   |       |   |   layout.js
-|   |   |       |   |   
-|   |   |       |   \---products
-|   |   |       |       \---golf
-|   |   |       |               page.js
-|   |   |       |               
+|   |   |       +---en
+|   |   |       |       layout.js
+|   |   |       |       page.js
+|   |   |       |       
 |   |   |       \---_not-found
 |   |   |               page.js
 |   |   |               
 |   |   +---css
 |   |   |   \---app
-|   |   |       \---ko
+|   |   |       |   layout.css
+|   |   |       |   
+|   |   |       \---en
 |   |   |               layout.css
 |   |   |               
 |   |   +---development
@@ -126,33 +162,49 @@ C:.
 |   |   |       _ssgManifest.js
 |   |   |       
 |   |   \---webpack
-|   |       |   16ddf0bd0e513cce.webpack.hot-update.json
+|   |       |   3bc09675ee22ea98.webpack.hot-update.json
 |   |       |   633457081244afec._.hot-update.json
-|   |       |   webpack.16ddf0bd0e513cce.hot-update.js
+|   |       |   daa953f8fb0217d1.webpack.hot-update.json
+|   |       |   eb178215de3396dc.webpack.hot-update.json
+|   |       |   f3bf4a75e3f29f42.webpack.hot-update.json
+|   |       |   fbf3e9c513fd8813.webpack.hot-update.json
+|   |       |   webpack.3bc09675ee22ea98.hot-update.js
+|   |       |   webpack.daa953f8fb0217d1.hot-update.js
+|   |       |   webpack.eb178215de3396dc.hot-update.js
+|   |       |   webpack.f3bf4a75e3f29f42.hot-update.js
+|   |       |   webpack.fbf3e9c513fd8813.hot-update.js
 |   |       |   
 |   |       \---app
-|   |           \---ko
-|   |                   layout.16ddf0bd0e513cce.hot-update.js
+|   |           |   layout.3bc09675ee22ea98.hot-update.js
+|   |           |   layout.fbf3e9c513fd8813.hot-update.js
+|   |           |   
+|   |           \---en
+|   |                   layout.eb178215de3396dc.hot-update.js
+|   |                   page.eb178215de3396dc.hot-update.js
 |   |                   
 |   \---types
 |       |   package.json
 |       |   
 |       \---app
 |           |   layout.ts
+|           |   page.ts
 |           |   
-|           \---ko
-|               |   layout.ts
-|               |   
-|               \---products
-|                   \---golf
-|                           page.ts
-|                           
+|           \---en
+|                   layout.ts
+|                   page.ts
+|                   
 +---app
 |   |   favicon.ico
 |   |   globals.css
 |   |   layout.tsx
 |   |   page.tsx
+|   |   robots.ts.txt
+|   |   sitemap.ts.txt
 |   |   
+|   +---en
+|   |       layout.tsx
+|   |       page.tsx
+|   |       
 |   \---ko
 |       |   KoFooter.tsx
 |       |   KrTopNav.tsx
@@ -176,9 +228,10 @@ C:.
 |                   page.tsx
 |                   
 +---components
-|   |   Footer.jsx
+|   |   EnFooter.jsx
 |   |   SekyungnetManufacturing.jsx
 |   |   SekyungnetManufacturingKo.jsx
+|   |   TopNav.jsx
 |   |   
 |   \---ui
 |           button.tsx
@@ -29128,46 +29181,84 @@ C:.
     |   vercel.svg
     |   window.svg
     |   
-    \---assets
-        |   2.png
-        |   3.svg
-        |   boris-misevic-vXxgA8GwMBA-unsplash.jpg
-        |   drawing1.jpg
-        |   equip1.png
-        |   equip2.png
-        |   equip3.png
-        |   equipment.jpg
-        |   facilities1.jpg
-        |   facilities2-color.jpg
-        |   facilities2.png
-        |   factory-main.jpg
-        |   fishing1.jpg
-        |   fishing2.jpg
-        |   fishing3.jpg
-        |   fishing4.jpg
-        |   fishing5.jpg
-        |   golf-net.jpg
-        |   hero-factory.jpg
-        |   logo-safitex.png
-        |   logo-sekyung-dark.png
-        |   logo-sekyung-symbol.png
-        |   logo-sekyung.png
-        |   safety-net4.jpg
-        |   safety1.jpg
-        |   safety2.jpg
-        |   safety3.jpg
-        |   sample-fishery.jpg
-        |   sample-golf.png
-        |   sample-safety.jpg
-        |   sample-sports.jpg
-        |   sports1.jpg
-        |   sports2.jpg
-        |   sports3.jpg
-        |   
-        \---process
-                process-cutting.png
-                process-knitting.JPG
-                process-qc.JPG
-                process-winder.JPG
-                process-yarn.JPG
-                
+    +---assets
+    |   |   2.png
+    |   |   3.svg
+    |   |   boris-misevic-vXxgA8GwMBA-unsplash.jpg
+    |   |   drawing1.jpg
+    |   |   equip1.png
+    |   |   equip2.png
+    |   |   equip3.png
+    |   |   equipment.jpg
+    |   |   facilities1.jpg
+    |   |   facilities2-color.jpg
+    |   |   facilities2.png
+    |   |   factory-main.jpg
+    |   |   fishing1.PNG
+    |   |   fishing11.jpg
+    |   |   fishing2.jpg
+    |   |   fishing3.jpg
+    |   |   fishing4.jpg
+    |   |   fishing5.jpg
+    |   |   golf-net.jpg
+    |   |   hero-factory.jpg
+    |   |   logo-safitex.png
+    |   |   logo-sekyung-dark.png
+    |   |   logo-sekyung-symbol.png
+    |   |   logo-sekyung.png
+    |   |   safety-net4.jpg
+    |   |   safety1.jpg
+    |   |   safety2.jpg
+    |   |   safety3.jpg
+    |   |   sample-fishery.jpg
+    |   |   sample-golf.png
+    |   |   sample-safety.jpg
+    |   |   sample-ski.jpg
+    |   |   sample-sports.jpg
+    |   |   sports1.jpg
+    |   |   sports2.jpg
+    |   |   sports3.jpg
+    |   |   원사.PNG
+    |   |   
+    |   +---process
+    |   |       process-cutting.png
+    |   |       process-knitting.JPG
+    |   |       process-qc.JPG
+    |   |       process-winder.JPG
+    |   |       process-yarn.JPG
+    |   |       
+    |   \---products
+    |       +---fishery
+    |       |       fishing1.jpg
+    |       |       fishing2-d.PNG
+    |       |       fishing2.PNG
+    |       |       fishing222.jpg
+    |       |       fishing3.jpg
+    |       |       
+    |       +---golf
+    |       |       golf-1.jpg
+    |       |       golf-2.jpg
+    |       |       golf-3.jpg
+    |       |       test.JPG
+    |       |       
+    |       +---safety
+    |       |       safety-1.jpg
+    |       |       safety-2.jpg
+    |       |       safety-3.jpg
+    |       |       
+    |       +---ski
+    |       |       ski-1.mp4
+    |       |       ski-2.jpg
+    |       |       ski-3.jpg
+    |       |       
+    |       \---sports
+    |               sports-1.jpg
+    |               sports-2.jpg
+    |               sports-22.jpg
+    |               sports-3.PNG
+    |               
+    \---files
+            spec.pdf
+            spec.xlsx
+            specs.pdf
+            
