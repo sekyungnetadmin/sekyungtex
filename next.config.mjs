@@ -20,6 +20,12 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_NAME: "SAFITEX by Sekyung Net",
     NEXT_PUBLIC_CONTACT_EMAIL: "info@sekyungnet.com",
   },
+  i18n: {
+    locales: ['en', 'ko'],
+    defaultLocale: 'en',
+    localeDetection: false,   // 자동 감지 OFF
+  },
+
 };
 
 export default nextConfig;
