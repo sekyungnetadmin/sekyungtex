@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-import EnFooter from "@/components/EnFooter";   // ★ 추가
 
 export const metadata = {
   title: "SekyungNET - Industrial Sports Netting Manufacturer",

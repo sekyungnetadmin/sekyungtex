@@ -1,7 +1,5 @@
-"use client";
-
+ 
 import SekyungnetManufacturing from "@/components/SekyungnetManufacturing";
-
 
 export const metadata = {
   title: "Golf Barrier Net & Sports Netting Manufacturer | SekyungNET",
@@ -12,12 +10,8 @@ export const metadata = {
 export default function Page() {
   return (
     <main>
-      <h1>Industrial Sports Netting & Golf Barrier Net Manufacturer</h1>
+   
+      <SekyungnetManufacturing />
     </main>
   );
-}
-
-
-export default function HomeEN() {
-  return <SekyungnetManufacturing />;
 }
