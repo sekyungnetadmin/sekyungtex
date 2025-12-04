@@ -88,10 +88,10 @@ function Hero() {
             Industrial Netting Engineered<br />for Performance
           </h1>
 
-          <p className="mt-5 text-body-lg text-gray-200 leading-relaxed">
+          <h2 className="mt-5 text-body-lg text-gray-200 leading-relaxed">
             High-strength industrial nets manufactured in-house with advanced knotless loom systems.
             SKN delivers certified netting solutions trusted across industrial, marine, and sports facilities.
-          </p>
+          </h2>
 
           <div className="mt-8 flex gap-3">
             <Button asChild size="lg" className="bg-accent hover:bg-[#ffb93a] text-white">

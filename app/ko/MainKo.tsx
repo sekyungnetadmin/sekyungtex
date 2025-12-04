@@ -120,7 +120,7 @@ function Hero() {
           </p>
 
           <h1 className="mt-4 text-4xl md:text-[48px] leading-[1.15] font-semibold">
-           
+           고품질 산업용 네트 전문 제조
           </h1>
 
           <p className="mt-4 text-[#E4E6E7]/90 text-[17px] leading-relaxed">
