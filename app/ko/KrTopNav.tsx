@@ -51,7 +51,7 @@ export default function KrTopNav() {
       <a href="/ko/products/safety" className="block px-4 py-2 hover:bg-gray-100">
         안전망
       </a>
-      <a href="/ko/products/fish" className="block px-4 py-2 hover:bg-gray-100">
+      <a href="/ko/products/fishery" className="block px-4 py-2 hover:bg-gray-100">
         어망
       </a>
     </div>
