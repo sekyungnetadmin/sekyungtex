@@ -16,15 +16,17 @@ export const metadata = {
       "x-default": "https://sekyungtex.co.kr/",
     },
   },
-   other: {
-    "naver-site-verification": "a724d3c7a5089923521507a7f2a7dac0e8171d84",
-  },
+  
 };
 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+       <head>
+      <meta name="naver-site-verification" 
+            content="a724d3c7a5089923521507a7f2a7dac0e8171d84" />
+        </head>
       <body >
         {children}
        
