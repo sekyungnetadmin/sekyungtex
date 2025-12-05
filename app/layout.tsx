@@ -16,6 +16,9 @@ export const metadata = {
       "x-default": "https://sekyungtex.co.kr/",
     },
   },
+   other: {
+    "naver-site-verification": "abc123def456gh789",
+  },
 };
 
 
