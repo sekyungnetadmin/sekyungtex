@@ -15,6 +15,7 @@ export default function SekyungnetManufacturing() {
     <div className="min-h-screen bg-[#FAFAFA] text-[#20262A]">
  
       <Hero />
+      <SeoHidden />  {/* ---- added ---- */}
       <About />
       <Manufacturing />
       <Technology />
@@ -109,6 +110,32 @@ function Hero() {
   );
 }
 
+/* -------------------- SEO HIDDEN CONTENT -------------------- */
+function SeoHidden() {
+  return (
+    <section
+      className="hidden"
+      aria-hidden="true"
+    >
+      <h2>Industrial Netting Manufacturer in Korea</h2>
+      <p>
+        SekyungNET manufactures high-performance netting products used across
+        golf driving ranges, baseball batting cages, aquaculture fish cages,
+        marine farming environments, industrial construction safety, fall
+        protection systems, wind protection nets and custom engineered netting.
+      </p>
+
+      <h3>Product Range</h3>
+      <p>
+        Golf barrier nets, practice range nets, baseball sports netting,
+        aquaculture and fish farming cage nets, industrial safety nets, debris
+        nets, construction protection nets, crane tower nets and custom-size
+        fiber nets built to international standards.
+      </p>
+    </section>
+  );
+}
+
 /* -------------------- ABOUT -------------------- */
 function About() {
   return (
@@ -118,8 +145,10 @@ function About() {
         <h2 className="text-h2 text-brand mb-6">About SekyungNET</h2>
 
         <p className="text-body max-w-3xl mx-auto leading-relaxed">
-          SKN is the industrial textile brand delivering engineered fiber solutions
-          that protect lives, sites, and industries. We provide custom sizing and professional square cutting for golf ranges, fishery nets, and industrial structures.
+          SekyungNET manufactures high-tensile industrial netting solutions used across
+          golf driving ranges, baseball training facilities, marine aquaculture systems,
+          construction fall-protection sites, and custom safety applications.
+          All nets are engineered in-house and produced to international durability standards.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">

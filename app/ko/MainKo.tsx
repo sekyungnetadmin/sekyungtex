@@ -18,6 +18,7 @@ export default function MainKo() {
   return (
   <>
       <Hero />
+      <SeoHiddenKo />   // added here
       <CompanyIntro />
       <ProductCategories />
       <Facilities />
@@ -143,6 +144,26 @@ function Hero() {
           </div>
         </motion.div>
       </div>
+    </section>
+  );
+}
+
+/* -------------------- SEO HIDDEN CONTENT (Korean) -------------------- */
+function SeoHiddenKo() {
+  return (
+    <section className="hidden" aria-hidden="true">
+      <h2>산업용 스포츠 안전망 및 해양 양식장 그물 제조</h2>
+      <p>
+        세경넷은 골프 연습장 안전망, 야구 배팅케이지망, 산업용 추락방지망, 건설 현장 낙하물 방지망,
+        해양 양식장 어망, 바람막이 방풍망, 선박·어획용 네트 등 다양한 산업용 네트 제품을 제조하고 있습니다.
+        모든 제품은 한국 본사 공장에서 직접 생산하며 고강도 PE 원사를 기반으로 제작됩니다.
+      </p>
+
+      <h3>제품 분야</h3>
+      <p>
+        골프장 안전망, 골프 드라이빙 레인지 그물, 야구 방망이버튼 케이지 보호망, 해상 양식장 그물망,
+        산업안전 추락방지망, 건설 현장 안전망, 낙하물 방지망, 공장 및 물류 보호망, 맞춤 제작 네트 시스템.
+      </p>
     </section>
   );
 }

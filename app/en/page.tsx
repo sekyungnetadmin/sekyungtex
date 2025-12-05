@@ -2,7 +2,7 @@
 import SekyungnetManufacturing from "@/components/SekyungnetManufacturing";
 
 export const metadata = {
-  title: "Golf Barrier Net | Golf Driving Range Net Manufacturer | SekyungNET",
+  title: "Industrial Sports Netting  | Golf Driving Range Net Manufacturer | SekyungNET",
   description:
     "SEKYUNG NET manufactures industrial and sports netting including golf barrier nets, driving range nets, baseball batting cage nets, and customized safety nets. Direct factory production & installation.",
   keywords: [

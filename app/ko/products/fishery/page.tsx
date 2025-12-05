@@ -4,6 +4,37 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+export const metadata = {
+  title: "양식장 그물망 · 어업용 그물 제조 | PE 내염성 어망 | 세경넷",
+  description:
+    "내염성과 내구성이 뛰어난 양식장 그물망, 해양 어업용 그물, 해상 가두리 망 제작. 바닷물 부식 방지 PE 소재, 맞춤 생산 및 빠른 납기.",
+  keywords: [
+    "양식장 그물망",
+    "어업용 그물",
+    "가두리망",
+    "해양 어망",
+    "내염성 PE 망",
+    "수산업 그물",
+    "세경넷",
+    "어망",
+        "fish farm net",
+    "aquaculture net",
+    "marine cage net",
+    "fishing net manufacturer",
+    "PE fish net",
+    "aqua cage",
+    "marine farming net",
+        "养殖网",
+    "网箱",
+    "渔网",
+    "水产 养殖网",
+    "PE 渔网",
+    "海水 养殖网",
+    "鱼场 网",
+  ],
+};
+
+
 export default function FisheryNetPage() {
   return (
     <div className="font-ko text-[#20262A] bg-white">
