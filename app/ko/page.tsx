@@ -22,7 +22,7 @@ export const metadata = {
     "드라이빙 레인지 네트",
     "볼 방풍망",
     "고품질 골프 네트",
-    "스포츠 시설 네트"
+    "스포츠 시설 네트",
     "어망", 
     "어구망",
     "어업용 그물",
@@ -34,7 +34,9 @@ export const metadata = {
     "야구망",
     "배팅케이지망",
     "스포츠 그물 제조",
-    "세경 어망"
+    "세경 어망",
+     "해양 양식장 어망",
+
   ],
   alternates: {
     canonical: "https://sekyungtex.co.kr/ko",

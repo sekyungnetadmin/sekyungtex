@@ -4,7 +4,7 @@ const nextConfig = {
 
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "sekyungnet.com" },
+      { protocol: "https", hostname: "sekyungtex.co.kr" },
       { protocol: "http", hostname: "localhost" },
     ],
     formats: ["image/webp", "image/avif"],
@@ -17,14 +17,10 @@ const nextConfig = {
   },
 
   env: {
-    NEXT_PUBLIC_SITE_NAME: "SAFITEX by Sekyung Net",
-    NEXT_PUBLIC_CONTACT_EMAIL: "info@sekyungnet.com",
+    NEXT_PUBLIC_SITE_NAME: "Sekyung NET",
+    NEXT_PUBLIC_CONTACT_EMAIL: "info@sekyungtex.co.kr",
   },
-  i18n: {
-    locales: ['en', 'ko'],
-    defaultLocale: 'en',
-    localeDetection: false,   // 자동 감지 OFF
-  },
+ 
 
 };
 

@@ -9,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { ChevronRight, Phone, Mail, MapPin, Factory, Award, Globe } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
+import WhatsAppQRModal from "@/components/WhatsAppQRModal";
+import Image from "next/image";
 
 export default function SekyungnetManufacturing() {
   return (
@@ -433,6 +436,7 @@ function Contact() {
   });
   const [loading, setLoading] = React.useState(false);
   const [status, setStatus] = React.useState("");
+  const [waOpen, setWaOpen] = React.useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -550,34 +554,108 @@ function Contact() {
             </Card>
           </div>
 
-          {/* RIGHT — CONTACT DETAILS */}
-          <Card className="rounded-2xl border-white/10 bg-white/10 backdrop-blur-md shadow-lg p-6 !text-white">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-h3 text-white !text-white">
-                Contact Details
-              </CardTitle>
-            </CardHeader>
+        {/* RIGHT — CONTACT DETAILS */}
+<Card className="rounded-2xl border-white/10 bg-white/10 backdrop-blur-md shadow-lg p-6 text-white">
+  <CardHeader className="pb-2">
+    <CardTitle className="text-h3 text-white">
+      Contact Details
+    </CardTitle>
+  </CardHeader>
 
-            <CardContent className="space-y-3 text-body-sm text-slate-200 !text-white">
-              <p className="flex items-center gap-2 !text-white">
-                <Phone className="h-4 w-4" /> TEL +82-051-262-5631
-              </p>
-              <p className="flex items-center gap-2 !text-white">
-                <Phone className="h-4 w-4 rotate-90" /> FAX +82-051-262-5630
-              </p>
-              <p className="flex items-center gap-2 !text-white">
-                <Mail className="h-4 w-4" /> info@sekyungtex.co.kr
-              </p>
-              <p className="flex items-start gap-2 leading-relaxed !text-white">
-                <MapPin className="h-4 w-4 mt-[2px]" />
-                6 Dasan-ro 53 beon-gil, Saha-gu,<br />
-                Busan, Republic of Korea
-              </p>
-            </CardContent>
-          </Card>
+  <CardContent className="space-y-3 text-body-sm text-white">
+    <p className="flex items-center gap-2">
+      <Phone className="h-4 w-4" /> TEL +82-051-262-5631
+    </p>
+
+    <p className="flex items-center gap-2">
+      <Phone className="h-4 w-4 rotate-90" /> FAX +82-051-262-5630
+    </p>
+
+    <p className="flex items-center gap-2">
+      <Mail className="h-4 w-4" /> info@sekyungtex.co.kr
+    </p>
+
+<p className="flex items-center gap-2">
+  <button
+    type="button"
+    onClick={() => setWaOpen(true)}
+    className="group flex items-center gap-2 text-white"
+  >
+    <FaWhatsapp className="h-5 w-5 text-white transition-colors group-hover:text-[#25D366]" />
+    <span className="text-base text-white/95">Chat on WhatsApp</span>
+  </button>
+</p>
+
+    <p className="flex items-start gap-2 leading-relaxed">
+      <MapPin className="h-4 w-4 mt-[2px]" />
+      6 Dasan-ro 53 beon-gil, Saha-gu,<br />
+      Busan, Republic of Korea
+    </p>
+  </CardContent>
+</Card>
 
         </div>
       </div>
+
+{waOpen && (
+  <div
+    className="fixed inset-0 z-[999] flex items-center justify-center px-6"
+    role="dialog"
+    aria-modal="true"
+    onClick={() => setWaOpen(false)}
+  >
+    {/* backdrop */}
+    <div className="absolute inset-0 bg-black/60" />
+
+    {/* modal */}
+    <div
+      className="relative w-full max-w-md rounded-2xl border border-white/10 bg-[#0C2230] text-white shadow-2xl p-6"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-xl font-semibold">Scan to chat</h3>
+          <p className="mt-1 text-white/75 text-sm">
+            Scan this QR code with WhatsApp.
+          </p>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setWaOpen(false)}
+          className="rounded-lg px-3 py-1 text-white/80 hover:text-white hover:bg-white/10 transition"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div className="mt-6 flex justify-center">
+        <div className="bg-white rounded-xl p-3">
+          <Image
+            src="/assets/whatsapp-qr.png"
+            alt="WhatsApp QR Code"
+            width={260}
+            height={260}
+            className="w-[260px] h-[260px] object-contain"
+            priority
+          />
+        </div>
+      </div>
+
+      <div className="mt-6 text-center">
+        <button
+          type="button"
+          onClick={() => setWaOpen(false)}
+          className="w-full rounded-xl bg-white text-[#0C2230] py-3 font-medium hover:bg-white/90 transition"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     </section>
   );
 }
