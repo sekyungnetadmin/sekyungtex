@@ -1,13 +1,21 @@
 "use client";
 
 import { useEffect } from "react";
-import { QRCodeCanvas } from "qrcode.react"; // ✅ 가장 호환성 높은 방식
+import dynamic from "next/dynamic";
+
+const QRCodeCanvas = dynamic(
+  () => import("qrcode.react").then((m) => m.QRCodeCanvas),
+  { ssr: false }
+);
+
 
 type Props = {
   open: boolean;
   onClose: () => void;
   qrUrl: string;
 };
+
+
 
 export default function WhatsAppQRModal({ open, onClose, qrUrl }: Props) {
   useEffect(() => {
@@ -32,7 +40,7 @@ export default function WhatsAppQRModal({ open, onClose, qrUrl }: Props) {
         </div>
 
         <div className="flex items-center justify-center rounded-xl bg-white p-4">
-          <QRCode value={qrUrl} size={210} includeMargin />
+          <QRCodeCanvas value={qrUrl} size={210} includeMargin />
         </div>
 
         <div className="mt-4 flex items-center justify-end gap-3">
