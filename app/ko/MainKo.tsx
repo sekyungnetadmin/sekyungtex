@@ -18,7 +18,7 @@ export default function MainKo() {
   return (
   <>
       <Hero />
-      <SeoHiddenKo />   // added here
+      <SeoHiddenKo />   
       <CompanyIntro />
       <ProductCategories />
       <Facilities />
@@ -343,15 +343,15 @@ function ContactSection() {
     setLoading(true);
     setStatus("");
 
-    emailjs
+emailjs
       .send(
-        "service_2bl3eup",
+        "service_iiv6qxn",
         "template_2c4pmnh",
         {
           name: form.name,
           phone: form.phone,
           message: form.message,
-          email: "info@sekyungtex.co.kr",
+          //email: form.email,
         },
         "_-NOMec4brDlvfvWZ"
       )

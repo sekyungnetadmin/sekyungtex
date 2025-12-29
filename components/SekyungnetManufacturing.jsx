@@ -445,7 +445,7 @@ function Contact() {
 
     emailjs
       .send(
-        "service_2bl3eup",
+        "service_iiv6qxn",
         "template_2c4pmnh",
         {
           name: form.name,
