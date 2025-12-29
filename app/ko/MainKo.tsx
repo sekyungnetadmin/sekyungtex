@@ -345,15 +345,15 @@ function ContactSection() {
 
     emailjs
       .send(
-        "service_cho1qym",
-        "template_jqjigqg",
+        "service_2bl3eup",
+        "template_2c4pmnh",
         {
           name: form.name,
           phone: form.phone,
           message: form.message,
           email: "info@sekyungtex.co.kr",
         },
-        "MbilfGOlyaYDfBgoc"
+        "_-NOMec4brDlvfvWZ"
       )
       .then(
         () => {
