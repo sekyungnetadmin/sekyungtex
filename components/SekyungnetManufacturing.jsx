@@ -451,7 +451,7 @@ function Contact() {
           name: form.name,
           phone: form.phone,
           message: form.message,
-          email: "info@sekyungtex.co.kr",
+          email: form.email,
         },
         "MbilfGOlyaYDfBgoc"
       )
