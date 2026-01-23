@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export const metadata = {
+/* export const metadata = {
   title: "스포츠 안전망 · 풋살장 보호망 | Sports Netting Supplier | 세경넷",
   description:
     "야구 배팅케이지 안전망, 풋살장 보호망, 테니스장 네트, 각종 스포츠 시설용 고강도 PE 안전망 맞춤 제작.",
@@ -30,7 +30,7 @@ export const metadata = {
   "batting practice net",
  
   ],
-};
+}; */
 
 export default function SportsNetPage() {
   return (
