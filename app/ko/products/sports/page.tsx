@@ -4,6 +4,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+export const metadata = {
+  title: "스포츠 안전망 · 풋살장 보호망 | Sports Netting Supplier | 세경넷",
+  description:
+    "야구 배팅케이지 안전망, 풋살장 보호망, 테니스장 네트, 각종 스포츠 시설용 고강도 PE 안전망 맞춤 제작.",
+  keywords: [
+    "스포츠 안전망",
+    "야구 케이지망",
+    "풋살장 보호망",
+    "테니스 네트",
+    "실내체육관 보호망",
+    "배터리케이지망",
+    "세경넷",
+      "야구 배팅케이지",
+  "야구 보호망",
+  "야구 외야망",
+  "투수 연습 보호망",
+  "야구 네트 제작",
+  "고강도 PE 야구망",
+  "스포츠 네트 제조",
+  "baseball batting cage net",
+  "baseball netting",
+  "sports net supplier",
+  "backstop net",
+  "batting practice net",
+ 
+  ],
+};
+
 export default function SportsNetPage() {
   return (
     <div className="font-ko text-[#20262A] bg-white">
@@ -26,7 +54,7 @@ export default function SportsNetPage() {
           {[
             "/assets/products/sports/sports-1.jpg",
             "/assets/products/sports/sports-2.jpg",
-            "/assets/products/sports/sports-3.png",
+            "/assets/products/sports/sports-3.PNG",
           ].map((img, idx) => (
             <img
               key={idx}
