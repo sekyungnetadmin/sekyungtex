@@ -234,7 +234,7 @@ function Technology() {
 
         <p className="text-body max-w-3xl mx-auto mb-16 text-slate-600 leading-relaxed">
           SKN applies advanced engineering techniques including
-          <strong> twisted knotless net (muketsu)</strong>,
+          <strong> twisted knotless net </strong>,
           <strong> square-cut custom fabrication</strong>,
           and <strong>CAD-based precision cutting</strong>.
         </p>
