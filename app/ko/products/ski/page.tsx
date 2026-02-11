@@ -4,6 +4,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+export const metadata = {
+  title: "스키장 안전망 · 슬로프 보호망 제조 | Ski Slope Safety Net | 세경넷",
+  description:
+    "스키장 슬로프 보호 안전망, 스키 펜스, 충돌 완화 네트 제조 설치. 고강도 PE 재질 및 UV 코팅 적용.",
+  keywords: [
+    "스키장 안전망",
+    "슬로프 보호망",
+    "스키 펜스",
+    "안전 펜스",
+    "충돌 완화 네트",
+    "스키장 네트",
+    "세경넷",
+      "스키 안전망",
+  "스키장 보호망",
+  "스키 슬로프 안전망",
+  "충돌 방지망",
+  "스키 네트 제작",
+      "ski safety net",
+    "ski slope net",
+    "ski resort protection netting",
+    "impact protection net",
+    "ski barrier net",
+    "sports safety net",
+    "custom ski net",
+    
+  ],
+};
+
 export default function SkiNetPage() {
   return (
     <div className="font-ko text-[#20262A] bg-white">
@@ -81,7 +109,7 @@ src.endsWith(".mp4") ? (
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">재질</td>
-                <td className="p-3">PE Braided</td>
+                <td className="p-3">PE</td>
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">색상</td>

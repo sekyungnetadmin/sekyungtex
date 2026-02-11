@@ -72,8 +72,8 @@ export default function SportsNetPage() {
           <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">제품 특징</h2>
           <ul className="space-y-3 text-[15px] text-gray-700">
             <li>• 강한 충격을 견디는 고강도 PE 재질</li>
-            <li>• 야구공, 축구공 충격에 최적화된 편직 구조</li>
-            <li>• UV 코팅 적용으로 실외 환경에 강함</li>
+            <li>• 야구공, 축구공 충격에 최적화된 무결편직 구조</li>
+            <li>• UV 적용으로 실외 환경에 강함</li>
             <li>• 경기장 환경 맞춤형 제작 가능</li>
           </ul>
         </div>
@@ -87,7 +87,7 @@ export default function SportsNetPage() {
             <tbody>
               <tr className="border-b">
                 <td className="p-3 font-medium">망사 규격</td>
-                <td className="p-3">결망 40mm · 60mm · 80mm</td>
+                <td className="p-3">40mm · 60mm · 80mm</td>
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">재질</td>
