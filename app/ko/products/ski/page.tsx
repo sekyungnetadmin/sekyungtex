@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export const metadata = {
+/* export const metadata = {
   title: "스키장 안전망 · 슬로프 보호망 제조 | Ski Slope Safety Net | 세경넷",
   description:
     "스키장 슬로프 보호 안전망, 스키 펜스, 충돌 완화 네트 제조 설치. 고강도 PE 재질 및 UV 코팅 적용.",
@@ -30,7 +30,7 @@ export const metadata = {
     "custom ski net",
     
   ],
-};
+}; */
 
 export default function SkiNetPage() {
   return (
