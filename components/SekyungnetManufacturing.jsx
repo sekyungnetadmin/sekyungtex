@@ -77,7 +77,7 @@ function Hero() {
   return (
     <section className="relative text-white">
 
-      <div className="absolute inset-0 bg-[url('/assets/hero-factory.jpg')] bg-cover bg-center opacity-80" />
+      <div className="absolute inset-0 bg-[url('/assets_webp/hero-factory_결과.webp')] bg-cover bg-center opacity-80" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1E28]/90 via-[#0F2D3A]/85 to-[#0F2D3A]/40" />
       <div className="absolute inset-0 backdrop-blur-[1px]" />
 

@@ -106,7 +106,7 @@ function KoHeader() {
 function Hero() {
   return (
     <section className="relative text-white">
-      <div className="absolute inset-0 bg-[url('/assets/hero-factory.jpg')] bg-cover bg-center opacity-30" />
+      <div className="absolute inset-0 bg-[url('/assets_webp/hero-factory_결과.webp')] bg-cover bg-center opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0F2D3A] via-[#0F2D3A]/70 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
