@@ -1,11 +1,11 @@
-"use client";
+//"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-/* export const metadata = {
-  title: "스포츠 안전망 · 풋살장 보호망 | Sports Netting Supplier | 세경넷",
+export const metadata = {
+  title: "스포츠 안전망 · 풋살장 보호망 | Sports Netting Supplier | 세경네트",
   description:
     "야구 배팅케이지 안전망, 풋살장 보호망, 테니스장 네트, 각종 스포츠 시설용 고강도 PE 안전망 맞춤 제작.",
   keywords: [
@@ -30,7 +30,7 @@ import { Button } from "@/components/ui/button";
   "batting practice net",
  
   ],
-}; */
+};
 
 export default function SportsNetPage() {
   return (
@@ -131,7 +131,7 @@ export default function SportsNetPage() {
         <p className="text-[15px] text-gray-600 mb-6">도면/사진을 보내주시면 정확한 상담이 가능합니다.</p>
         <Link href="/ko/contact">
           <Button className="bg-[#1F3B5D] text-white px-8 py-4">
-            견적 문의하기
+            <Link href="/ko#contact">견적 문의하기</Link>
           </Button>
         </Link>
       </section>

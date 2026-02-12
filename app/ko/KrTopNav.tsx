@@ -2,10 +2,26 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function KrTopNav() {
   const [open, setOpen] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+
+  const openMenu = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    setOpen(true);
+  };
+
+  const scheduleClose = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => setOpen(false), 150);
+  };
+
+  const closeNow = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    setOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-md transition-all duration-300">
@@ -27,37 +43,66 @@ export default function KrTopNav() {
             회사소개
           </a>
 
-          {/* 제품안내 드롭다운 */}
-         <div
-  className="relative"
-  onMouseEnter={() => setOpen(true)}
-  onMouseLeave={() => setOpen(false)}
->
-  <button className="hover:text-brand transition-colors duration-300">
-    제품안내
-  </button>
+             {/* ✅ 제품안내 드롭다운 (고친 버전) */}
+          <div className="relative">
+            <button
+              type="button"
+              className="hover:text-brand transition-colors duration-300"
+              onMouseEnter={openMenu}
+              onMouseLeave={scheduleClose}
+              onClick={() => setOpen((v) => !v)} // 클릭으로도 열고닫기(원치 않으면 삭제)
+              aria-expanded={open}
+              aria-haspopup="menu"
+            >
+              제품안내
+            </button>
 
-  {open && (
-    <div className="absolute top-full left-0 mt-2 w-40 bg-white shadow-lg rounded-lg py-2 z-50">
-      <a href="/ko/products/golf" className="block px-4 py-2 hover:bg-gray-100">
-        골프망
-      </a>
-      <a href="/ko/products/ski" className="block px-4 py-2 hover:bg-gray-100">
-        스키망
-      </a>
-      <a href="/ko/products/sports" className="block px-4 py-2 hover:bg-gray-100">
-        스포츠망
-      </a>
-      <a href="/ko/products/safety" className="block px-4 py-2 hover:bg-gray-100">
-        안전망
-      </a>
-      <a href="/ko/products/fishery" className="block px-4 py-2 hover:bg-gray-100">
-        어망
-      </a>
-    </div>
-  )}
-</div>
-
+            {open && (
+              <div
+                className="absolute top-full left-0 pt-2 z-50"
+                onMouseEnter={openMenu}
+                onMouseLeave={scheduleClose}
+              >
+                <div className="w-40 bg-white shadow-lg rounded-lg py-2">
+                  <Link
+                    href="/ko/products/golf"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={closeNow}
+                  >
+                    골프망
+                  </Link>
+                  <Link
+                    href="/ko/products/ski"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={closeNow}
+                  >
+                    스키망
+                  </Link>
+                  <Link
+                    href="/ko/products/sports"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={closeNow}
+                  >
+                    스포츠망
+                  </Link>
+                  <Link
+                    href="/ko/products/safety"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={closeNow}
+                  >
+                    안전망
+                  </Link>
+                  <Link
+                    href="/ko/products/fishery"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={closeNow}
+                  >
+                    어망
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           <a href="/ko#facilities" className="hover:text-brand transition-colors duration-300">
             설비현황
           </a>

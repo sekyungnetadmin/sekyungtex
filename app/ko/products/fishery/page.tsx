@@ -1,10 +1,10 @@
-"use client";
+/* "use client"; */
 
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-/* export const metadata = {
+ export const metadata = {
   title: "양식장 그물망 · 어업용 그물 제조 | PE 내염성 어망 | 세경넷",
   description:
     "내염성과 내구성이 뛰어난 양식장 그물망, 해양 어업용 그물, 해상 가두리 망 제작. 바닷물 부식 방지 PE 소재, 맞춤 생산 및 빠른 납기.",
@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
     "해양 어망",
     "내염성 PE 망",
     "수산업 그물",
-    "세경넷",
+    "세경네트",
     "어망",
         "fish farm net",
     "aquaculture net",
@@ -24,15 +24,9 @@ import { Button } from "@/components/ui/button";
     "PE fish net",
     "aqua cage",
     "marine farming net",
-        "养殖网",
-    "网箱",
-    "渔网",
-    "水产 养殖网",
-    "PE 渔网",
-    "海水 养殖网",
-    "鱼场 网",
-  ], */
-// };
+
+  ], 
+ };
 
 
 export default function FisheryNetPage() {
@@ -126,7 +120,7 @@ export default function FisheryNetPage() {
         </p>
         <Link href="/ko/contact">
           <Button className="bg-[#1F3B5D] text-white px-8 py-4">
-            견적 문의하기
+            <Link href="/ko#contact">견적 문의하기</Link>
           </Button>
         </Link>
       </section>

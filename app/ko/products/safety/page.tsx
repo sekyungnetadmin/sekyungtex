@@ -1,11 +1,13 @@
-"use client";
+//"use client";
 
-import Image from "next/image";
+
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-/* export const metadata = {
-  title: "산업용 안전망 · 추락방지망 · 건설용 보호망 제조 | 세경넷",
+
+  export const metadata = {
+   title: "산업용 안전망 · 풋살망 · 비구망 제조 |Safety Net Manufacturer | 세경네트",
   description:
     "건설 현장 사망 사고 예방을 위한 추락방지망, 비계망, 낙하물 방지망, 산업용 보호망 전문 생산. KS/ISO 인증, 맞춤 제작 가능.",
   keywords: [
@@ -16,6 +18,8 @@ import { Button } from "@/components/ui/button";
     "낙하물 방지망",
     "공사용 보호망",
     "세경넷",
+    "세경네트",
+    "210합 안전망",
       "industrial safety net",
     "fall protection net",
     "debris safety net",
@@ -23,9 +27,9 @@ import { Button } from "@/components/ui/button";
     "heavy-duty netting",
     "safety net manufacturer",
     "PE safety net",
-   
   ],
-}; */
+};
+ 
 
 
 export default function SafetyNetPage() {
@@ -122,7 +126,7 @@ export default function SafetyNetPage() {
         </p>
         <Link href="/ko/contact">
           <Button className="bg-[#1F3B5D] text-white px-8 py-4">
-            견적 문의하기
+            <Link href="/ko#contact">견적 문의하기</Link>
           </Button>
         </Link>
       </section>
