@@ -1,8 +1,58 @@
-"use client";
+//"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+
+
+  export const metadata = {
+  title: "골프 연습장 안전망 제조 | Golf Barrier Net Manufacturer  | 세경네트",
+  description:
+    "세경넷은 30년 제조 경험 기반의 골프 연습장 안전망, 외야 보호망, 골프 방풍망을 자체 생산합니다. PE 고강도 재질, 무결절 방식, 맞춤 제작 및 설치 지원.",
+  keywords: [
+    "골프 연습장 안전망",
+    "골프 방풍망",
+    "골프 외야망",
+    "골프 보호망",
+    "골프 망 제작",
+    "산업용 스포츠 안전망",
+    "세경넷",
+    "골프장 네트",
+    "golf driving range net",
+    "golf barrier net",
+    "golf wind protection net",
+    "sports net manufacturer",
+    "outfield safety net",
+    "골프연습장 시공",
+    "골프장 안전망 설치",
+    "골프장 보호망 제작",
+    "골프장 방풍망",
+    "골프장 외야망",
+    "골프장 네트 시공",
+    "골프장 네트 설치",
+    "골프장 네트 제작",
+    "골프망 교체공사",
+    "골프연습장 건설",
+    "골프망 부분 교체공사",
+    "골프연습장 시공업체",
+    "골프장 안전망 시공업체",
+    "골프장 보호망 시공업체",
+    "골프망 공사",
+    "golf net installation",
+    "golf net construction",
+    "golf net replacement",
+    "golf range netting",
+    "golf safety netting",
+    "golf net installation company",
+    "golf net contractor",
+    "golf net replacement service",
+    "골프연습장 시공",
+    "골프장 안전망 설치",
+    "골프연습장 공사",
+ 
+  ],
+};
+ 
 
 export default function GolfNetPage() {
   const photos = [
@@ -51,7 +101,7 @@ export default function GolfNetPage() {
             제품 특징
           </h2>
           <ul className="space-y-3 text-[15px] text-gray-700 leading-relaxed">
-            <li>• 고강도 PE / PP 원사를 사용한 내구성 높은 무결 구조</li>
+            <li>• 고강도 PE 원사를 사용한 내구성 높은 무결 구조</li>
             <li>• 실외 환경(비·바람·자외선)에 강한 UV 코팅</li>
             <li>• 규격 오차 ±1~2% 이내의 정밀 가공</li>
             <li>• 타석망, 측면망, 천정망 등 다양한 규격 주문 제작</li>
@@ -81,7 +131,7 @@ export default function GolfNetPage() {
               </tr>
               <tr className="border-b border-gray-300">
                 <td className="p-3 font-medium">사용 원사</td>
-                <td className="p-3">고강도 PE, UHMWPE</td>
+                <td className="p-3">PE, UHMWPE</td>
               </tr>
               <tr className="border-b border-gray-300">
                 <td className="p-3 font-medium">색상</td>
@@ -134,7 +184,7 @@ export default function GolfNetPage() {
 
         <Link href="/ko/contact">
           <Button className="bg-[#1F3B5D] text-white text-[15px] px-8 py-5">
-            견적 문의하기
+            <Link href="/ko#contact">견적 문의하기</Link>
           </Button>
         </Link>
       </section>
