@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: "https://sekyungtex.co.kr/ko/products/baseball",
+      url: "https://sekyungtex.co.kr/ko/products/sports",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
@@ -46,6 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: "https://sekyungtex.co.kr/ko/installation",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }

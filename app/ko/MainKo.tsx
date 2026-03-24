@@ -1,13 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import Image from "next/image";
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { ChevronRight, Phone, Mail, MapPin, Factory, Award, Globe } from "lucide-react";
-import { motion } from "framer-motion";   // 
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import type { FormEvent } from "react";
  
@@ -30,78 +27,6 @@ export default function MainKo() {
 }
 
 
-/* -------------------- HEADER -------------------- */
-
-function KoHeader() {
-  const [open, setOpen] = React.useState(false);
-
-  return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-md transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-
-        {/* LOGO — 영문과 동일 */}
-        <Link 
-          href="/ko"
-          className="flex items-center gap-3 -ml-8 transition-transform duration-300 hover:scale-105 hover:opacity-90"
-        >
-          <img
-            src="/assets/logo-sekyung.png"
-            alt="Sekyung"
-            className="h-12 md:h-14 w-auto scale-[4.0] origin-left object-contain transition-all duration-500 hover:brightness-110"
-          />
-        </Link>
-
-        {/* NAVIGATION – 글자만 한국어로 */}
-        <nav className="hidden md:flex items-center gap-10 text-body font-medium text-[#20262A]/90 justify-start pl-10">
-          <Link href="/ko/company" className="hover:text-brand transition-colors duration-300">회사소개</Link>
-
-          {/* 제품소개 드롭다운 */}
-          <div
-            className="relative"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}
-          >
-            <button className="flex items-center gap-1 hover:text-brand transition-colors duration-300">
-              제품소개 <span>▼</span>
-            </button>
-
-            {open && (
-              <div className="absolute left-0 top-8 w-48 bg-white shadow-lg border border-gray-200 rounded-md z-50 animate-dropdown">
-                <ul className="text-[14px] text-gray-700 py-2">
-                  <li className="px-4 py-2 hover:bg-gray-100"><Link href="/ko/products/golf">골프망</Link></li>
-                  <li className="px-4 py-2 hover:bg-gray-100"><Link href="/ko/products/sports">스포츠망</Link></li>
-                  <li className="px-4 py-2 hover:bg-gray-100"><Link href="/ko/products/ski">스키장 보호망</Link></li>
-                  <li className="px-4 py-2 hover:bg-gray-100"><Link href="/ko/products/safety">안전망</Link></li>
-                  <li className="px-4 py-2 hover:bg-gray-100"><Link href="/ko/products/fish">어업용 네트</Link></li>
-                </ul>
-              </div>
-            )}
-          </div>
-
-          <Link href="/ko/facilities" className="hover:text-brand transition-colors duration-300">생산설비</Link>
-          <Link href="/ko/contact" className="hover:text-brand transition-colors duration-300">견적문의</Link>
-        </nav>
-
-        {/* RIGHT SIDE */}
-        <div className="hidden md:flex items-center gap-6 ml-6">
-          <Button
-            asChild
-            className="bg-brand hover:bg-black text-white transition-colors duration-300"
-          >
-            <a href="/ko/contact">견적 문의</a>
-          </Button>
-
-          <div className="flex items-center gap-3 text-body-sm text-slate-600">
-            <Link href="/" className="hover:text-brand">EN</Link>
-            <span className="opacity-40">|</span>
-            <Link href="/ko" className="hover:text-brand">KR</Link>
-          </div>
-        </div>
-
-      </div>
-    </header>
-  );
-}
 /* -------------------- HERO -------------------- */
 function Hero() {
   return (
@@ -251,7 +176,7 @@ function ProductCategories() {
           {list.map((item, idx) => (
             <Link key={idx} href={item.link}>
               <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition cursor-pointer h-[380px] flex flex-col">
-                <img src={item.img} alt={item.title} className="rounded-t-lg w-full h-[160px] object-cover" />
+                <Image src={item.img} alt={item.title} width={400} height={160} className="rounded-t-lg w-full h-[160px] object-cover" />
                 <div className="p-4 flex-1 flex flex-col">
                   <h3 className="text-lg font-semibold text-[#1F3B5D]">{item.title}</h3>
                   <p className="text-sm text-gray-600 mt-1 flex-1">{item.desc}</p>
@@ -308,24 +233,6 @@ function Facilities() {
     </section>
   );
 }
-/* -------------------- PERFORMANCE -------------------- */
-
-function Performance() {
-  return (
-    <section className="py-16 bg-[#F5F6FA]">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-[#1F3B5D] mb-4">주요 납품실적</h2>
-        <ul className="text-[15px] text-gray-700 leading-relaxed space-y-2">
-          <li>• ○○시 체육시설관리사업소 골프연습장망 납품</li>
-          <li>• ○○군 스포츠센터 야구 보호망 시공</li>
-          <li>• ○○건설(주) 건설현장 안전망 공급</li>
-          <li>• ○○수협 어망 및 어구 공급</li>
-        </ul>
-      </div>
-    </section>
-  );
-}
-
 /* -------------------- CONTACT -------------------- */
 
 function ContactSection() {
@@ -345,15 +252,15 @@ function ContactSection() {
 
 emailjs
       .send(
-        "service_iiv6qxn",
-        "template_2c4pmnh",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
           name: form.name,
           phone: form.phone,
           message: form.message,
           //email: form.email,
         },
-        "_-NOMec4brDlvfvWZ"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
       .then(
         () => {
@@ -435,21 +342,5 @@ emailjs
         </div>
       </div>
     </section>
-  );
-}
-
- 
-
-/* -------------------- FOOTER -------------------- */
-
-function KoFooter() {
-  return (
-    <footer className="bg-[#1F3B5D] text-white py-6">
-      <div className="max-w-7xl mx-auto px-4 text-sm">
-        <p>(주)세경네트 | 부산광역시 사하구 다산로 53번길 6</p>
-<p>T. 051-262-5631   F. 051-262-5630   E. info@sekyungtex.co.kr</p>
-        <p className="mt-2 text-blue-200">© 2025 Sekyung Net. All rights reserved.</p>
-      </div>
-    </footer>
   );
 }

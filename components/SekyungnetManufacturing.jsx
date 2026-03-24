@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,7 +9,6 @@ import { ChevronRight, Phone, Mail, MapPin, Factory, Award, Globe } from "lucide
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import WhatsAppQRModal from "@/components/WhatsAppQRModal";
 import Image from "next/image";
 
 export default function SekyungnetManufacturing() {
@@ -28,47 +26,6 @@ export default function SekyungnetManufacturing() {
       <Contact />
  
     </div>
-  );
-}
-
-/* -------------------- NAV -------------------- */
-function TopNav() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-md transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-
-        {/* LOGO */}
-        <a href="#" className="flex items-center gap-3 -ml-8 transition-transform duration-300 hover:scale-105 hover:opacity-90">
-          <img
-            src="/assets/logo-sekyung.png"
-            alt="Sekyung"
-            className="h-12 md:h-14 w-auto scale-[4.0] origin-left object-contain transition-all duration-500 hover:brightness-110"
-          />
-        </a>
-
-        {/* NAVIGATION */}
-        <nav className="hidden md:flex items-center gap-10 text-body font-medium text-[#20262A]/90 justify-start pl-10">
-          <a href="#manufacturing" className="hover:text-brand transition-colors duration-300">Company</a>
-          <a href="#products" className="hover:text-brand transition-colors duration-300">Products</a>
-          <a href="#facilities" className="hover:text-brand transition-colors duration-300">Facilities</a>
-          <a href="#contact" className="hover:text-brand transition-colors duration-300">Contact</a>
-        </nav>
-
-        {/* RIGHT BUTTONS */}
-        <div className="hidden md:flex items-center gap-6 ml-6">
-          <Button asChild className="bg-brand hover:bg-black text-white transition-colors duration-300">
-            <a href="#contact">Get a Quote</a>
-          </Button>
-
-          <div className="flex items-center gap-3 text-body-sm text-slate-600">
-            <Link href="/" className="hover:text-brand">EN</Link>
-            <span className="opacity-40">|</span>
-            <Link href="/ko" className="hover:text-brand">KR</Link>
-          </div>
-        </div>
-
-      </div>
-    </header>
   );
 }
 
@@ -445,15 +402,15 @@ function Contact() {
 
     emailjs
       .send(
-        "service_iiv6qxn",
-        "template_2c4pmnh",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
           name: form.name,
           phone: form.phone,
           message: form.message,
           email: form.email,
         },
-        "_-NOMec4brDlvfvWZ"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {

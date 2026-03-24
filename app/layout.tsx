@@ -5,6 +5,9 @@ export const metadata = {
   title: "SekyungNET - Industrial Sports Netting Manufacturer",
   description:
     "SekyungNET manufactures golf barrier nets, baseball netting, industrial safety and sports netting solutions in Korea.",
+  verification: {
+    naver: "a724d3c7a5089923521507a7f2a7dac0e8171d84",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -16,22 +19,15 @@ export const metadata = {
       "x-default": "https://sekyungtex.co.kr/",
     },
   },
-  
 };
+
 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-         <head>
-        <meta
-          name="naver-site-verification"
-          content="a724d3c7a5089923521507a7f2a7dac0e8171d84"
-        />
-      </head>
-      <body >
+    <html lang="en" suppressHydrationWarning>
+      <body>
         {children}
-       
       </body>
     </html>
   );

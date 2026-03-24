@@ -1,12 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
 
 export default function KrTopNav() {
   const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const closeTimer = useRef<number | null>(null);
+  const productLinks = [
+    { href: "/ko/products/golf", label: "골프망" },
+    { href: "/ko/products/ski", label: "스키망" },
+    { href: "/ko/products/sports", label: "스포츠망" },
+    { href: "/ko/products/safety", label: "안전망" },
+    { href: "/ko/products/fishery", label: "어망" },
+  ];
 
   const openMenu = () => {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
@@ -29,12 +39,28 @@ export default function KrTopNav() {
 
         {/* LOGO */}
         <a href="/ko" className="flex items-center gap-3 -ml-8 transition-transform duration-300 hover:scale-105 hover:opacity-90">
-          <img
+          <Image
             src="/assets/logo-sekyung.png"
             alt="세경네트"
-            className="h-12 md:h-14 w-auto scale-[4.0] origin-left object-contain transition-all duration-500 hover:brightness-110"
+            width={160}
+            height={56}
+            className="h-12 md:h-14 w-auto scale-[4.5] origin-left object-contain transition-all duration-500 hover:brightness-110"
+            priority
           />
         </a>
+
+        <button
+          type="button"
+          className="md:hidden inline-flex items-center justify-center rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-700"
+          aria-expanded={mobileOpen}
+          aria-label="모바일 메뉴 열기"
+          onClick={() => {
+            setMobileOpen((prev) => !prev);
+            if (mobileOpen) setMobileProductsOpen(false);
+          }}
+        >
+          {mobileOpen ? "닫기" : "메뉴"}
+        </button>
 
         {/* NAVIGATION */}
 <nav className="hidden md:flex items-center gap-10 text-body font-medium text-[#20262A]/90 justify-start pl-10">
@@ -113,6 +139,43 @@ export default function KrTopNav() {
         </div>
 
       </div>
+
+      {mobileOpen && (
+        <div className="md:hidden border-t border-black/10 bg-white">
+          <nav className="px-6 py-4 flex flex-col gap-3 text-[15px] text-[#20262A]">
+            <a href="/ko#manufacturing" onClick={() => setMobileOpen(false)}>회사소개</a>
+            <button
+              type="button"
+              className="flex items-center justify-between text-left"
+              aria-expanded={mobileProductsOpen}
+              onClick={() => setMobileProductsOpen((prev) => !prev)}
+            >
+              <span>제품안내</span>
+              <span className="text-slate-500">{mobileProductsOpen ? "−" : "+"}</span>
+            </button>
+            {mobileProductsOpen && (
+              <div className="pl-3 border-l border-slate-200 flex flex-col gap-2 text-slate-700">
+                {productLinks.map((item) => (
+                  <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)}>
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+            <a href="/ko/installation" onClick={() => setMobileOpen(false)}>설치서비스</a>
+            <a href="/ko#facilities" onClick={() => setMobileOpen(false)}>설비현황</a>
+            <a href="/ko#contact" onClick={() => setMobileOpen(false)}>문의하기</a>
+            <a href="/ko#contact" onClick={() => setMobileOpen(false)} className="font-medium text-[#0F2D3A]">
+              견적 요청
+            </a>
+            <div className="pt-1 text-slate-600">
+              <Link href="/" onClick={() => setMobileOpen(false)}>EN</Link>
+              <span className="mx-2 opacity-40">|</span>
+              <Link href="/ko" onClick={() => setMobileOpen(false)}>KR</Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
