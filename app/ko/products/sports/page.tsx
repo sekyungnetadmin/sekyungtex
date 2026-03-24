@@ -1,6 +1,5 @@
 //"use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -91,7 +90,7 @@ export default function SportsNetPage() {
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">재질</td>
-                <td className="p-3">PE</td>
+                <td className="p-3">HDPE</td>
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">색상</td>
@@ -129,11 +128,9 @@ export default function SportsNetPage() {
       <section className="py-16 bg-[#F5F6FA] text-center">
         <h3 className="text-xl font-bold text-[#1F3B5D]">견적이 필요하신가요?</h3>
         <p className="text-[15px] text-gray-600 mb-6">도면/사진을 보내주시면 정확한 상담이 가능합니다.</p>
-        <Link href="/ko/contact">
-          <Button className="bg-[#1F3B5D] text-white px-8 py-4">
-            <Link href="/ko#contact">견적 문의하기</Link>
-          </Button>
-        </Link>
+        <Button asChild className="bg-[#1F3B5D] text-white px-8 py-4">
+          <Link href="/ko#contact">견적 문의하기</Link>
+        </Button>
       </section>
     </div>
   );

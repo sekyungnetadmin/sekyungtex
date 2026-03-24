@@ -1,6 +1,4 @@
 /* "use client"; */
-
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -118,11 +116,9 @@ export default function FisheryNetPage() {
         <p className="text-[15px] text-gray-600 mb-6">
           어종·수심·환경 조건을 알려주시면 최적의 규격으로 제작해드립니다.
         </p>
-        <Link href="/ko/contact">
-          <Button className="bg-[#1F3B5D] text-white px-8 py-4">
-            <Link href="/ko#contact">견적 문의하기</Link>
-          </Button>
-        </Link>
+        <Button asChild className="bg-[#1F3B5D] text-white px-8 py-4">
+          <Link href="/ko#contact">견적 문의하기</Link>
+        </Button>
       </section>
 
     </div>

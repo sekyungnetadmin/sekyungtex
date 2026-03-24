@@ -27,8 +27,21 @@ import { Button } from "@/components/ui/button";
     "heavy-duty netting",
     "safety net manufacturer",
     "PE safety net",
+    "축구망",
+    "풋살망",
+    "비구망",
+    "sports safety net",
+    "futsal net",
+    "soccer net",
+    "sports facility netting",
+    "그물망 교체공사", 
+    "net replacement service",
+    "net installation service",
+    "net construction service",
   ],
 };
+
+ 
  
 
 
@@ -89,7 +102,7 @@ export default function SafetyNetPage() {
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">재질</td>
-                <td className="p-3">PE</td>
+                <td className="p-3">HDPE</td>
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">색상</td>
