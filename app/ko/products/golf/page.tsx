@@ -131,7 +131,7 @@ export default function GolfNetPage() {
               </tr>
               <tr className="border-b border-gray-300">
                 <td className="p-3 font-medium">사용 원사</td>
-                <td className="p-3">PE, UHMWPE</td>
+                <td className="p-3">HDPE, UHMWPE</td>
               </tr>
               <tr className="border-b border-gray-300">
                 <td className="p-3 font-medium">색상</td>

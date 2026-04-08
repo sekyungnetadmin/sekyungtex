@@ -16,6 +16,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
 
+    // Product detail pages (EN)
+    {
+      url: "https://sekyungtex.co.kr/en/products/golf-netting",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://sekyungtex.co.kr/en/products/baseball-netting",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://sekyungtex.co.kr/en/products/safety-netting",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://sekyungtex.co.kr/en/products/ski-slope-netting",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: "https://sekyungtex.co.kr/en/products/fishing-nets",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
     // Product detail pages (KO)
     {
       url: "https://sekyungtex.co.kr/ko/products/golf",

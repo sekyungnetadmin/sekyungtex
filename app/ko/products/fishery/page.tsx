@@ -89,7 +89,7 @@ export default function FisheryNetPage() {
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">재질</td>
-                <td className="p-3">PE / PP </td>
+                <td className="p-3">HDPE / PP </td>
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">색상</td>

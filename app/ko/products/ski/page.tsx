@@ -1,10 +1,11 @@
-"use client";
+//"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-/* export const metadata = {
-  title: "스키장 안전망 · 슬로프 보호망 제조 | Ski Slope Safety Net | 세경넷",
+export const metadata = {
+  title: "스키장 안전망 · 슬로프 보호망 제조 | Ski Slope Safety Net | 세경네트",
   description:
     "스키장 슬로프 보호 안전망, 스키 펜스, 충돌 완화 네트 제조 설치. 고강도 PE 재질 및 UV 코팅 적용.",
   keywords: [
@@ -14,7 +15,7 @@ import { Button } from "@/components/ui/button";
     "안전 펜스",
     "충돌 완화 네트",
     "스키장 네트",
-    "세경넷",
+    "세경네트",
       "스키 안전망",
   "스키장 보호망",
   "스키 슬로프 안전망",
@@ -27,10 +28,13 @@ import { Button } from "@/components/ui/button";
     "ski barrier net",
     "sports safety net",
     "custom ski net",
-    
+    "곤지암 스키장 네트",
+    "휘닉스파크 스키장 네트",
+    "알펜시아 스키장 네트",
+    "용평 스키장 네트",
   ],
-}; */
-
+};
+  
 export default function SkiNetPage() {
   return (
     <div className="font-ko text-[#20262A] bg-white">
@@ -108,7 +112,7 @@ src.endsWith(".mp4") ? (
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">재질</td>
-                <td className="p-3">PE</td>
+                <td className="p-3">HDPE</td>
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium">색상</td>
@@ -124,7 +128,7 @@ src.endsWith(".mp4") ? (
       </section>
 
       {/* 시공 */}
-      <section className="py-16 bg-white">
+{/*       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">
             설치 · 시공 방식
@@ -133,8 +137,8 @@ src.endsWith(".mp4") ? (
             
           </ul>
         </div>
-      </section>
-
+      </section> 
+ */}
    
 
       {/* CTA */}
@@ -145,7 +149,7 @@ src.endsWith(".mp4") ? (
         </p>
         <Link href="/ko/contact">
           <Button className="bg-[#1F3B5D] text-white px-8 py-4">
-            견적 문의하기
+            <Link href="/ko#contact">견적 문의하기</Link>
           </Button>
         </Link>
       </section>

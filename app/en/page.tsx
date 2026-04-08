@@ -8,7 +8,7 @@ export const metadata = {
   keywords: [
     "golf barrier net",
     "golf driving range net",
-    "golf netting korea",
+    "golf driving range netting korea",
     "sports netting manufacturer",
     "baseball batting cage net",
     "industrial safety net",
