@@ -39,7 +39,7 @@ const faqs = [
 ]
 
 const otherProducts = [
-  {name:'Golf Driving Range Netting',href:'/en/products/golf-netting',active:false},
+  {name:'Golf Driving Range Netting',href:'/en/products/golf-driving-range-netting',active:false},
   {name:'Baseball Netting',href:'/en/products/baseball-netting',active:false},
   {name:'Safety Netting',href:'/en/products/safety-netting',active:false},
   {name:'Ski Slope Netting',href:'/en/products/ski-slope-netting',active:false},
@@ -53,7 +53,7 @@ export default function FishingNetsPage() {
     <main className="bg-white text-sm">
       <section className="bg-[#1a2332] w-full relative overflow-hidden px-6 py-14" style={{backgroundImage:`linear-gradient(rgba(26,35,50,0.82),rgba(26,35,50,0.82)),url(/assets/products/fishery/fishing1.jpg)`,backgroundSize:'cover',backgroundPosition:'center'}}>
         
-        <div className="relative max-w-7xl mx-auto grid grid-cols-[1fr_300px] gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8 md:gap-12 items-center">
           <div>
             <p className="text-[11px] tracking-[0.12em] text-[#e8c840] font-medium mb-3">PRODUCTS · MARINE & AQUACULTURE</p>
             <h1 className="text-[34px] font-bold text-white leading-tight mb-3">Aquaculture &<br/>Fishing Nets</h1>
@@ -63,7 +63,7 @@ export default function FishingNetsPage() {
               <a href="/files/sekyung_specifications.pdf" className="border border-white/25 text-white px-5 py-2.5 rounded-md text-[13px] hover:bg-white/10 transition-colors">Download Specs</a>
             </div>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-5">
+          <div className="hidden md:block bg-white/5 border border-white/10 rounded-xl p-5">
             <p className="text-[10px] text-[#e8c840] tracking-widest font-semibold mb-3">QUICK SPECS</p>
             {[{l:'Construction',v:'Knotless'},{l:'Material',v:'HDPE / Poly'},{l:'Mesh size',v:'35–200mm custom'},{l:'Lead time',v:'1–3 weeks'}].map((row)=>(
               <div key={row.l} className="flex justify-between py-2 border-b border-white/[0.07] last:border-0">
@@ -82,7 +82,7 @@ export default function FishingNetsPage() {
       </section>
       <section className="bg-white w-full">
         <div className="max-w-7xl mx-auto grid grid-cols-[1fr_300px]">
-          <div className="border-r border-gray-200">
+          <div className="border-r-0 lg:border-r border-gray-200">
             <div className="bg-white px-8 py-6 border-b border-gray-100">
               <div className="relative w-full h-80 rounded-lg overflow-hidden">
                 <Image src="/assets/fishing1.PNG" alt="Aquaculture fishing net by SekyungNET" fill className="object-cover"/>
