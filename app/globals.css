@@ -12,6 +12,7 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   color: #20262A; /* 기본 텍스트 색 */
+  overflow-x: hidden;
 }
 
 /* ---------------------------------------------------------

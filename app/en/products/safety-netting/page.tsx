@@ -82,7 +82,7 @@ export default function SafetyNettingPage() {
         </nav>
       </section>
       <section className="bg-white w-full">
-        <div className="max-w-7xl mx-auto grid grid-cols-[1fr_300px]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_300px]">
           <div className="border-r-0 lg:border-r border-gray-200">
             <div className="bg-white px-8 py-6 border-b border-gray-100">
               <div className="relative w-full h-64 rounded-lg overflow-hidden">

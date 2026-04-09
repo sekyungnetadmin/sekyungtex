@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const products = [
-  { name: "Golf Driving Range Netting",      href: "/en/products/golf-driving-range-netting" },
+  { name: "Golf Driving Range Netting", href: "/en/products/golf-driving-range-netting" },
   { name: "Baseball Netting",  href: "/en/products/baseball-netting" },
   { name: "Safety Netting",    href: "/en/products/safety-netting" },
   { name: "Ski Slope Netting", href: "/en/products/ski-slope-netting" },
