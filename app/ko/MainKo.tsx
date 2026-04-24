@@ -144,7 +144,7 @@ function ProductCategories() {
       title: "스키장 보호망 · 스키망",
       desc: "슬로프 주변 보호망/안전 펜스/완충망 설계·제작·시공",
       link: "/ko/products/ski",
-      img: "/assets/sample-ski.jpg", // 필요 시 이미지 교체 가능
+      img: "/assets/sample-ski.jpg",
     },
     {
       title: "스포츠 보호망",
@@ -216,7 +216,6 @@ function Facilities() {
               key={i}
               className="flex flex-col items-start bg-[#F5F6FA] rounded-lg px-4 py-5 shadow-sm"
             >
-              {/* 동그란 단계 표시 */}
               <div className="w-7 h-7 rounded-full bg-[#1F3B5D] text-white text-xs flex items-center justify-center mb-3">
                 {i + 1}
               </div>
@@ -238,34 +237,33 @@ function Facilities() {
 function ContactSection() {
   const [form, setForm] = React.useState({
     name: "",
-    phone: "",
+    email: "",
     message: "",
   });
 
   const [loading, setLoading] = React.useState(false);
   const [status, setStatus] = React.useState("");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {  // ★ 타입 지정
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setStatus("");
 
-emailjs
+    emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
           name: form.name,
-          phone: form.phone,
+          email: form.email,
           message: form.message,
-          //email: form.email,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
       .then(
         () => {
           setStatus("문의가 성공적으로 접수되었습니다.");
-          setForm({ name: "", phone: "", message: "" });
+          setForm({ name: "", email: "", message: "" });
           setLoading(false);
         },
         () => {
@@ -309,12 +307,12 @@ emailjs
             />
 
             <input
-              type="text"
-              placeholder="연락처"
-              value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              type="email"
+              placeholder="이메일 주소"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full border p-3 rounded-md text-[15px]"
-	  required
+              required
             />
 
             <textarea
