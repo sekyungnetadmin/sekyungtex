@@ -153,7 +153,7 @@ export default function GolfNettingPage() {
       </section>
 
       <section className="bg-white w-full">
-        <div className="max-w-7xl mx-auto grid grid-cols-[1fr_300px]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_300px]">
           <div className="border-r-0 lg:border-r border-gray-200">
 
             <div className="bg-[#1a2332] px-8 py-7 border-b border-[#243040]">

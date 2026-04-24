@@ -6,50 +6,52 @@ import { Button } from "@/components/ui/button";
 
 
   export const metadata = {
-  title: "골프 연습장 안전망 제조 | Golf Barrier Net Manufacturer  | 세경네트",
+  title: "골프망 제조 · 판매 | 골프 연습장 안전망 · 보호망 | 세경네트",
   description:
-    "세경넷은 30년 제조 경험 기반의 골프 연습장 안전망, 외야 보호망, 골프 방풍망을 자체 생산합니다. PE 고강도 재질, 무결절 방식, 맞춤 제작 및 설치 지원.",
+    "세경네트는 골프망, 골프 연습장 안전망, 드라이빙레인지 방호망을 직접 제조합니다. 고강도 PE 무결절 방식, 맞춤 제작 및 설치 지원. 전국 납품 가능.",
   keywords: [
+    "골프망",
+    "골프망 제조",
+    "골프망 판매",
+    "골프망 교체",
+    "골프망 제작",
     "골프 연습장 안전망",
     "골프 방풍망",
     "골프 외야망",
     "골프 보호망",
     "골프 망 제작",
-    "산업용 스포츠 안전망",
-    "세경넷",
+    "드라이빙레인지 방호망",
+    "드라이빙레인지 네트",
     "골프장 네트",
-    "golf driving range net",
-    "golf barrier net",
-    "golf wind protection net",
-    "sports net manufacturer",
-    "outfield safety net",
-    "골프연습장 시공",
-    "골프장 안전망 설치",
-    "골프장 보호망 제작",
+    "골프장 안전망",
+    "골프장 보호망",
     "골프장 방풍망",
     "골프장 외야망",
-    "골프장 네트 시공",
-    "골프장 네트 설치",
-    "골프장 네트 제작",
-    "골프망 교체공사",
+    "골프연습장 시공",
+    "골프연습장 네트",
+    "골프연습장 안전망",
     "골프연습장 건설",
+    "골프망 공사",
     "골프망 부분 교체공사",
     "골프연습장 시공업체",
     "골프장 안전망 시공업체",
     "골프장 보호망 시공업체",
-    "골프망 공사",
+    "파크골프망",
+    "산업용 스포츠 안전망",
+    "세경네트",
+    "golf net",
+    "golf driving range net",
+    "golf barrier net",
+    "golf wind protection net",
+    "golf safety netting",
+    "golf range netting",
+    "golf net manufacturer",
     "golf net installation",
     "golf net construction",
     "golf net replacement",
-    "golf range netting",
-    "golf safety netting",
-    "golf net installation company",
     "golf net contractor",
-    "golf net replacement service",
-    "골프연습장 시공",
-    "골프장 안전망 설치",
-    "골프연습장 공사",
- 
+    "outfield safety net",
+    "sports net manufacturer",
   ],
 };
  
@@ -67,11 +69,11 @@ export default function GolfNetPage() {
       <section className="w-full border-b border-gray-200 py-12">
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-3xl font-bold text-[#1F3B5D]">
-            골프장 · 연습장 보호망
+            골프망 · 골프 연습장 안전망 제조
           </h1>
           <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
             전국 골프장 및 실내·야외 연습장에 사용되는
-            <strong> 골프 주변 보호망, 천정망, 타석망</strong>을 전문적으로 제작합니다.
+            <strong> 골프망, 골프 보호망, 천정망, 타석망</strong>을 전문적으로 제작합니다.
             고강도 PE 원사와 편직 기술을 바탕으로
             <strong> 내구성·안전성·규격 정확도</strong>를 모두 충족합니다.
           </p>
@@ -85,7 +87,7 @@ export default function GolfNetPage() {
             <div key={i} className="w-full h-[220px] relative">
               <Image
                 src={img}
-                alt="골프망"
+                alt="골프망 골프 연습장 안전망"
                 fill
                 className="object-cover rounded-lg shadow-sm"
               />
@@ -98,7 +100,7 @@ export default function GolfNetPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">
-            제품 특징
+            골프망 제품 특징
           </h2>
           <ul className="space-y-3 text-[15px] text-gray-700 leading-relaxed">
             <li>• 고강도 PE 원사를 사용한 내구성 높은 무결 구조</li>
@@ -114,7 +116,7 @@ export default function GolfNetPage() {
       <section className="py-16 bg-[#F5F6FA]">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">
-            규격 · 스펙
+            골프망 규격 · 스펙
           </h2>
 
           <table className="w-full border border-gray-300 text-[15px]">
@@ -135,7 +137,7 @@ export default function GolfNetPage() {
               </tr>
               <tr className="border-b border-gray-300">
                 <td className="p-3 font-medium">색상</td>
-                <td className="p-3">그린 · 블랙 · 화이트 · 그레이 · 브라운 </td>
+                <td className="p-3">그린 · 블랙 · 화이트 · 그레이 · 브라운</td>
               </tr>
               <tr className="border-b border-gray-300">
                 <td className="p-3 font-medium">규격</td>
@@ -143,40 +145,38 @@ export default function GolfNetPage() {
               </tr>
               <tr>
                 <td className="p-3 font-medium">적용 분야</td>
-                <td className="p-3">골프장, 실내외 골프연습장, 파크골프 등</td>
+                <td className="p-3">골프장, 실내외 골프연습장, 드라이빙레인지, 파크골프 등</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-{/* 설치 · 시공 방식 */}
-<section className="py-16 bg-white">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">
-      설치 · 시공 방식
-    </h2>
+      {/* 설치 · 시공 방식 */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">
+            골프망 설치 · 시공 방식
+          </h2>
 
-    <ul className="text-[15px] text-gray-700 space-y-3 leading-relaxed">
-      <li>• <strong>와이어 로프 + 턴버클 장력 조절</strong> 방식으로 네트 처짐을 최소화하고 안정적인 긴장도를 유지합니다.</li>
-      <li>• <strong>기둥 고정 브라켓/클램프</strong> 사용으로 구조물 손상 없이 견고하게 설치됩니다.</li>
-      <li>• <strong>네트 상·하단 와이어 고정</strong>을 통해 바람 및 충격 환경에서도 흔들림 없이 유지됩니다.</li>
-      <li>• <strong>현장 도면 기반 맞춤 제작</strong>으로 설치 환경에 최적화된 시공이 가능합니다.</li>
-      <li>• 로프커버 및 보호캡 마감 처리로 완성도가 높고 안전합니다.</li>
-    </ul>
+          <ul className="text-[15px] text-gray-700 space-y-3 leading-relaxed">
+            <li>• <strong>와이어 로프 + 턴버클 장력 조절</strong> 방식으로 골프망 처짐을 최소화하고 안정적인 긴장도를 유지합니다.</li>
+            <li>• <strong>기둥 고정 브라켓/클램프</strong> 사용으로 구조물 손상 없이 견고하게 설치됩니다.</li>
+            <li>• <strong>네트 상·하단 와이어 고정</strong>을 통해 바람 및 충격 환경에서도 흔들림 없이 유지됩니다.</li>
+            <li>• <strong>현장 도면 기반 맞춤 제작</strong>으로 설치 환경에 최적화된 시공이 가능합니다.</li>
+            <li>• 로프커버 및 보호캡 마감 처리로 완성도가 높고 안전합니다.</li>
+          </ul>
 
-    <p className="mt-6 text-[15px] text-gray-600 italic">
-      ※ 설치 견적은 <strong>도면(구조/규격 정보)</strong>을 함께 제공해 주시면 보다 정확하고 빠르게 안내 가능합니다.
-    </p>
-  </div>
-</section>
-
-
+          <p className="mt-6 text-[15px] text-gray-600 italic">
+            ※ 골프망 설치 견적은 <strong>도면(구조/규격 정보)</strong>을 함께 제공해 주시면 보다 정확하고 빠르게 안내 가능합니다.
+          </p>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-16 bg-[#F5F6FA] text-center">
         <h3 className="text-xl font-bold text-[#1F3B5D] mb-4">
-          정확한 견적이 필요하신가요?
+          골프망 견적이 필요하신가요?
         </h3>
         <p className="text-[15px] text-gray-600 mb-6">
           도면/사진을 함께 보내주시면 더욱 빠르고 정확하게 안내해 드립니다.
