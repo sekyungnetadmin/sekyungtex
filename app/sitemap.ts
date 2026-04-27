@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Product detail pages (EN)
     {
-      url: "https://sekyungtex.co.kr/en/products/golf-netting",
+      url: "https://sekyungtex.co.kr/en/products/golf-driving-range-netting",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
