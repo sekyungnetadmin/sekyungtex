@@ -1,5 +1,7 @@
 import "./globals.css";
 import type { ReactNode } from "react";
+import { Analytics } from '@vercel/analytics/react';
+import GoogleAnalytics from './GoogleAnalytics';
 
 export const metadata = {
   title: "SekyungNET - Industrial Sports Netting Manufacturer",
@@ -23,11 +25,15 @@ export const metadata = {
 
 
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body>
         {children}
+        <Analytics /> {/* Vercel */}
       </body>
     </html>
   );
