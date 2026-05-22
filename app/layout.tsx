@@ -24,8 +24,11 @@ export const metadata = {
 };
 
 
-
-export default function RootLayout({ children }) {
+export default function RootLayout({ 
+  children 
+}: { 
+  children: ReactNode  // ← 이것만 추가!
+}) {
   return (
     <html>
       <head>
@@ -33,7 +36,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        <Analytics /> {/* Vercel */}
+        <Analytics />
       </body>
     </html>
   );
