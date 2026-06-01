@@ -97,7 +97,7 @@ export default function KrTopNav() {
             스키망
           </Link>
           <Link href="/ko/products/sports" className="block px-4 py-2 hover:bg-gray-100" onClick={closeNow}>
-            스포츠망
+            야구망
           </Link>
           <Link href="/ko/products/safety" className="block px-4 py-2 hover:bg-gray-100" onClick={closeNow}>
             안전망

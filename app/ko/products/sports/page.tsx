@@ -4,12 +4,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "야구망 · 야구장 방호망 전문 제조 | 세경네트",
+  title: "야구망 · 야구장 안전망 · 비구방지망 전문 제조 | 세경네트",
   description:
     "야구장 방호망, 배팅케이지망, 파울망, 외야망 전문 제조. 고강도 PE 무결편직 구조로 내구성 우수. 현장 맞춤 제작 및 납품.",
   keywords: [
     "야구망",
-    "야구장 방호망",
+    "야구장 안전망",
+    "비구방지망",
     "배팅케이지망",
     "파울망",
     "외야망",
@@ -32,7 +33,7 @@ export const metadata = {
 const galleryImages = [
   {
     src: "/assets/products/sports/sports-1.jpg",
-    alt: "야구망 무결편직 구조 클로즈업 — 고강도 HDPE 원사",
+    alt: "야구망 무결망 — 고강도 HDPE 원사",
   },
   {
     src: "/assets/products/sports/sports-2.jpg",
@@ -40,7 +41,7 @@ const galleryImages = [
   },
   {
     src: "/assets/products/sports/sports-3.PNG",
-    alt: "야구장 외야 방호망 설치 완료 현장",
+    alt: "야구장 비구방지망 설치 완료 현장",
   },
   // 👇 사진 추가 시 여기에 계속 추가하면 됨
   // {
@@ -60,11 +61,12 @@ export default function BaseballNetPage() {
       {/* Title */}
       <section className="w-full border-b border-gray-200 py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-3xl font-bold text-[#1F3B5D]">야구망 · 야구장 방호망</h1>
-          <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
-            야구장 외야망, 파울망, 배팅케이지망 등{" "}
-            <strong>야구 전용 방호망 · 보호망</strong>을 전문 제작합니다.
-            고강도 PE 원사 무결편직 구조로 충격 흡수력과 내구성이 우수합니다.
+          <h1 className="text-3xl font-bold text-[#1F3B5D]">야구망 · 비구방지망</h1>
+  <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
+            야구장 외야망, 파울망, 배팅케이지망, 체육시설 휀스 등 <strong>야구 안전망과 비구방지망</strong>을 전문 제작합니다.
+            <strong>흰색(화이트), 검정, 녹색</strong> 등 다양한 색상으로 경기장 환경에 맞출 수 있으며, 주문량에 따라 <strong>커스텀 색상도 가능</strong>합니다.
+            <strong>고강도 PE 원사와 UV 안료</strong>로 야외 환경에서 오래 사용할 수 있으며, 무결편직 구조로 충격 흡수력과 내구성이 우수합니다.
+            야구 스타디움, 공공 야구장, 학교 운동장 등 다양한 시설에서 사용되고 있습니다.
           </p>
         </div>
       </section>
@@ -102,33 +104,42 @@ export default function BaseballNetPage() {
       {/* 나머지 섹션은 동일 */}
       {/* 적용 분야 */}
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">야구망 적용 분야</h2>
-          <ul className="space-y-3 text-[15px] text-gray-700">
-            <li>• <strong>외야 방호망</strong> — 외야 펜스 상단 보호망</li>
-            <li>• <strong>파울망</strong> — 파울라인 외곽 관중석 보호망</li>
-            <li>• <strong>배팅케이지망</strong> — 실내외 타격 연습장 케이지 전용망</li>
-            <li>• <strong>투수 연습 보호망</strong> — 투수 훈련용 L자형 보호망</li>
-            <li>• <strong>스타디움 방호망</strong> — 경기장 전체 관중 보호 시스템</li>
-          </ul>
-        </div>
-      </section>
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      {/* 적용 분야 */}
+      <div>
+        <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">야구망 적용 분야</h2>
+        <ul className="space-y-3 text-[15px] text-gray-700">
+          <li>• <strong>외야 방호망</strong> — 외야 펜스 상단 보호망</li>
+          <li>• <strong>파울망</strong> — 파울라인 외곽 관중석 보호망</li>
+          <li>• <strong>배팅케이지망</strong> — 실내외 타격 연습장 케이지 전용망</li>
+          <li>• <strong>투수 연습 보호망</strong> — 투수 훈련용 L자형 보호망</li>
+          <li>• <strong>스타디움 방호망</strong> — 경기장 전체 관중 보호 시스템</li>
+        </ul>
+      </div>
 
-      {/* 특징 */}
-      <section className="py-16 bg-[#F5F6FA]">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">제품 특징</h2>
-          <ul className="space-y-3 text-[15px] text-gray-700">
-            <li>• 야구공 고속 충격에 최적화된 <strong>무결(Knotless) 편직 구조</strong></li>
-            <li>• 고강도 HDPE 원사 적용 — 끊김·마모에 강함</li>
-            <li>• UV 처리로 실외 장기 사용에도 변형 없음</li>
-            <li>• 경기장·훈련장 환경 맞춤형 규격 제작 가능</li>
-          </ul>
-        </div>
-      </section>
+      {/* 제품 특징 */}
+      <div>
+        <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">제품 특징</h2>
+        <ul className="space-y-3 text-[15px] text-gray-700">
+          <li>• 야구공 고속 충격에 최적화된 <strong>무결(Knotless) 편직 구조</strong></li>
+          <li>• 고강도 HDPE 원사 적용 — 끊김·마모에 강함</li>
+          <li>• <strong>UV 처리</strong>로 실외 장기 사용에도 변형 없음</li>
+          <li>• <strong>야구망 흰색(화이트), 백색 야구망</strong> 포함 다양한 색상 선택 가능</li>
+          <li>• 경기장·훈련장 환경 맞춤형 규격 제작 가능</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    
+ 
 
       {/* 스펙 */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#F5F6FA]">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">규격 · 스펙</h2>
           <table className="w-full border border-gray-300 text-[15px]">
@@ -147,7 +158,7 @@ export default function BaseballNetPage() {
               </tr>
               <tr className="border-b">
                 <td className="p-3 font-medium bg-gray-50">색상</td>
-                <td className="p-3">블랙 · 그린 · 화이트</td>
+                <td className="p-3">블랙 · 그린 · 백색</td>
               </tr>
               <tr>
                 <td className="p-3 font-medium bg-gray-50">납품 실적</td>
@@ -159,24 +170,26 @@ export default function BaseballNetPage() {
       </section>
 
       {/* 시공 */}
-      <section className="py-16 bg-[#F5F6FA]">
+      <section className="py-16 ">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">설치 · 시공 방식</h2>
           <ul className="text-[15px] text-gray-700 space-y-3">
             <li>• 외야 펜스 상부 방호망 설치</li>
             <li>• 파울라인 외곽 관중석 보호망 시공</li>
-            <li>• 배팅케이지 프레임 맞춤 제작 및 설치</li>
-            <li>• 철재 기둥 + 와이어 고정 방식 가능</li>
+            <li>• 배팅케이지 프레임 맞춤 제작 및 휀스 시공</li>
+            <li>• 야구장 휀스 시공 - 철재 기둥 + 와이어 고정 방식 가능</li>
           </ul>
+
           <p className="mt-6 text-[15px] text-gray-600 italic">
-            ※ 설치 견적은 <strong>도면(구조/규격 정보)</strong>을 함께 제공해 주시면
+            ※ 체육시설 휀스 시공 전문 — 현장 환경에 맞춰 정밀하게 설치합니다.<br>
+            </br>설치 견적은 <strong>도면(구조/규격 정보)</strong>을 함께 제공해 주시면
             보다 정확하고 빠르게 안내 가능합니다.
           </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#F5F6FA] text-center">
+      <section className="py-16  text-center bg-[#F5F6FA] ">
         <h3 className="text-xl font-bold text-[#1F3B5D]">야구망 견적이 필요하신가요?</h3>
         <p className="text-[15px] text-gray-600 mb-6">
           도면·사진을 보내주시면 정확한 상담이 가능합니다.

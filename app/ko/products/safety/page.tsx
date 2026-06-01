@@ -52,11 +52,10 @@ export default function SafetyNetPage() {
       {/* Title */}
       <section className="w-full border-b border-gray-200 py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-3xl font-bold text-[#1F3B5D]">건설 · 산업용 안전망</h1>
-          <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
-            건설현장의 <strong>추락 방지, 낙하물 방지, 안전구역 확보</strong>를 위해 사용되는 
-            전문 안전망을 제작합니다.  
-          </p>
+          <h1 className="text-3xl font-bold text-[#1F3B5D]">산업용 안전망 · 축구망</h1>
+<p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
+  건설현장의 <strong>추락 방지, 낙하물 방지, 안전구역 확보</strong>를 위해 사용되는 전문 안전망을 제작합니다. 뿐만 아니라 <strong>축구망, 축구골대망, 풋살망</strong> 등 체육시설용 안전망도 전문 제조하고 있습니다. <strong>야외 풋살망</strong>부터 실내 시설까지 환경에 맞춘 맞춤형 제작이 가능하며, <strong>풋살망공사</strong> 및 설치 서비스까지 제공합니다.
+</p>
         </div>
       </section>
 
@@ -80,12 +79,38 @@ export default function SafetyNetPage() {
       {/* 특징 */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">제품 특징</h2>
-          <ul className="space-y-3 text-[15px] text-gray-700 leading-relaxed">
-            <li>• 고강도 PE 원사로 제작된 강력한 인장강도</li>
-            <li>• 고층 현장에 적합한 낙하물 방지 기능</li>
-            <li>• 현장 규격에 맞춘 맞춤 제작 가능</li>
-          </ul>
+<h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">제품 특징</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div className="border border-gray-300 rounded-lg p-4 bg-white">
+    <h3 className="font-bold text-[#1F3B5D] mb-2">고강도 PE 원사</h3>
+    <p className="text-[14px] text-gray-700">직접 생산으로 품질 관리 및 빠른 납기 가능</p>
+  </div>
+  
+  <div className="border border-gray-300 rounded-lg p-4 bg-white">
+    <h3 className="font-bold text-[#1F3B5D] mb-2">UV 처리</h3>
+    <p className="text-[14px] text-gray-700">야외 장기 사용에도 변형·변색 없음</p>
+  </div>
+
+  <div className="border border-gray-300 rounded-lg p-4 bg-white">
+    <h3 className="font-bold text-[#1F3B5D] mb-2">방염 기능</h3>
+    <p className="text-[14px] text-gray-700">안전 기준에 맞춘 맞춤 제작 가능</p>
+  </div>
+
+  <div className="border border-gray-300 rounded-lg p-4 bg-white">
+    <h3 className="font-bold text-[#1F3B5D] mb-2">맞춤 제작</h3>
+    <p className="text-[14px] text-gray-700">현장 규격 및 색상에 맞춘 제작 가능</p>
+  </div>
+
+  <div className="border border-gray-300 rounded-lg p-4 bg-white">
+    <h3 className="font-bold text-[#1F3B5D] mb-2">비구방지 설치</h3>
+    <p className="text-[14px] text-gray-700">체육시설 비구방지망, 비구휀스 설치 가능</p>
+  </div>
+
+  <div className="border border-gray-300 rounded-lg p-4 bg-white">
+    <h3 className="font-bold text-[#1F3B5D] mb-2">부분 보수</h3>
+    <p className="text-[14px] text-gray-700">손상된 부분만 신속하게 교체 및 수리</p>
+  </div>
+</div>
         </div>
       </section>
 
@@ -110,7 +135,7 @@ export default function SafetyNetPage() {
               </tr>
               <tr>
                 <td className="p-3 font-medium">적용 분야</td>
-                <td className="p-3">건설현장 추락방지망, 낙하물 방지막, 산업시설 보호구역</td>
+                <td className="p-3">건설현장 추락방지망, 낙하물 방지막, 산업시설 보호구역, 체육시설 비구방지망, 축구장, 풋살장</td>
               </tr>
             </tbody>
           </table>
@@ -121,11 +146,16 @@ export default function SafetyNetPage() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">설치 · 시공 방식</h2>
-          <ul className="text-[15px] text-gray-700 space-y-3">
-            <li>• 고정용 로프 + 철재 와이어 시공</li>
-            <li>• 고층 건설현장에 적합한 장력 유지 구조</li>
-            <li>• 설치 환경에 따른 맞춤 제작 가능</li>
-          </ul>
+<ul className="text-[15px] text-gray-700 space-y-3">
+  <li>• 고정용 로프 + 철재 와이어 시공으로 안정적인 구조 확보</li>
+  <li>• 고층 건설현장에 적합한 장력 유지 구조</li>
+  <li>• 설치 환경에 따른 맞춤 제작 가능</li>
+  <li>• 현장 도면 기반 정밀한 맞춤 설계 및 시공</li>
+  <li>• <strong>체육시설 비구방지망, 비구휀스 설치</strong> — 축구장, 풋살장 등 다양한 시설 대응</li>
+  <li>• 신속한 설치로 공사 기간 단축</li>
+  <li>• <strong>부분 보수 서비스</strong> — 손상된 부분만 교체하여 유지비 절감</li>
+  <li>• 사후관리 및 AS 지원</li>
+</ul>
         </div>
       </section>
 

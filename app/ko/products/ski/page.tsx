@@ -152,7 +152,7 @@ export default function SkiNetPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#F5F6FA] text-center">
+      <section className="py-16  text-center">
         <h3 className="text-xl font-bold text-[#1F3B5D]">견적이 필요하신가요?</h3>
         <p className="text-[15px] text-gray-600 mb-6">
           스키장 환경에 맞춘 정확한 규격 상담을 도와드립니다.
