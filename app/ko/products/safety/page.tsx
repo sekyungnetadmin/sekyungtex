@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 
   export const metadata = {
-   title: "산업용 안전망 · 풋살망 · 비구망 제조 |Safety Net Manufacturer | 세경네트",
+   title: "산업용 안전망 · 축구망 · 비구방지망 휀스 |Safety Net Manufacturer | 세경네트",
   description:
     "건설 현장 사망 사고 예방을 위한 추락방지망, 비계망, 낙하물 방지망, 산업용 보호망 전문 생산. KS/ISO 인증, 맞춤 제작 가능.",
   keywords: [
@@ -20,6 +20,13 @@ import { Button } from "@/components/ui/button";
     "세경넷",
     "세경네트",
     "210합 안전망",
+      "비구방지망 휀스",
+  "축구장 휀스",
+  "축구 비구방지용 그물망",
+  "비구방지망 설치",
+  "그물망 울타리",
+  "그물망 휀스 설치",
+  "그물망 휀스 시공",
       "industrial safety net",
     "fall protection net",
     "debris safety net",
@@ -54,7 +61,12 @@ export default function SafetyNetPage() {
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-3xl font-bold text-[#1F3B5D]">산업용 안전망 · 축구망</h1>
 <p className="mt-3 text-[15px] text-gray-600 leading-relaxed">
-  건설현장의 <strong>추락 방지, 낙하물 방지, 안전구역 확보</strong>를 위해 사용되는 전문 안전망을 제작합니다. 뿐만 아니라 <strong>축구망, 축구골대망, 풋살망</strong> 등 체육시설용 안전망도 전문 제조하고 있습니다. <strong>야외 풋살망</strong>부터 실내 시설까지 환경에 맞춘 맞춤형 제작이 가능하며, <strong>풋살망공사</strong> 및 설치 서비스까지 제공합니다.
+  건설현장의 <strong>추락 방지, 낙하물 방지, 안전구역 확보</strong>를 위한 전문 안전망을 제작합니다.{" "}
+  뿐만 아니라 <strong>축구망, 축구골대망, 풋살망, 축구 비구방지용 그물망</strong> 등 체육시설용 안전망도 전문 제조하고 있습니다.{" "}
+  <strong>축구장 휀스, 비구방지망 휀스, 그물망 울타리</strong> 설치부터{" "}
+  <strong>그물망 휀스 설치 시공</strong>까지 현장 맞춤으로 진행합니다.{" "}
+  <strong>비구방지망 설치</strong> 및 야외 풋살망부터 실내 시설까지 환경에 맞춘 맞춤형 제작이 가능하며,{" "}
+  풋살망공사 및 설치 서비스까지 제공합니다.
 </p>
         </div>
       </section>
@@ -102,8 +114,8 @@ export default function SafetyNetPage() {
   </div>
 
   <div className="border border-gray-300 rounded-lg p-4 bg-white">
-    <h3 className="font-bold text-[#1F3B5D] mb-2">비구방지 설치</h3>
-    <p className="text-[14px] text-gray-700">체육시설 비구방지망, 비구휀스 설치 가능</p>
+    <h3 className="font-bold text-[#1F3B5D] mb-2">비구방지망 휀스 설치</h3>
+    <p className="text-[14px] text-gray-700"> 축구장 휀스, 체육시설 휀스, 그물망 울타리, 비구방지망 설치 — 축구 비구방지용 그물망 시공 가능</p>
   </div>
 
   <div className="border border-gray-300 rounded-lg p-4 bg-white">
@@ -151,7 +163,8 @@ export default function SafetyNetPage() {
   <li>• 고층 건설현장에 적합한 장력 유지 구조</li>
   <li>• 설치 환경에 따른 맞춤 제작 가능</li>
   <li>• 현장 도면 기반 정밀한 맞춤 설계 및 시공</li>
-  <li>• <strong>체육시설 비구방지망, 비구휀스 설치</strong> — 축구장, 풋살장 등 다양한 시설 대응</li>
+<li>• <strong>축구장 휀스 · 비구방지망 휀스 설치</strong> — 그물망 울타리, 축구 비구방지용 그물망 시공</li>
+<li>• <strong>그물망 휀스 설치 시공</strong> — 비구방지망 설치, 풋살장·학교 운동장 등 다양한 시설 대응</li>
   <li>• 신속한 설치로 공사 기간 단축</li>
   <li>• <strong>부분 보수 서비스</strong> — 손상된 부분만 교체하여 유지비 절감</li>
   <li>• 사후관리 및 AS 지원</li>
@@ -163,9 +176,9 @@ export default function SafetyNetPage() {
 
       {/* CTA */}
       <section className="py-16 bg-[#F5F6FA] text-center">
-        <h3 className="text-xl font-bold text-[#1F3B5D]">정확한 안전망 견적이 필요하신가요?</h3>
+        <h3 className="text-xl font-bold text-[#1F3B5D]">정확한 풋살망 · 안전망 견적이 필요하신가요?</h3>
         <p className="text-[15px] text-gray-600 mb-6">
-          현장 위치, 규격, 설치 방식 등을 알려주시면 정확하게 안내해드립니다.
+          축구장 휀스, 비구방지망 설치, 그물망 휀스 시공 등 — 현장 위치, 규격, 설치 방식 등을 알려주시면 정확하게 안내해드립니다.
         </p>
         <Link href="/ko/contact">
           <Button className="bg-[#1F3B5D] text-white px-8 py-4">
