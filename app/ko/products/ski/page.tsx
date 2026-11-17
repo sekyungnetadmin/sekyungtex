@@ -39,11 +39,12 @@ export default function Page() {
       <ProductPage
         en="SKI NET"
         kr="스키장 안전망"
-        lead={<>스키장 슬로프와 리프트 주변,<br />현장에 맞춰 재단하고 설치합니다.</>}
+        lead={<>스키장 슬로프와 리프트 주변,<br />현장에 맞춰 제작합니다.</>}
         hero={IMG.skiSlope}
         heroPos="center 40%"
         heroAlt="스키장 슬로프 안전망 설치 현장"
-        install={true}
+        install={false}
+        records="스키장 안전망"
         features={[
     { title: "브레이드 결망", desc: "슬로프 펜스용으로 짠 결망입니다." },
     { title: "UV 처리", desc: "눈에 반사되는 햇빛에도 오래 갑니다." },

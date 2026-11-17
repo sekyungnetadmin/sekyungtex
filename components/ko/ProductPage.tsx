@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
@@ -14,6 +15,7 @@ type Props = {
   specs: Spec[];
   photos: { src: string; alt: string }[];
   install?: boolean;
+  records?: string;
 };
 
 const LABEL = "ko-en text-[12px] md:text-[13px] font-semibold tracking-[4px] md:tracking-[6px] text-[#777]";
@@ -36,7 +38,7 @@ export const Note = ({ children }: { children: ReactNode }) => (
   <span className="font-normal text-[#777]"> {children}</span>
 );
 
-export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, features, specs, photos, install = true }: Props) {
+export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, features, specs, photos, install = true, records }: Props) {
   return (
     <main className="ko-site bg-white">
       <section className="mx-auto flex max-w-[1280px] flex-col justify-between gap-5 px-6 pb-10 pt-14 md:flex-row md:flex-wrap md:items-end md:gap-8 md:px-8 md:pb-16 md:pt-[120px]">
@@ -83,6 +85,26 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
           </div>
         ))}
       </section>
+
+      {records && (
+        <section className="bg-[#F5F5F5]">
+          <div className="mx-auto flex max-w-[1280px] flex-col justify-between gap-6 px-6 py-14 md:flex-row md:items-end md:px-8 md:py-[100px]">
+            <div className="flex flex-col gap-4">
+              <span className={LABEL}>REFERENCES</span>
+              <h2 className="m-0 text-[32px] font-black tracking-[-1.5px] md:text-[40px]">납품 실적</h2>
+              <p className="m-0 max-w-[420px] text-[15px] leading-[1.75] text-[#555] md:text-[16px]">
+                입찰이나 검토에 필요한 납품 실적 자료를 보내드립니다.
+              </p>
+            </div>
+            <Link
+              href={`/ko/contact?product=${encodeURIComponent(records)}&req=record`}
+              className="inline-flex min-h-[52px] items-center justify-center bg-[#111] px-8 text-[15px] font-semibold text-white hover:bg-[#FFC107] hover:text-[#111]"
+            >
+              납품 실적 요청하기 →
+            </Link>
+          </div>
+        </section>
+      )}
 
       {install && (
         <section className="bg-[#F5F5F5]">

@@ -30,7 +30,7 @@ function Info() {
   );
 }
 
-export default function ContactPage({ searchParams }: { searchParams?: { tab?: string } }) {
+export default function ContactPage({ searchParams }: { searchParams?: { tab?: string; product?: string; req?: string } }) {
   return (
     <main className="ko-site bg-white">
       <section className="mx-auto grid max-w-[1280px] grid-cols-1 gap-8 px-6 pb-20 pt-14 md:grid-cols-2 md:gap-16 md:px-8 md:pb-[120px] md:pt-[120px]">
@@ -46,7 +46,11 @@ export default function ContactPage({ searchParams }: { searchParams?: { tab?: s
             <Info />
           </div>
         </div>
-        <ContactForm initialTab={searchParams?.tab === "catalog" ? "catalog" : "quote"} />
+        <ContactForm
+          initialTab={searchParams?.tab === "catalog" ? "catalog" : "quote"}
+          initialProduct={searchParams?.product}
+          initialMessage={searchParams?.req === "record" ? `${searchParams?.product ?? ""} 납품 실적 자료를 요청합니다.`.trim() : undefined}
+        />
         <div className="flex flex-col gap-2.5 border-t border-[#111] pt-5 text-[15px] md:hidden">
           <Info />
         </div>

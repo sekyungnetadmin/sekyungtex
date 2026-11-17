@@ -10,14 +10,14 @@ const input =
   "w-full border-0 border-b border-[#BDBDBD] bg-transparent py-3 text-[16px] text-[#111] outline-none focus:border-[#111]";
 const label = "flex flex-col gap-1 text-[14px] text-[#777]";
 
-function ProductChips({ multiple }: { multiple: boolean }) {
+function ProductChips({ multiple, selected }: { multiple: boolean; selected?: string }) {
   return (
     <fieldset className="flex flex-col gap-3">
       <legend className="mb-3 text-[14px] text-[#777]">{multiple ? "관심 제품 (여러 개 선택 가능)" : "제품"}</legend>
       <div className="flex flex-wrap gap-2">
         {PRODUCTS.map((p) => (
           <label key={p} className="cursor-pointer">
-            <input type={multiple ? "checkbox" : "radio"} name="product" value={p} className="peer sr-only" />
+            <input type={multiple ? "checkbox" : "radio"} name="product" value={p} defaultChecked={p === selected} className="peer sr-only" />
             <span className="inline-flex min-h-[44px] items-center border border-[#BDBDBD] px-4 text-[14px] text-[#555] peer-checked:border-[#111] peer-checked:bg-[#111] peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-2">
               {p}
             </span>
@@ -28,7 +28,15 @@ function ProductChips({ multiple }: { multiple: boolean }) {
   );
 }
 
-export default function ContactForm({ initialTab = "quote" }: { initialTab?: "quote" | "catalog" }) {
+export default function ContactForm({
+  initialTab = "quote",
+  initialProduct,
+  initialMessage,
+}: {
+  initialTab?: "quote" | "catalog";
+  initialProduct?: string;
+  initialMessage?: string;
+}) {
   const [tab, setTab] = useState<"quote" | "catalog">(initialTab);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<{ ok: boolean; msg: string } | null>(null);
@@ -120,10 +128,10 @@ export default function ContactForm({ initialTab = "quote" }: { initialTab?: "qu
                 <input name="email" type="email" required className={input} />
               </label>
             </div>
-            <ProductChips multiple={false} />
+            <ProductChips multiple={false} selected={initialProduct} />
             <label className={label}>
               문의 내용
-              <textarea name="message" rows={5} className={`${input} resize-none`} placeholder="대략 규격, 수량, 지역을 적어주세요." />
+              <textarea name="message" rows={5} defaultValue={initialMessage} className={`${input} resize-none`} placeholder="대략 규격, 수량, 지역을 적어주세요." />
             </label>
 
             <div className="flex flex-col gap-3">
