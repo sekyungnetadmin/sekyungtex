@@ -29,6 +29,8 @@ export const IMG = {
   baseballStadium: "/assets_webp/products/new/baseball-stadium.webp",
   skiKnot: "/assets_webp/products/new/ski-knot.webp",
   skiSlopeSite: "/assets_webp/products/new/ski-slope-site.webp",
+  golfSample: "/assets_webp/sample-golf_결과.webp",
+  golfNight: "/assets_webp/golf-net_결과.webp",
   golfRange: "/assets_webp/products/new/golf-range.webp",
 };
 
