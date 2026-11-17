@@ -31,6 +31,7 @@ export const IMG = {
   skiSlopeSite: "/assets_webp/products/new/ski-slope-site.webp",
   golfSample: "/assets_webp/sample-golf_결과.webp",
   golfNight: "/assets_webp/golf-net_결과.webp",
+  baseballHero: "/assets_webp/products/new/baseball-field-hero.webp",
   golfRange: "/assets_webp/products/new/golf-range.webp",
 };
 
