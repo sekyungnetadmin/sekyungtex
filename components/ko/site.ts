@@ -31,7 +31,7 @@ export const IMG = {
 };
 
 export const PRODUCTS = [
-  { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", img: IMG.golfRange },
+  { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", img: IMG.golfClose },
   { href: "/ko/products/sports", en: "BASEBALL NET", kr: "야구망", img: IMG.baseballStadium },
   { href: "/ko/products/safety", en: "SAFETY NET", kr: "안전망 · 축구망", img: IMG.soccerNet },
   { href: "/ko/products/ski", en: "SKI NET", kr: "스키장 안전망", img: IMG.skiSlope },
