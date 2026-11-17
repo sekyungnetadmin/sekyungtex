@@ -40,8 +40,9 @@ export default function Page() {
         en="SKI NET"
         kr="스키장 안전망"
         lead={<>스키장 슬로프와 리프트 주변,<br />현장에 맞춰 재단하고 설치합니다.</>}
-        hero={IMG.skiNet}
-        heroAlt="스키장 안전망 원단"
+        hero={IMG.skiSlope}
+        heroPos="center 40%"
+        heroAlt="스키장 슬로프 안전망 설치 현장"
         install={true}
         features={[
     { title: "브레이드 결망", desc: "슬로프 펜스용으로 짠 결망입니다." },
@@ -57,7 +58,7 @@ export default function Page() {
     { k: "적용", v: "슬로프 · 리프트 주변 · 안전구역" }
         ]}
         photos={[
-    { src: IMG.skiSlope, alt: "스키장 슬로프 안전망 설치 현장" },
+    { src: IMG.skiNet, alt: "스키장 안전망 원단" },
     { src: IMG.skiRoll, alt: "스키망 원단" },
     { src: IMG.skiSlopeSite, alt: "스키장 슬로프 펜스" }
         ]}
