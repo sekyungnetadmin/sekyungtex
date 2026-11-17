@@ -14,6 +14,30 @@ function esc(s: string) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
 }
 
+function transport() {
+  const port = Number(process.env.SMTP_PORT || 465);
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST || "smtp.gmail.com",
+    port,
+    secure: port === 465,
+    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+  });
+}
+
+// 접속 점검용 (메일은 보내지 않음): /api/inquiry?check=1
+export async function GET(req: Request) {
+  if (new URL(req.url).searchParams.get("check") !== "1") return NextResponse.json({ ok: true });
+  const host = process.env.SMTP_HOST || "smtp.gmail.com";
+  const env = { host, user: !!process.env.SMTP_USER, pass: !!process.env.SMTP_PASS, to: !!process.env.INQUIRY_TO };
+  try {
+    await transport().verify();
+    return NextResponse.json({ ok: true, env });
+  } catch (e) {
+    const err = e as { code?: string; responseCode?: number; response?: string };
+    return NextResponse.json({ ok: false, env, code: err.code, responseCode: err.responseCode, response: err.response?.slice(0, 200) });
+  }
+}
+
 export async function POST(req: Request) {
   try {
     const fd = await req.formData();
@@ -56,12 +80,7 @@ export async function POST(req: Request) {
       .map(([k, v]) => `<tr><td style="padding:6px 16px 6px 0;color:#777;vertical-align:top">${k}</td><td style="padding:6px 0">${esc(v || "-")}</td></tr>`)
       .join("")}</table>${attachments.length ? `<p style="color:#777;font-size:13px">첨부 ${attachments.length}개</p>` : ""}`;
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.SMTP_PORT || 465),
-      secure: Number(process.env.SMTP_PORT || 465) === 465,
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-    });
+    const transporter = transport();
 
     await transporter.sendMail({
       from: `"세경네트 홈페이지" <${process.env.SMTP_USER}>`,
@@ -75,6 +94,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
   } catch (e) {
     console.error("inquiry error", e);
-    return NextResponse.json({ ok: false, error: "전송에 실패했습니다. 전화나 이메일로 연락 부탁드립니다." }, { status: 500 });
+    const err = e as { code?: string; responseCode?: number };
+    const code = [err.code, err.responseCode].filter(Boolean).join(" ");
+    return NextResponse.json(
+      { ok: false, error: `전송에 실패했습니다. 전화나 이메일로 연락 부탁드립니다.${code ? ` (${code})` : ""}` },
+      { status: 500 }
+    );
   }
 }
