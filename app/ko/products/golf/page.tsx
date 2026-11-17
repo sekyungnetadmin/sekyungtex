@@ -68,7 +68,7 @@ export default function Page() {
     { title: "정밀 가공", desc: "규격 오차 ±1~2% 이내로 맞춥니다." }
         ]}
         specs={[
-    { k: "메쉬", v: "20 · 25mm" },
+    { k: "메쉬", v: "21.5 · 25mm" },
     { k: "원사", v: "HDPE · UHMWPE" },
     { k: "색상", v: "녹색 · 검정 · 흰색 · 회색 · 갈색" },
     { k: "크기", v: "현장 맞춤" },
