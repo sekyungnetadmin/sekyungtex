@@ -32,12 +32,14 @@ export const IMG = {
   golfSample: "/assets_webp/sample-golf_결과.webp",
   golfNight: "/assets_webp/golf-net_결과.webp",
   baseballHero: "/assets_webp/products/new/baseball-field-hero.webp",
+  golfRolls: "/assets_webp/products/new/golf-rolls.webp",
+  baseballSewing: "/assets_webp/products/new/baseball-sewing.webp",
   golfRange: "/assets_webp/products/new/golf-range.webp",
 };
 
 export const PRODUCTS = [
   { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", img: IMG.golfClose },
-  { href: "/ko/products/sports", en: "BASEBALL NET", kr: "야구망", img: IMG.baseballStadium },
+  { href: "/ko/products/sports", en: "BASEBALL NET", kr: "야구망", img: IMG.baseballSewing },
   { href: "/ko/products/safety", en: "SAFETY NET", kr: "안전망 · 축구망", img: IMG.soccerNet },
   { href: "/ko/products/ski", en: "SKI NET", kr: "스키장 안전망", img: IMG.skiKnot },
   { href: "/ko/products/fishery", en: "FISHING NET", kr: "어망 · 양식망", img: IMG.fishFarm },
