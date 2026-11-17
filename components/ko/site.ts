@@ -19,12 +19,18 @@ export const IMG = {
   fishCage: "/assets_webp/products/fishery/fishing2_결과.webp",
   fishNet: "/assets_webp/products/fishery/fishing3_결과.webp",
   yarn: "/assets_webp/원사_결과.webp",
+  soccerNet: "/assets_webp/products/new/soccer-net.webp",
+  baseballCurtain: "/assets_webp/products/new/baseball-curtain.webp",
+  parkGolf: "/assets_webp/products/new/parkgolf-net.webp",
+  skiNet: "/assets_webp/products/new/ski-net.webp",
+  baseballEdge: "/assets_webp/products/new/baseball-net-edge.webp",
+  shipping: "/assets_webp/products/new/shipping-pallet.webp",
 };
 
 export const PRODUCTS = [
   { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", img: IMG.golfTower },
   { href: "/ko/products/sports", en: "BASEBALL NET", kr: "야구망", img: IMG.baseballField },
-  { href: "/ko/products/safety", en: "SAFETY NET", kr: "안전망 · 축구망", img: IMG.safetyFlat },
+  { href: "/ko/products/safety", en: "SAFETY NET", kr: "안전망 · 축구망", img: IMG.soccerNet },
   { href: "/ko/products/ski", en: "SKI NET", kr: "스키장 안전망", img: IMG.skiSlope },
   { href: "/ko/products/fishery", en: "FISHING NET", kr: "어망 · 양식망", img: IMG.fishFarm },
 ];

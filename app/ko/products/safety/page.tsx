@@ -50,8 +50,8 @@ export default function Page() {
         en="SAFETY NET"
         kr="안전망 · 축구망"
         lead={<>건설 현장의 추락·낙하물 방지망,<br />축구장·풋살장 비구방지망까지.</>}
-        hero={IMG.safetyFlat}
-        heroAlt="안전망 원단"
+        hero={IMG.soccerNet}
+        heroAlt="축구망 클로즈업"
         install={true}
         features={[
     { title: "고강도 PE", desc: "축구망, 안전망으로 사용합니다." },
@@ -68,7 +68,7 @@ export default function Page() {
         photos={[
     { src: IMG.safetyRoll, alt: "안전망 출고 준비" },
     { src: IMG.safetyGreen, alt: "그린 안전망 원단" },
-    { src: IMG.indoorNet, alt: "실내 체육시설 보호망" }
+    { src: IMG.safetyFlat, alt: "안전망 원단" }
         ]}
       />
     </>

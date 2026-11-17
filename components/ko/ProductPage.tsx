@@ -9,6 +9,7 @@ type Props = {
   lead: ReactNode;
   hero: string;
   heroAlt: string;
+  heroPos?: string;
   features: { title: string; desc: string }[];
   specs: Spec[];
   photos: { src: string; alt: string }[];
@@ -35,7 +36,7 @@ export const Note = ({ children }: { children: ReactNode }) => (
   <span className="font-normal text-[#777]"> {children}</span>
 );
 
-export default function ProductPage({ en, kr, lead, hero, heroAlt, features, specs, photos, install = true }: Props) {
+export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, features, specs, photos, install = true }: Props) {
   return (
     <main className="ko-site bg-white">
       <section className="mx-auto flex max-w-[1280px] flex-col justify-between gap-5 px-6 pb-10 pt-14 md:flex-row md:flex-wrap md:items-end md:gap-8 md:px-8 md:pb-16 md:pt-[120px]">
@@ -48,7 +49,7 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, features, spe
 
       <section className="relative mx-auto max-w-[1280px] px-6 md:px-8">
         <div className="relative aspect-[4/3] overflow-hidden bg-[#E8E8E8] sm:aspect-[16/9] md:aspect-[16/7]">
-          <Image src={hero} alt={heroAlt} fill priority sizes="100vw" className="object-cover" />
+          <Image src={hero} alt={heroAlt} fill priority sizes="100vw" className="object-cover" style={heroPos ? { objectPosition: heroPos } : undefined} />
         </div>
         <span className="absolute bottom-0 left-6 h-1.5 w-16 bg-[#FFC107] md:left-8" />
       </section>

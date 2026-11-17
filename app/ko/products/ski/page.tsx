@@ -40,7 +40,7 @@ export default function Page() {
         en="SKI NET"
         kr="스키장 안전망"
         lead={<>스키장 슬로프와 리프트 주변,<br />현장에 맞춰 재단하고 설치합니다.</>}
-        hero={IMG.skiRoll}
+        hero={IMG.skiNet}
         heroAlt="스키장 안전망 원단"
         install={true}
         features={[
@@ -58,7 +58,7 @@ export default function Page() {
         ]}
         photos={[
     { src: IMG.skiSlope, alt: "스키장 슬로프 안전망 설치 현장" },
-    { src: IMG.golfClose, alt: "결망 클로즈업" },
+    { src: IMG.skiRoll, alt: "스키망 원단" },
     { src: IMG.knitting, alt: "세경네트 제망 공장" }
         ]}
       />

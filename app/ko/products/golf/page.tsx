@@ -76,7 +76,7 @@ export default function Page() {
         photos={[
     { src: IMG.golfTower, alt: "골프연습장 골프망 설치 현장" },
     { src: IMG.golfMachine, alt: "골프망 제망 설비" },
-    { src: IMG.golfRoll, alt: "출고 전 골프망 완제품" }
+    { src: IMG.parkGolf, alt: "파크골프장 그물망" }
         ]}
       />
     </>

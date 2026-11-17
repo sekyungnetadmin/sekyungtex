@@ -38,8 +38,9 @@ export default function Page() {
         en="BASEBALL NET"
         kr="야구망"
         lead={<>외야 펜스, 파울망, 배팅케이지.<br />야구장과 학교 운동장을 지킵니다.</>}
-        hero={IMG.baseballField}
-        heroAlt="야구장 비구방지망 설치 현장"
+        hero={IMG.baseballCurtain}
+        heroPos="center 85%"
+        heroAlt="실내 야구장 커튼망 설치 현장"
         install={true}
         features={[
     { title: "무결망 · 결망", desc: "현장에 맞춰 두 가지 모두 제작합니다." },
@@ -54,9 +55,9 @@ export default function Page() {
     { k: "납품", v: "야구장 · 배팅연습장 · 학교 운동장" }
         ]}
         photos={[
-    { src: IMG.sportsSewing, alt: "야구망 가공 작업" },
+    { src: IMG.baseballEdge, alt: "야구망 테두리 마감" },
     { src: IMG.sportsRoll, alt: "야구망 원단 롤 — 세경네트 자체 생산" },
-    { src: IMG.golfClose, alt: "야구망 무결망 클로즈업" }
+    { src: IMG.shipping, alt: "출고 준비된 야구망" }
         ]}
       />
     </>
