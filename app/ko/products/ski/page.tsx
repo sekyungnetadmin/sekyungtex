@@ -59,7 +59,7 @@ export default function Page() {
         photos={[
     { src: IMG.skiSlope, alt: "스키장 슬로프 안전망 설치 현장" },
     { src: IMG.skiRoll, alt: "스키망 원단" },
-    { src: IMG.knitting, alt: "세경네트 제망 공장" }
+    { src: IMG.skiSlopeSite, alt: "스키장 슬로프 펜스" }
         ]}
       />
     </>
