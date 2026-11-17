@@ -50,7 +50,7 @@ export default function Page() {
     { k: "메쉬", v: <>40 · 45mm<Note>(그 외 규격 문의)</Note></> },
     { k: "원사", v: <>HDPE · UHMWPE<Note>(그 외 소재 문의)</Note></> },
     { k: "구조", v: "무결망 · 결망" },
-    { k: "색상", v: "Black · Green · White" },
+    { k: "색상", v: "검정 · 녹색 · 흰색" },
     { k: "납품", v: "야구장 · 배팅연습장 · 학교 운동장" }
         ]}
         photos={[

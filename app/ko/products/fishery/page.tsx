@@ -42,7 +42,7 @@ export default function Page() {
       specs={[
         { k: "메쉬", v: "15 ~ 200mm" },
         { k: "원사", v: <>HDPE · UHMWPE<Note>(그 외 소재 주문 제작)</Note></> },
-        { k: "색상", v: "Green · Black · White" },
+        { k: "색상", v: "녹색 · 검정 · 흰색" },
       ]}
       photos={[
         { src: IMG.fishNet, alt: "어망 원단" },

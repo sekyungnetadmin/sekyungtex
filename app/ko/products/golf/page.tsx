@@ -70,7 +70,7 @@ export default function Page() {
         specs={[
     { k: "메쉬", v: "20 · 25mm" },
     { k: "원사", v: "HDPE · UHMWPE" },
-    { k: "색상", v: "Green · Black · White · Gray · Brown" },
+    { k: "색상", v: "녹색 · 검정 · 흰색 · 회색 · 갈색" },
     { k: "크기", v: "현장 맞춤" },
     { k: "적용", v: "골프장 · 실내외 연습장 · 드라이빙레인지 · 파크골프" }
         ]}

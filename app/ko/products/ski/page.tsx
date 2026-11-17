@@ -54,7 +54,7 @@ export default function Page() {
     { k: "굵기", v: "망사 Φ4mm · 테두리 Φ6mm" },
     { k: "구조", v: "브레이드 결망" },
     { k: "원사", v: <>HDPE<Note>(커스텀 가능)</Note></> },
-    { k: "색상", v: "Red · Blue" },
+    { k: "색상", v: "빨강 · 파랑" },
     { k: "적용", v: "슬로프 · 리프트 주변 · 안전구역" }
         ]}
         photos={[

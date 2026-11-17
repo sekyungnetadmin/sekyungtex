@@ -62,7 +62,7 @@ export default function Page() {
     { k: "메쉬", v: <>100mm<Note>(그 외 규격 주문 제작)</Note></> },
     { k: "구조", v: "무결망 · 결망" },
     { k: "원사", v: "HDPE" },
-    { k: "색상", v: "Green · Black · White(무결)" },
+    { k: "색상", v: "녹색 · 검정 · 흰색(무결)" },
     { k: "적용", v: "추락방지망 · 낙하물 방지망 · 축구장 · 풋살장" }
         ]}
         photos={[
