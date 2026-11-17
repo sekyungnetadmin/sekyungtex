@@ -5,8 +5,8 @@ import { getPosts } from "@/lib/news";
 
 const SLIDES = [
   { img: IMG.golfClose, en: "From Yarn to Net.", kr: "원사부터 완제품까지, 직접 짭니다.", delay: "0s" },
-  { img: IMG.baseballField, en: "Still Weaving.", kr: "끊임없이 고민합니다.", delay: "6s" },
-  { img: IMG.knitting, en: "Nets, Made Right.", kr: "현장에 맞게, 제대로 만듭니다.", delay: "12s" },
+  { img: IMG.golfRange, en: "Still Weaving.", kr: "끊임없이 고민합니다.", delay: "6s" },
+  { img: IMG.baseballStadium, en: "Nets, Made Right.", kr: "현장에 맞게, 제대로 만듭니다.", delay: "12s" },
 ];
 
 const STATS = [
@@ -35,6 +35,7 @@ export default function MainKo() {
             alt=""
             fill
             priority={i === 0}
+            quality={90}
             sizes="100vw"
             className="sk-s object-cover"
             style={{ animationDelay: s.delay }}
