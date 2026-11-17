@@ -51,7 +51,7 @@ export default function Page() {
     { k: "원사", v: <>HDPE · UHMWPE<Note>(그 외 소재 문의)</Note></> },
     { k: "구조", v: "무결망 · 결망" },
     { k: "색상", v: "검정 · 녹색 · 흰색" },
-    { k: "납품", v: "야구장 · 배팅연습장 · 학교 운동장" }
+    { k: "적용", v: "야구장 · 배팅연습장 · 학교 운동장 · 테니스장 · 게이트볼장 · 파크골프장" }
         ]}
         photos={[
     { src: IMG.baseballEdge, alt: "야구망 테두리 마감" },
