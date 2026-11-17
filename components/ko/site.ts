@@ -25,6 +25,7 @@ export const IMG = {
   skiNet: "/assets_webp/products/new/ski-net.webp",
   baseballEdge: "/assets_webp/products/new/baseball-net-edge.webp",
   shipping: "/assets_webp/products/new/shipping-pallet.webp",
+  baseballCurtainTop: "/assets_webp/products/new/baseball-curtain-top.webp",
   golfRange: "/assets_webp/products/new/golf-range.webp",
 };
 
