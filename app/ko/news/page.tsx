@@ -16,10 +16,10 @@ export default function NewsPage({ searchParams }: { searchParams?: { type?: str
 
   return (
     <main className="ko-site bg-white">
-      <section className="mx-auto flex max-w-[1280px] flex-wrap items-end justify-between gap-8 px-6 pb-20 pt-24 md:px-8 md:pt-[120px]">
+      <section className="mx-auto flex max-w-[1280px] flex-wrap items-end justify-between gap-5 px-6 pb-10 pt-14 md:gap-8 md:px-8 md:pb-20 md:pt-[120px]">
         <div className="flex flex-col gap-5">
           <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#777]">소식 · 정보</span>
-          <h1 className="ko-en m-0 text-[56px] font-extrabold leading-[1.05] tracking-[-3px] md:text-[80px]">News</h1>
+          <h1 className="ko-en m-0 text-[44px] font-extrabold leading-[1.05] tracking-[-2px] md:text-[80px] md:tracking-[-3px]">News</h1>
         </div>
         <p className="m-0 max-w-[420px] text-[17px] leading-[1.8] text-[#555]">
           그물 정보와 회사 소식을
@@ -42,7 +42,7 @@ export default function NewsPage({ searchParams }: { searchParams?: { type?: str
         ))}
       </nav>
 
-      <section className="mx-auto flex max-w-[1280px] flex-col border-t border-[#111] px-6 pb-[140px] md:px-8">
+      <section className="mx-auto flex max-w-[1280px] flex-col border-t border-[#111] px-6 pb-20 md:px-8 md:pb-[140px]">
         {posts.length === 0 && <p className="py-20 text-center text-[16px] text-[#777]">아직 등록된 글이 없습니다.</p>}
         {posts.map((p) => (
           <Link

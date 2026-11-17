@@ -189,7 +189,7 @@ export default function ContactForm({ initialTab = "quote" }: { initialTab?: "qu
         <button
           type="submit"
           disabled={loading}
-          className="mt-2 inline-flex min-h-[52px] items-center justify-center self-start bg-[#111] px-8 text-[16px] font-bold text-white disabled:opacity-60"
+          className="mt-2 inline-flex min-h-[52px] w-full items-center justify-center sm:w-auto sm:self-start bg-[#111] px-8 text-[16px] font-bold text-white disabled:opacity-60"
         >
           {loading ? "전송 중..." : tab === "catalog" ? "카탈로그 요청하기" : "문의 보내기"}
         </button>

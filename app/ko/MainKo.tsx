@@ -18,7 +18,7 @@ const STATS = [
 
 const PROCESS = ["원사 준비", "와인딩", "제망", "재단", "검수 · 포장"];
 
-const LABEL = "ko-en text-[13px] font-semibold tracking-[6px] text-[#777]";
+const LABEL = "ko-en text-[12px] md:text-[13px] font-semibold tracking-[4px] md:tracking-[6px] text-[#777]";
 const H2 = "ko-en m-0 text-[40px] md:text-[52px] font-extrabold leading-[1.1] tracking-[-2px]";
 
 export default function MainKo() {
@@ -78,7 +78,7 @@ export default function MainKo() {
       </section>
 
       {/* BUSINESS */}
-      <section id="products" className="mx-auto flex max-w-[1280px] flex-col gap-12 px-6 pt-[140px] md:px-8">
+      <section id="products" className="mx-auto flex max-w-[1280px] flex-col gap-8 px-6 md:gap-12 pt-20 md:px-8 md:pt-[140px]">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="flex flex-col gap-4">
             <span className={LABEL}>사업영역</span>
@@ -88,20 +88,20 @@ export default function MainKo() {
         </div>
         <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
           {PRODUCTS.map((p) => (
-            <Link key={p.href} href={p.href} className="sk-card relative block aspect-[3/4] overflow-hidden bg-[#1A1A1A] text-white">
+            <Link key={p.href} href={p.href} className="sk-card relative block aspect-[4/5] overflow-hidden first:col-span-2 first:aspect-[16/9] md:aspect-[3/4] md:first:col-span-1 md:first:aspect-[3/4] bg-[#1A1A1A] text-white">
               <Image src={p.img} alt={p.kr} fill sizes="(max-width: 768px) 50vw, 20vw" className="object-cover" />
               <span className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/75" />
-              <span className="absolute bottom-6 left-6 right-6 flex flex-col gap-1.5">
-                <span className="ko-en text-[12px] font-semibold italic tracking-[2px] text-[#FFC107]">{p.en}</span>
-                <span className="text-[20px] font-bold text-white md:text-[22px]">{p.kr}</span>
+              <span className="absolute bottom-4 left-4 right-4 flex flex-col gap-1 md:bottom-6 md:left-6 md:right-6 md:gap-1.5">
+                <span className="ko-en text-[10px] font-semibold italic tracking-[1.5px] text-[#FFC107] md:text-[12px] md:tracking-[2px]">{p.en}</span>
+                <span className="text-[17px] font-bold leading-snug text-white md:text-[22px]">{p.kr}</span>
               </span>
             </Link>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-8 pt-6 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 pt-2 md:grid-cols-4 md:gap-8 md:pt-6">
           {STATS.map((s) => (
             <div key={s.big} className="flex flex-col gap-1.5 border-t border-[#111] pt-5">
-              <span className="ko-en text-[30px] font-extrabold md:text-[34px]">{s.big}</span>
+              <span className="ko-en text-[26px] font-extrabold md:text-[34px]">{s.big}</span>
               <span className="text-[15px] text-[#555]">{s.small}</span>
             </div>
           ))}
@@ -109,20 +109,20 @@ export default function MainKo() {
       </section>
 
       {/* MANUFACTURING */}
-      <section id="about" className="mx-auto max-w-[1280px] px-6 pt-[140px] md:px-8">
+      <section id="about" className="mx-auto max-w-[1280px] px-6 pt-20 md:px-8 md:pt-[140px]">
         <div className="relative overflow-hidden bg-[#141414] text-white">
           <Image src={IMG.knitting} alt="세경네트 제망 공장" fill sizes="100vw" className="object-cover" />
           <span className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/85" />
-          <div className="relative flex flex-col gap-4 px-8 pb-14 pt-[120px] md:px-14">
+          <div className="relative flex flex-col gap-4 px-6 pb-10 pt-16 md:px-14 md:pb-14 md:pt-[120px]">
             <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#D4D4D4]">생산 공정</span>
             <h2 className={`${H2} text-white`}>Manufacturing Process</h2>
-            <div className="grid grid-cols-2 pt-12 md:grid-cols-5">
+            <div className="grid grid-cols-2 gap-x-6 pt-6 md:grid-cols-5 md:gap-x-0 md:pt-12">
               {PROCESS.map((t, i) => (
                 <div key={t} className="flex flex-col gap-2 border-b border-white/35 py-5">
                   <span className="ko-en text-[12px] font-semibold text-[#BDBDBD]">0{i + 1}</span>
-                  <span className="text-[18px] font-bold text-white">
+                  <span className="text-[16px] font-bold text-white md:text-[18px]">
                     {t}
-                    {i < PROCESS.length - 1 && <span className="font-normal text-[#8A8A8A]" aria-hidden="true"> →</span>}
+                    {i < PROCESS.length - 1 && <span className="hidden font-normal text-[#8A8A8A] md:inline" aria-hidden="true"> →</span>}
                   </span>
                 </div>
               ))}
@@ -133,7 +133,7 @@ export default function MainKo() {
 
       {/* NEWS — 글이 있을 때만 표시 */}
       {posts.length > 0 ? (
-        <section className="mx-auto grid max-w-[1280px] grid-cols-1 items-start gap-12 px-6 py-[140px] md:grid-cols-3 md:px-8">
+        <section className="mx-auto grid max-w-[1280px] grid-cols-1 items-start gap-8 px-6 py-20 md:grid-cols-3 md:gap-12 md:py-[140px] md:px-8">
           <div className="flex flex-col gap-4">
             <span className={LABEL}>소식 · 정보</span>
             <h2 className={H2}>News</h2>
@@ -143,13 +143,13 @@ export default function MainKo() {
           </div>
           <div className="flex flex-col md:col-span-2">
             {posts.map((p) => (
-              <Link key={p.slug} href={`/ko/news/${p.slug}`} className="flex min-h-[44px] items-center justify-between gap-6 border-b border-[#E0E0E0] py-7">
+              <Link key={p.slug} href={`/ko/news/${p.slug}`} className="flex min-h-[44px] items-center justify-between gap-6 border-b border-[#E0E0E0] py-5 md:py-7">
                 <span className="flex flex-col gap-1.5">
                   <span className="text-[13px] text-[#777]">
                     {p.type}
                     {p.topic && ` / ${p.topic}`}
                   </span>
-                  <span className="text-[20px] font-bold">{p.title}</span>
+                  <span className="text-[17px] font-bold md:text-[20px]">{p.title}</span>
                 </span>
                 <span className="text-[20px]" aria-hidden="true">→</span>
               </Link>
@@ -157,7 +157,7 @@ export default function MainKo() {
           </div>
         </section>
       ) : (
-        <div className="h-[140px]" />
+        <div className="h-20 md:h-[140px]" />
       )}
     </main>
   );

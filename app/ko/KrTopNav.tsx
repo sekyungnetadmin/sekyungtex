@@ -16,10 +16,9 @@ export default function KrTopNav() {
 
   return (
     <header className="ko-site sticky top-0 z-50 border-b border-[#EBEBEB] bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-6 py-5 md:px-8">
-        <Link href="/ko" className="flex items-baseline gap-2.5" aria-label="세경네트 홈">
-          <span className="ko-en text-[22px] font-extrabold tracking-wide text-[#111]">SEKYUNG</span>
-          <span className="text-[13px] font-medium text-[#777]">세경네트</span>
+      <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 py-3 md:px-8 md:py-5">
+        <Link href="/ko" className="flex shrink-0 items-center" aria-label="세경네트 홈">
+          <img src="/assets/logo-sekyung-h.png" alt="세경네트 SEKYUNG" width={817} height={217} className="h-8 w-auto md:h-9" />
         </Link>
 
         {/* Desktop */}
