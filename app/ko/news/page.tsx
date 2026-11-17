@@ -21,11 +21,6 @@ export default function NewsPage({ searchParams }: { searchParams?: { type?: str
           <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#777]">소식 · 정보</span>
           <h1 className="ko-en m-0 text-[44px] font-extrabold leading-[1.05] tracking-[-2px] md:text-[80px] md:tracking-[-3px]">News</h1>
         </div>
-        <p className="m-0 max-w-[420px] text-[17px] leading-[1.8] text-[#555]">
-          그물 정보와 회사 소식을
-          <br />
-          이곳에 정리합니다.
-        </p>
       </section>
 
       <nav aria-label="카테고리" className="mx-auto flex max-w-[1280px] flex-wrap gap-8 px-6 pb-4 md:px-8">
