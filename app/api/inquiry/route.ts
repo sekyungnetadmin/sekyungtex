@@ -57,7 +57,7 @@ export async function POST(req: Request) {
       .join("")}</table>${attachments.length ? `<p style="color:#777;font-size:13px">첨부 ${attachments.length}개</p>` : ""}`;
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
+      host: process.env.SMTP_HOST || "smtp.gmail.com",
       port: Number(process.env.SMTP_PORT || 465),
       secure: Number(process.env.SMTP_PORT || 465) === 465,
       auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
