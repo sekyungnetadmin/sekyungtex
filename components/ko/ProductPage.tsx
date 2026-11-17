@@ -49,7 +49,7 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
 
       <section className="relative mx-auto max-w-[1280px] px-6 md:px-8">
         <div className="relative aspect-[4/3] overflow-hidden bg-[#E8E8E8] sm:aspect-[16/9] md:aspect-[16/7]">
-          <Image src={hero} alt={heroAlt} fill priority sizes="100vw" className="object-cover" style={heroPos ? { objectPosition: heroPos } : undefined} />
+          <Image src={hero} alt={heroAlt} fill priority quality={90} sizes="100vw" className="object-cover" style={heroPos ? { objectPosition: heroPos } : undefined} />
         </div>
         <span className="absolute bottom-0 left-6 h-1.5 w-16 bg-[#FFC107] md:left-8" />
       </section>
@@ -79,7 +79,7 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
       <section className="mx-auto flex max-w-[1280px] snap-x snap-mandatory gap-2 overflow-x-auto px-6 pb-14 sm:grid sm:grid-cols-3 sm:overflow-visible md:px-8 md:pb-[120px]">
         {photos.map((p) => (
           <div key={p.src} className="relative aspect-[3/4] w-[72%] shrink-0 snap-start overflow-hidden bg-[#E8E8E8] sm:w-auto">
-            <Image src={p.src} alt={p.alt} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
+            <Image src={p.src} alt={p.alt} fill quality={90} sizes="(max-width: 640px) 80vw, 33vw" className="object-cover" />
           </div>
         ))}
       </section>

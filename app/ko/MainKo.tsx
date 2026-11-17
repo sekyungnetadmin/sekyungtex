@@ -89,7 +89,7 @@ export default function MainKo() {
         <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
           {PRODUCTS.map((p) => (
             <Link key={p.href} href={p.href} className="sk-card relative block aspect-[4/5] overflow-hidden first:col-span-2 first:aspect-[16/9] md:aspect-[3/4] md:first:col-span-1 md:first:aspect-[3/4] bg-[#1A1A1A] text-white">
-              <Image src={p.img} alt={p.kr} fill sizes="(max-width: 768px) 50vw, 20vw" className="object-cover" />
+              <Image src={p.img} alt={p.kr} fill quality={90} sizes="(max-width: 768px) 50vw, 20vw" className="object-cover" />
               <span className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/75" />
               <span className="absolute bottom-4 left-4 right-4 flex flex-col gap-1 md:bottom-6 md:left-6 md:right-6 md:gap-1.5">
                 <span className="ko-en text-[10px] font-semibold italic tracking-[1.5px] text-[#FFC107] md:text-[12px] md:tracking-[2px]">{p.en}</span>

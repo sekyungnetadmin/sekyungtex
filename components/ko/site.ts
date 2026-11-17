@@ -34,6 +34,9 @@ export const IMG = {
   baseballHero: "/assets_webp/products/new/baseball-field-hero.webp",
   golfRolls: "/assets_webp/products/new/golf-rolls.webp",
   baseballSewing: "/assets_webp/products/new/baseball-sewing.webp",
+  fishSea: "/assets_webp/fishing4_결과.webp",
+  fishPile: "/assets_webp/fishing11_결과.webp",
+  golfTowerNew: "/assets_webp/products/new/golf-tower.webp",
   golfRange: "/assets_webp/products/new/golf-range.webp",
 };
 

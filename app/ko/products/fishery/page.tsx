@@ -46,8 +46,8 @@ export default function Page() {
       ]}
       photos={[
         { src: IMG.fishNet, alt: "어망 원단" },
-        { src: IMG.fishCage, alt: "양식장 가두리" },
-        { src: IMG.shipping, alt: "출고 준비된 그물 원단" },
+        { src: IMG.fishSea, alt: "바다 위 그물" },
+        { src: IMG.fishPile, alt: "어망 원단" },
       ]}
     />
   );
