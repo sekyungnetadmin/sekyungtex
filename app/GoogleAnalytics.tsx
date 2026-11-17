@@ -3,6 +3,9 @@
 import Script from 'next/script';
 
 export default function GoogleAnalytics() {
+  // 실제 홈페이지(Production)에서만 집계. 미리보기·로컬은 제외
+  if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production') return null;
+
   return (
     <>
       <Script
