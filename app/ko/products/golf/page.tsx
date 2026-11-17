@@ -58,8 +58,9 @@ export default function Page() {
         en="GOLF NET"
         kr="골프망"
         lead={<>골프연습장의 현장에 맞춰<br />재단하고 설치합니다.</>}
-        hero={IMG.golfClose}
-        heroAlt="골프망 무결망 클로즈업"
+        hero={IMG.golfRange}
+        heroPos="center 60%"
+        heroAlt="골프연습장 골프망 설치 현장"
         install={true}
         features={[
     { title: "무결망", desc: "가볍고, 바람을 덜 받습니다." },
@@ -74,7 +75,7 @@ export default function Page() {
     { k: "적용", v: "골프장 · 실내외 연습장 · 드라이빙레인지 · 파크골프" }
         ]}
         photos={[
-    { src: IMG.golfTower, alt: "골프연습장 골프망 설치 현장" },
+    { src: IMG.golfClose, alt: "골프망 클로즈업" },
     { src: IMG.golfMachine, alt: "골프망 제망 설비" },
     { src: IMG.parkGolf, alt: "파크골프장 그물망" }
         ]}

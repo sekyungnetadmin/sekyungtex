@@ -25,10 +25,11 @@ export const IMG = {
   skiNet: "/assets_webp/products/new/ski-net.webp",
   baseballEdge: "/assets_webp/products/new/baseball-net-edge.webp",
   shipping: "/assets_webp/products/new/shipping-pallet.webp",
+  golfRange: "/assets_webp/products/new/golf-range.webp",
 };
 
 export const PRODUCTS = [
-  { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", img: IMG.golfTower },
+  { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", img: IMG.golfRange },
   { href: "/ko/products/sports", en: "BASEBALL NET", kr: "야구망", img: IMG.baseballField },
   { href: "/ko/products/safety", en: "SAFETY NET", kr: "안전망 · 축구망", img: IMG.soccerNet },
   { href: "/ko/products/ski", en: "SKI NET", kr: "스키장 안전망", img: IMG.skiSlope },
