@@ -14,27 +14,29 @@ function esc(s: string) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br>");
 }
 
+const env = (k: string) => (process.env[k] || "").trim();
+
 function transport() {
-  const port = Number(process.env.SMTP_PORT || 465);
+  const port = Number(env("SMTP_PORT") || 465);
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.gmail.com",
+    host: env("SMTP_HOST") || "smtp.gmail.com",
     port,
     secure: port === 465,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    auth: { user: env("SMTP_USER"), pass: env("SMTP_PASS") },
   });
 }
 
 // 접속 점검용 (메일은 보내지 않음): /api/inquiry?check=1
 export async function GET(req: Request) {
   if (new URL(req.url).searchParams.get("check") !== "1") return NextResponse.json({ ok: true });
-  const host = process.env.SMTP_HOST || "smtp.gmail.com";
-  const env = { host, user: !!process.env.SMTP_USER, pass: !!process.env.SMTP_PASS, to: !!process.env.INQUIRY_TO };
+  const host = env("SMTP_HOST") || "smtp.gmail.com";
+  const info = { host, user: !!env("SMTP_USER"), pass: !!env("SMTP_PASS"), to: !!env("INQUIRY_TO") };
   try {
     await transport().verify();
-    return NextResponse.json({ ok: true, env });
+    return NextResponse.json({ ok: true, env: info });
   } catch (e) {
     const err = e as { code?: string; responseCode?: number; response?: string };
-    return NextResponse.json({ ok: false, env, code: err.code, responseCode: err.responseCode, response: err.response?.slice(0, 200) });
+    return NextResponse.json({ ok: false, env: info, code: err.code, responseCode: err.responseCode, response: err.response?.slice(0, 200) });
   }
 }
 
@@ -83,8 +85,8 @@ export async function POST(req: Request) {
     const transporter = transport();
 
     await transporter.sendMail({
-      from: `"세경네트 홈페이지" <${process.env.SMTP_USER}>`,
-      to: process.env.INQUIRY_TO || "info@sekyungtex.co.kr",
+      from: `"세경네트 홈페이지" <${env("SMTP_USER")}>`,
+      to: env("INQUIRY_TO") || "info@sekyungtex.co.kr",
       replyTo: email,
       subject: kind === "catalog" ? `[카탈로그 요청] ${company}` : `[견적 문의] ${company}${product ? ` · ${product}` : ""}`,
       html,
