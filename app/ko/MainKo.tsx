@@ -1,344 +1,164 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import type { FormEvent } from "react";
- 
+import { IMG, PRODUCTS } from "@/components/ko/site";
+import { getPosts } from "@/lib/news";
 
+const SLIDES = [
+  { img: IMG.golfClose, en: "From Yarn to Net.", kr: "원사부터 완제품까지, 직접 짭니다.", delay: "0s" },
+  { img: IMG.baseballField, en: "Still Weaving.", kr: "끊임없이 고민합니다.", delay: "6s" },
+  { img: IMG.knitting, en: "Nets, Made Right.", kr: "현장에 맞게, 제대로 만듭니다.", delay: "12s" },
+];
 
+const STATS = [
+  { big: "100%", small: "원사부터 자체 생산" },
+  { big: "10,000+", small: "연간 생산 세트" },
+  { big: "전국", small: "지자체 · 골프장 납품" },
+  { big: "1~2일", small: "5,000㎡ 미만 납품" },
+];
+
+const PROCESS = ["원사 준비", "와인딩", "제망", "재단", "검수 · 포장"];
+
+const LABEL = "ko-en text-[13px] font-semibold tracking-[6px] text-[#777]";
+const H2 = "ko-en m-0 text-[40px] md:text-[52px] font-extrabold leading-[1.1] tracking-[-2px]";
 
 export default function MainKo() {
+  const posts = getPosts().slice(0, 3);
+
   return (
-  <>
-      <Hero />
-      <SeoHiddenKo />   
-      <CompanyIntro />
-      <ProductCategories />
-      <Facilities />
-      
-      <ContactSection />
- 
-    </>
-  );
-}
-
-
-/* -------------------- HERO -------------------- */
-function Hero() {
-  return (
-    <section className="relative text-white">
-      <div className="absolute inset-0 bg-[url('/assets_webp/hero-factory_결과.webp')] bg-cover bg-center opacity-30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0F2D3A] via-[#0F2D3A]/70 to-transparent" />
-
-      <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-24 md:py-32">
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-2xl"
-        >
-          <p className="uppercase tracking-[0.22em] text-xs text-[#E4E6E7]/80">
-            INDUSTRIAL NET MANUFACTURING
-          </p>
-
-          <h1 className="mt-4 text-4xl md:text-[48px] leading-[1.15] font-semibold">
-           고품질 산업용 네트 전문 제조
-          </h1>
-
-          <p className="mt-4 text-[#E4E6E7]/90 text-[17px] leading-relaxed">
-            30년 기술력으로 고품질 산업용 네트를 제공합니다.<br />
-            골프장 · 야구장 · 축구장 · 안전망 등 맞춤 제작
-          </p>
-
-          <p className="mt-5 font-semibold text-[15px] text-[#E4E6E7] flex flex-wrap gap-2">
-            30년 제조 경험 <span>|</span> 자체 생산 설비 <span>|</span> 커스텀 제작 <span>|</span> 빠른 납기
-          </p>
-
-          <div className="mt-8 flex gap-3">
-            <Button asChild size="lg" className="bg-white text-[#0F2D3A] hover:bg-[#E4E6E7]">
-              <a href="#products">제품 보기</a>
-            </Button>
-
-            <Button asChild size="lg" className="bg-white text-[#0F2D3A] hover:bg-[#E4E6E7]">
-              <a href="#contact">견적 문의</a>
-            </Button>
+    <main className="ko-site bg-white">
+      {/* HERO */}
+      <section className="relative h-[620px] overflow-hidden bg-[#0E0E0E] text-white md:h-[760px]">
+        {SLIDES.map((s, i) => (
+          <Image
+            key={s.en}
+            src={s.img}
+            alt=""
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            className="sk-s object-cover"
+            style={{ animationDelay: s.delay }}
+          />
+        ))}
+        <span className="absolute inset-0 bg-gradient-to-b from-black/15 to-black/85" />
+        <div className="relative mx-auto flex h-full max-w-[1280px] flex-col justify-end gap-6 px-6 pb-[72px] md:px-8">
+          <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#D4D4D4]">SEKYUNG NET</span>
+          <div className="relative h-[150px]">
+            {SLIDES.map((s, i) => (
+              <div key={s.en} className="sk-t absolute bottom-0 left-0 flex flex-col gap-5" style={{ animationDelay: s.delay }}>
+                {i === 0 ? (
+                  <h1 className="ko-en m-0 whitespace-nowrap text-[48px] font-extrabold leading-none tracking-[-3px] md:text-[96px]">{s.en}</h1>
+                ) : (
+                  <p className="ko-en m-0 whitespace-nowrap text-[48px] font-extrabold leading-none tracking-[-3px] md:text-[96px]">{s.en}</p>
+                )}
+                <p className="m-0 text-[17px] text-[#E8E8E8] md:text-[20px]">{s.kr}</p>
+              </div>
+            ))}
           </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-/* -------------------- SEO HIDDEN CONTENT (Korean) -------------------- */
-function SeoHiddenKo() {
-  return (
-    <section className="hidden" aria-hidden="true">
-      <h2>산업용 스포츠 안전망 및 해양 양식장 그물 제조</h2>
-      <p>
-        세경넷은 골프 연습장 안전망, 야구 배팅케이지망, 산업용 추락방지망, 건설 현장 낙하물 방지망,
-        해양 양식장 어망, 바람막이 방풍망, 선박·어획용 네트 등 다양한 산업용 네트 제품을 제조하고 있습니다.
-        모든 제품은 한국 본사 공장에서 직접 생산하며 고강도 PE 원사를 기반으로 제작됩니다.
-      </p>
-
-      <h3>제품 분야</h3>
-      <p>
-        골프장 안전망, 골프 드라이빙 레인지 그물, 야구 방망이버튼 케이지 보호망, 해상 양식장 그물망,
-        산업안전 추락방지망, 건설 현장 안전망, 낙하물 방지망, 공장 및 물류 보호망, 맞춤 제작 네트 시스템.
-      </p>
-    </section>
-  );
-}
-
-/* -------------------- COMPANY INTRO -------------------- */
-
-function CompanyIntro() {
-  return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-[#1F3B5D] mb-4">
-          ABOUT US
-        </h2>
-        <p className="text-[#555] text-[15px] leading-relaxed w-full md:w-3/4">
-          세경네트는 골프연습장망, 스포츠 보호망, 산업용 안전망, 어업용 어구 등
-          다양한 산업용 네트 제품을 직접 생산·제작·시공하는 전문 제조업체입니다.
-          다년간 쌓아온 공정 기술과 설비 운영 노하우를 바탕으로, 고객이 원하는
-          규격과 품질을 정확하게 제공합니다.
-        </p>
-
-        {/* 핵심 수치 */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
-          {[
-            { label: "설립", value: "2000년대" },
-            { label: "연간 생산능력", value: "300톤" },
-            { label: "주요 납품처", value: "전국 지자체·골프장" },
-            { label: "품목", value: "골프망/스포츠망/스키망/" },
-          ].map((item, idx) => (
-            <div key={idx} className="p-4 bg-[#F5F6FA] rounded-lg">
-              <div className="text-xl font-bold text-[#1F3B5D]">
-                {item.value}
-              </div>
-              <div className="text-sm text-gray-600 mt-1">{item.label}</div>
-            </div>
-          ))}
+          <div className="ko-en mt-6 flex items-center gap-4 text-[13px] font-semibold text-[#BDBDBD]">
+            <span className="relative block h-4 w-5 text-white">
+              {SLIDES.map((s, i) => (
+                <span key={i} className="sk-n absolute left-0 top-0" style={{ animationDelay: s.delay }}>
+                  0{i + 1}
+                </span>
+              ))}
+            </span>
+            <span className="relative block h-0.5 w-40 overflow-hidden bg-[#555]">
+              <span className="sk-bar absolute left-0 top-0 block h-0.5 bg-[#FFC107]" />
+            </span>
+            <span>03</span>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
+        <div className="ko-en absolute bottom-[72px] right-12 hidden flex-col items-center gap-3 text-[11px] font-semibold tracking-[4px] text-[#BDBDBD] md:flex">
+          <span style={{ writingMode: "vertical-rl" }}>SCROLL</span>
+          <span className="relative block h-16 w-px overflow-hidden bg-[#444]">
+            <span className="sk-line absolute inset-0 block bg-white" />
+          </span>
+        </div>
+      </section>
 
-/* -------------------- PRODUCT CATEGORIES -------------------- */
-
-function ProductCategories() {
-  const list = [
-    {
-      title: "골프장 · 연습장망",
-      desc: "주 경기장, 연습장, 타석 주변 보호망 및 천정망 제작·시공",
-      link: "/ko/products/golf",
-      img: "/assets/sample-golf.png",
-    },
- {
-      title: "스키장 보호망 · 스키망",
-      desc: "슬로프 주변 보호망/안전 펜스/완충망 설계·제작·시공",
-      link: "/ko/products/ski",
-      img: "/assets/sample-ski.jpg",
-    },
-    {
-      title: "스포츠 보호망",
-      desc: "야구·축구·테니스 등 다양한 실외 스포츠용 보호망 제작",
-      link: "/ko/products/sports",
-      img: "/assets/sample-sports.jpg",
-    },
-   
-    {
-      title: "산업용 안전망",
-      desc: "건설현장 추락방지망/납품·규격 제작 가능",
-      link: "/ko/products/safety",
-      img: "/assets/sample-safety.jpg",
-    },
-    {
-      title: "어업용 네트",
-      desc: "어구/어망 설계, 제작 및 맞춤형 공급",
-      link: "/ko/products/fishery",
-      img: "/assets/sample-fishery.jpg",
-    },
-  ];
-
-  return (
-    <section id="products" className="py-16 bg-[#F5F6FA]">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-[#1F3B5D] mb-8">주요 제품 카테고리</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {list.map((item, idx) => (
-            <Link key={idx} href={item.link}>
-              <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition cursor-pointer h-[380px] flex flex-col">
-                <Image src={item.img} alt={item.title} width={400} height={160} className="rounded-t-lg w-full h-[160px] object-cover" />
-                <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="text-lg font-semibold text-[#1F3B5D]">{item.title}</h3>
-                  <p className="text-sm text-gray-600 mt-1 flex-1">{item.desc}</p>
-                  <div className="text-sm text-[#2D4F75] font-medium mt-2">자세히 보기 →</div>
-                </div>
-              </div>
+      {/* BUSINESS */}
+      <section id="products" className="mx-auto flex max-w-[1280px] flex-col gap-12 px-6 pt-[140px] md:px-8">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <div className="flex flex-col gap-4">
+            <span className={LABEL}>사업영역</span>
+            <h2 className={H2}>Business</h2>
+          </div>
+          <p className="m-0 max-w-[380px] text-[16px] leading-[1.8] text-[#555]">스포츠 · 산업안전 · 수산</p>
+        </div>
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+          {PRODUCTS.map((p) => (
+            <Link key={p.href} href={p.href} className="sk-card relative block aspect-[3/4] overflow-hidden bg-[#1A1A1A] text-white">
+              <Image src={p.img} alt={p.kr} fill sizes="(max-width: 768px) 50vw, 20vw" className="object-cover" />
+              <span className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/75" />
+              <span className="absolute bottom-6 left-6 right-6 flex flex-col gap-1.5">
+                <span className="ko-en text-[12px] font-semibold italic tracking-[2px] text-[#FFC107]">{p.en}</span>
+                <span className="text-[20px] font-bold text-white md:text-[22px]">{p.kr}</span>
+              </span>
             </Link>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-/* -------------------- FACILITIES -------------------- */
-
-function Facilities() {
-  const processes = [
-    { title: "원사 준비", desc: "원사 입고, 보관 및 사용 전 컨디션 관리" },
-    { title: "와인더", desc: "권취(와인딩) 공정으로 작업 적합한 상태로 준비" },
-    { title: "편직", desc: "자동 편직 설비로 규격에 맞는 네트 생산" },
-    { title: "재단", desc: "현장 도면에 맞춘 규격 재단 및 가공" },
-    { title: "검수 및 포장", desc: "규격·외관 검수 후 포장 및 출하" },
-  ];
-
-  return (
-    <section id="facilities" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-[#1F3B5D] mb-4">생산 공정</h2>
-        <p className="text-[15px] text-gray-600 mb-6">
-          세경네트는 원사 준비 → 와인더 → 편직 → 재단 → 검수·포장까지
-          모든 공정을 자체 운영하고 있습니다.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
-          {processes.map((item, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-start bg-[#F5F6FA] rounded-lg px-4 py-5 shadow-sm"
-            >
-              <div className="w-7 h-7 rounded-full bg-[#1F3B5D] text-white text-xs flex items-center justify-center mb-3">
-                {i + 1}
-              </div>
-              <div className="text-[15px] font-semibold text-[#1F3B5D] mb-1">
-                {item.title}
-              </div>
-              <p className="text-[13px] text-gray-600 leading-relaxed">
-                {item.desc}
-              </p>
+        <div className="grid grid-cols-2 gap-8 pt-6 md:grid-cols-4">
+          {STATS.map((s) => (
+            <div key={s.big} className="flex flex-col gap-1.5 border-t border-[#111] pt-5">
+              <span className="ko-en text-[30px] font-extrabold md:text-[34px]">{s.big}</span>
+              <span className="text-[15px] text-[#555]">{s.small}</span>
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-/* -------------------- CONTACT -------------------- */
+      </section>
 
-function ContactSection() {
-  const [form, setForm] = React.useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = React.useState(false);
-  const [status, setStatus] = React.useState("");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("");
-
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          name: form.name,
-          email: form.email,
-          message: form.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
-      .then(
-        () => {
-          setStatus("문의가 성공적으로 접수되었습니다.");
-          setForm({ name: "", email: "", message: "" });
-          setLoading(false);
-        },
-        () => {
-          setStatus("전송에 실패했습니다. 다시 시도해주세요.");
-          setLoading(false);
-        }
-      );
-  };
-
-  return (
-    <section id="contact" className="py-16 bg-[#F5F6FA]">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-[#1F3B5D] mb-6">
-          견적 및 상담문의
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Left Info */}
-          <div>
-            <p className="text-[15px] text-gray-600 leading-relaxed mb-4">
-              문의하시면 담당자가 빠르게 답변드리겠습니다.<br />
-              도면/사진이 있으면 보다 정확한 견적 안내가 가능합니다.
-            </p>
-
-            <div className="space-y-2 text-[15px] text-gray-800">
-              <p>대표전화: 051-262-5631</p>
-              <p>팩스: 051-262-5630</p>
-              <p>이메일: info@sekyungtex.co.kr</p>
+      {/* MANUFACTURING */}
+      <section id="about" className="mx-auto max-w-[1280px] px-6 pt-[140px] md:px-8">
+        <div className="relative overflow-hidden bg-[#141414] text-white">
+          <Image src={IMG.knitting} alt="세경네트 제망 공장" fill sizes="100vw" className="object-cover" />
+          <span className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/85" />
+          <div className="relative flex flex-col gap-4 px-8 pb-14 pt-[120px] md:px-14">
+            <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#D4D4D4]">생산 공정</span>
+            <h2 className={`${H2} text-white`}>Manufacturing Process</h2>
+            <div className="grid grid-cols-2 pt-12 md:grid-cols-5">
+              {PROCESS.map((t, i) => (
+                <div key={t} className="flex flex-col gap-2 border-b border-white/35 py-5">
+                  <span className="ko-en text-[12px] font-semibold text-[#BDBDBD]">0{i + 1}</span>
+                  <span className="text-[18px] font-bold text-white">
+                    {t}
+                    {i < PROCESS.length - 1 && <span className="font-normal text-[#8A8A8A]" aria-hidden="true"> →</span>}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
-
-          {/* Right Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              placeholder="성함 / 업체명"
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-              className="w-full border p-3 rounded-md text-[15px]"
-              required
-            />
-
-            <input
-              type="email"
-              placeholder="이메일 주소"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full border p-3 rounded-md text-[15px]"
-              required
-            />
-
-            <textarea
-              placeholder="문의 내용"
-              value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
-              className="w-full border p-3 rounded-md h-[120px] text-[15px]"
-              required
-            />
-
-            <Button
-              type="submit"
-              disabled={loading}
-              className="bg-[#1F3B5D] text-white font-medium px-6 py-3"
-            >
-              {loading ? "전송 중..." : "문의 접수하기"}
-            </Button>
-
-            {status && (
-              <p className="text-[14px] text-center text-gray-700 mt-1">
-                {status}
-              </p>
-            )}
-          </form>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* NEWS — 글이 있을 때만 표시 */}
+      {posts.length > 0 ? (
+        <section className="mx-auto grid max-w-[1280px] grid-cols-1 items-start gap-12 px-6 py-[140px] md:grid-cols-3 md:px-8">
+          <div className="flex flex-col gap-4">
+            <span className={LABEL}>소식 · 정보</span>
+            <h2 className={H2}>News</h2>
+            <Link href="/ko/news" className="mt-2 self-start border-b-2 border-[#FFC107] pb-1 text-[15px] font-bold">
+              전체 글 보기
+            </Link>
+          </div>
+          <div className="flex flex-col md:col-span-2">
+            {posts.map((p) => (
+              <Link key={p.slug} href={`/ko/news/${p.slug}`} className="flex min-h-[44px] items-center justify-between gap-6 border-b border-[#E0E0E0] py-7">
+                <span className="flex flex-col gap-1.5">
+                  <span className="text-[13px] text-[#777]">
+                    {p.type}
+                    {p.topic && ` / ${p.topic}`}
+                  </span>
+                  <span className="text-[20px] font-bold">{p.title}</span>
+                </span>
+                <span className="text-[20px]" aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <div className="h-[140px]" />
+      )}
+    </main>
   );
 }

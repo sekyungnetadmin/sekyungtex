@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -113,3 +114,37 @@ body {
   letter-spacing: 0.08em;
 }
 
+
+/* ---------------------------------------------------------
+   KO RENEWAL — 메인 히어로 슬라이드 / 모션
+---------------------------------------------------------- */
+.ko-site { font-family: 'Montserrat', 'Noto Sans KR', system-ui, sans-serif; color: #111111; }
+.ko-en { font-family: 'Montserrat', sans-serif; }
+@keyframes sk-slide { 0%{opacity:0;transform:scale(1.14)} 5%{opacity:1} 33%{opacity:1} 39%{opacity:0;transform:scale(1.02)} 100%{opacity:0;transform:scale(1.02)} }
+@keyframes sk-txt { 0%{opacity:0;transform:translateY(32px)} 4%{opacity:1;transform:none} 31%{opacity:1;transform:none} 35%{opacity:0;transform:translateY(-16px)} 100%{opacity:0;transform:translateY(-16px)} }
+@keyframes sk-num { 0%{opacity:0} 3%{opacity:1} 33%{opacity:1} 36%{opacity:0} 100%{opacity:0} }
+@keyframes sk-bar { from{width:0} to{width:100%} }
+@keyframes sk-line { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+.sk-s { opacity:0; animation: sk-slide 18s ease-in-out infinite; }
+.sk-t { opacity:0; animation: sk-txt 18s cubic-bezier(.2,.7,.2,1) infinite; }
+.sk-n { opacity:0; animation: sk-num 18s linear infinite; }
+.sk-bar { animation: sk-bar 6s linear infinite; }
+.sk-line { animation: sk-line 2.4s ease-in-out infinite; }
+.sk-card img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.sk-card:hover img { transform: scale(1.06); }
+@media (prefers-reduced-motion: reduce) {
+  .sk-s, .sk-t, .sk-n, .sk-bar, .sk-line { animation: none !important; }
+  .sk-s:first-of-type, .sk-t:first-of-type, .sk-n:first-of-type { opacity: 1; }
+}
+/* 블로그 본문 */
+.ko-prose h2 { margin: 48px 0 16px; font-size: 26px; font-weight: 900; letter-spacing: -0.5px; }
+.ko-prose h3 { margin: 32px 0 12px; font-size: 20px; font-weight: 700; }
+.ko-prose p { margin: 0 0 20px; font-size: 17px; line-height: 1.9; color: #333; }
+.ko-prose ul, .ko-prose ol { margin: 0 0 20px; padding-left: 22px; font-size: 17px; line-height: 1.9; color: #333; }
+.ko-prose blockquote { margin: 24px 0; padding: 20px 24px; background: #111; color: #fff; border-top: 4px solid #FFC107; }
+.ko-prose blockquote p { color: #fff; margin: 0; }
+.ko-prose table { width: 100%; border-collapse: collapse; margin: 0 0 24px; font-size: 15px; }
+.ko-prose th, .ko-prose td { text-align: left; padding: 12px 8px; border-bottom: 1px solid #E0E0E0; }
+.ko-prose th { border-bottom: 2px solid #111; }
+.ko-prose a { text-decoration: underline; }
+.ko-prose strong { font-weight: 700; color: #111; }
