@@ -41,6 +41,7 @@ export default function Page() {
       ]}
       specs={[
         { k: "메쉬", v: "15 ~ 200mm" },
+        { k: "실 굵기 · 합수", v: "커스텀 가능 (문의)" },
         { k: "원사", v: <>HDPE · UHMWPE<Note>(그 외 소재 주문 제작)</Note></> },
         { k: "색상", v: "녹색 · 검정 · 흰색" },
       ]}

@@ -52,6 +52,7 @@ export default function Page() {
         ]}
         specs={[
     { k: "메쉬", v: "50 · 60mm" },
+    { k: "실 굵기 · 합수", v: "커스텀 가능 (문의)" },
     { k: "굵기", v: "망사 Φ4mm · 테두리 Φ6mm" },
     { k: "구조", v: "브레이드 결망" },
     { k: "원사", v: <>HDPE<Note>(커스텀 가능)</Note></> },
