@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 export const metadata = {
@@ -9,5 +10,8 @@ export const metadata = {
 
 
 export default function Home() {
-  redirect("/en");
+  // 브라우저 언어가 한국어면 /ko, 그 외는 /en
+  const lang = (headers().get("accept-language") || "").toLowerCase();
+  const hasKo = lang.split(",").some((l) => l.trim().startsWith("ko"));
+  redirect(hasKo ? "/ko" : "/en");
 }
