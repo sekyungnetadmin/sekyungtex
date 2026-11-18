@@ -18,7 +18,7 @@ export default function KrTopNav() {
     <header className="ko-site sticky top-0 z-50 border-b border-[#EBEBEB] bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 py-3 md:px-8 md:py-5">
         <Link href="/ko" className="flex shrink-0 items-center" aria-label="세경네트 홈">
-          <img src="/assets/logo-sekyung-h.png" alt="세경네트 SEKYUNG" width={817} height={217} className="h-8 w-auto md:h-9" />
+          <img src="/assets/logo-sekyung-h.png" alt="세경네트 SEKYUNG" width={817} height={217} className="h-9 w-auto md:h-11" />
         </Link>
 
         {/* Desktop */}
