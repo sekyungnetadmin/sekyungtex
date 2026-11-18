@@ -26,20 +26,6 @@ function transport() {
   });
 }
 
-// 접속 점검용 (메일은 보내지 않음): /api/inquiry?check=1
-export async function GET(req: Request) {
-  if (new URL(req.url).searchParams.get("check") !== "1") return NextResponse.json({ ok: true });
-  const host = env("SMTP_HOST") || "smtp.gmail.com";
-  const info = { host, user: !!env("SMTP_USER"), pass: !!env("SMTP_PASS"), to: !!env("INQUIRY_TO") };
-  try {
-    await transport().verify();
-    return NextResponse.json({ ok: true, env: info });
-  } catch (e) {
-    const err = e as { code?: string; responseCode?: number; response?: string };
-    return NextResponse.json({ ok: false, env: info, code: err.code, responseCode: err.responseCode, response: err.response?.slice(0, 200) });
-  }
-}
-
 export async function POST(req: Request) {
   try {
     const fd = await req.formData();
