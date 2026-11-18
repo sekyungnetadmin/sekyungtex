@@ -93,7 +93,7 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
               <span className={LABEL}>REFERENCES</span>
               <h2 className="m-0 text-[32px] font-black tracking-[-1.5px] md:text-[40px]">납품 실적</h2>
               <p className="m-0 max-w-[420px] text-[15px] leading-[1.75] text-[#555] md:text-[16px]">
-                입찰이나 검토에 필요한 납품 실적 자료를 보내드립니다.
+                발주나 검토에 필요한 납품 실적 자료를 보내드립니다.
               </p>
             </div>
             <Link
