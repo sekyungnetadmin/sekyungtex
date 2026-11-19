@@ -43,13 +43,10 @@ export default function MainKo() {
         ))}
         <span className="absolute inset-0 bg-gradient-to-b from-black/15 to-black/85" />
         <div className="relative mx-auto flex h-full max-w-[1280px] flex-col justify-end gap-6 px-6 pb-[72px] md:px-8">
-          <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#D4D4D4]">SEKYUNG NET</span>
+          <h1 className="m-0 text-[13px] font-semibold tracking-[1px] text-[#D4D4D4] md:text-[15px]">골프망 · 야구망 · 안전망 제조 <span className="text-[#FFC107]">|</span> 세경네트</h1>
           <div className="relative h-[150px]">
             {SLIDES.map((s, i) => (
               <div key={s.en} className="sk-t absolute bottom-0 left-0 flex flex-col gap-5" style={{ animationDelay: s.delay }}>
-                {i === 0 && (
-                  <h1 className="sr-only">세경네트 | 골프망 · 야구망 · 안전망 · 스키장 안전망 · 어망 제조</h1>
-                )}
                 <p className="ko-en m-0 whitespace-nowrap text-[48px] font-extrabold leading-none tracking-[-3px] md:text-[96px]">{s.en}</p>
                 <p className="m-0 text-[17px] text-[#E8E8E8] md:text-[20px]">{s.kr}</p>
               </div>
