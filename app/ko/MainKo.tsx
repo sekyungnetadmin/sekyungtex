@@ -47,11 +47,10 @@ export default function MainKo() {
           <div className="relative h-[150px]">
             {SLIDES.map((s, i) => (
               <div key={s.en} className="sk-t absolute bottom-0 left-0 flex flex-col gap-5" style={{ animationDelay: s.delay }}>
-                {i === 0 ? (
-                  <h1 className="ko-en m-0 whitespace-nowrap text-[48px] font-extrabold leading-none tracking-[-3px] md:text-[96px]">{s.en}</h1>
-                ) : (
-                  <p className="ko-en m-0 whitespace-nowrap text-[48px] font-extrabold leading-none tracking-[-3px] md:text-[96px]">{s.en}</p>
+                {i === 0 && (
+                  <h1 className="sr-only">세경네트 | 골프망 · 야구망 · 안전망 · 스키장 안전망 · 어망 제조</h1>
                 )}
+                <p className="ko-en m-0 whitespace-nowrap text-[48px] font-extrabold leading-none tracking-[-3px] md:text-[96px]">{s.en}</p>
                 <p className="m-0 text-[17px] text-[#E8E8E8] md:text-[20px]">{s.kr}</p>
               </div>
             ))}
