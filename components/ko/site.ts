@@ -41,11 +41,11 @@ export const IMG = {
 };
 
 export const PRODUCTS = [
-  { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", img: IMG.golfClose },
-  { href: "/ko/products/sports", en: "BASEBALL NET", kr: "야구망", img: IMG.baseballSewing },
-  { href: "/ko/products/safety", en: "SAFETY NET", kr: "안전망 · 축구망", img: IMG.soccerNet },
-  { href: "/ko/products/ski", en: "SKI NET", kr: "스키장 안전망", img: IMG.skiKnot },
-  { href: "/ko/products/fishery", en: "FISHING NET", kr: "어망 · 양식망", img: IMG.fishFarm },
+  { href: "/ko/products/golf", en: "GOLF NET", kr: "골프망", desc: "골프연습장 · 타석망 · 천정망", img: IMG.golfClose },
+  { href: "/ko/products/sports", en: "BASEBALL NET", kr: "야구망", desc: "비구방지망 · 배팅케이지 · 테니스장", img: IMG.baseballSewing },
+  { href: "/ko/products/safety", en: "SAFETY NET", kr: "안전망 · 축구망", desc: "축구장 · 풋살장 · 추락방지망", img: IMG.soccerNet },
+  { href: "/ko/products/ski", en: "SKI NET", kr: "스키장 안전망", desc: "슬로프 펜스 · 리프트 주변", img: IMG.skiKnot },
+  { href: "/ko/products/fishery", en: "FISHING NET", kr: "어망 · 양식망", desc: "그물 원단 · HDPE · UHMWPE", img: IMG.fishFarm },
 ];
 
 export const CONTACT = {

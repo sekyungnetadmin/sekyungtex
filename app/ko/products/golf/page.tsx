@@ -75,6 +75,7 @@ export default function Page() {
     { k: "크기", v: "현장 맞춤" },
     { k: "적용", v: "골프장 · 실내외 연습장 · 드라이빙레인지 · 파크골프" }
         ]}
+        keywords={["골프망", "골프 보호망", "타석망", "측면망", "천정망", "골프연습장", "드라이빙레인지", "파크골프장", "골프장"]}
         photos={[
     { src: IMG.golfRange, alt: "골프연습장 골프망 설치 현장" },
     { src: IMG.golfRolls, alt: "출고 전 골프망 완제품" },

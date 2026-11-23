@@ -16,7 +16,13 @@ const STATS = [
   { big: "1~2일", small: "5,000㎡ 미만 납품" },
 ];
 
-const PROCESS = ["원사 준비", "와인딩", "제망", "재단", "검수 · 포장"];
+const PROCESS = [
+  { t: "원사 준비", d: "UV 안정제를 넣은 PE 원사 입고 · 관리" },
+  { t: "와인딩", d: "제망에 맞게 원사를 감는 공정" },
+  { t: "제망", d: "무결망 · 결망을 규격에 맞춰 생산" },
+  { t: "재단", d: "현장 도면에 맞춘 재단 · 가공" },
+  { t: "검수 · 포장", d: "규격 · 외관 검수 후 출고" },
+];
 
 const LABEL = "ko-en text-[12px] md:text-[13px] font-semibold tracking-[4px] md:tracking-[6px] text-[#777]";
 const H2 = "ko-en m-0 text-[40px] md:text-[52px] font-extrabold leading-[1.1] tracking-[-2px]";
@@ -91,6 +97,7 @@ export default function MainKo() {
               <span className="absolute bottom-4 left-4 right-4 flex flex-col gap-1 md:bottom-6 md:left-6 md:right-6 md:gap-1.5">
                 <span className="ko-en text-[10px] font-semibold italic tracking-[1.5px] text-[#FFC107] md:text-[12px] md:tracking-[2px]">{p.en}</span>
                 <span className="text-[17px] font-bold leading-snug text-white md:text-[22px]">{p.kr}</span>
+                <span className="hidden text-[13px] leading-snug text-[#D4D4D4] sm:block">{p.desc}</span>
               </span>
             </Link>
           ))}
@@ -113,14 +120,18 @@ export default function MainKo() {
           <div className="relative flex flex-col gap-4 px-6 pb-10 pt-16 md:px-14 md:pb-14 md:pt-[120px]">
             <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#D4D4D4]">생산 공정</span>
             <h2 className={`${H2} text-white`}>Manufacturing Process</h2>
+            <p className="m-0 max-w-[620px] text-[15px] leading-[1.8] text-[#D4D4D4] md:text-[16px]">
+              세경네트는 부산 사하구에서 골프망, 야구망, 축구망, 건설 안전망, 스키장 안전망, 어망을 원사부터 직접 생산하는 그물 제조업체입니다.
+            </p>
             <div className="grid grid-cols-2 gap-x-6 pt-6 md:grid-cols-5 md:gap-x-0 md:pt-12">
-              {PROCESS.map((t, i) => (
+              {PROCESS.map(({ t, d }, i) => (
                 <div key={t} className="flex flex-col gap-2 border-b border-white/35 py-5">
                   <span className="ko-en text-[12px] font-semibold text-[#BDBDBD]">0{i + 1}</span>
                   <span className="text-[16px] font-bold text-white md:text-[18px]">
                     {t}
                     {i < PROCESS.length - 1 && <span className="hidden font-normal text-[#8A8A8A] md:inline" aria-hidden="true"> →</span>}
                   </span>
+                  <span className="pr-4 text-[13px] leading-[1.6] text-[#BDBDBD]">{d}</span>
                 </div>
               ))}
             </div>

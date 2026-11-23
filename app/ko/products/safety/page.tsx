@@ -66,6 +66,7 @@ export default function Page() {
     { k: "색상", v: "녹색 · 검정 · 흰색(무결)" },
     { k: "적용", v: "추락방지망 · 낙하물 방지망 · 축구장 · 풋살장" }
         ]}
+        keywords={["축구망", "축구골대망", "풋살망", "비구방지망 휀스", "그물망 울타리", "건설현장 추락방지망", "낙하물 방지망"]}
         photos={[
     { src: IMG.safetyRoll, alt: "안전망 출고 준비" },
     { src: IMG.safetyGreen, alt: "그린 안전망 원단" },

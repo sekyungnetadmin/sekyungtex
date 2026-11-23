@@ -16,6 +16,7 @@ type Props = {
   photos: { src: string; alt: string }[];
   install?: boolean;
   records?: string;
+  keywords?: string[];
 };
 
 const LABEL = "ko-en text-[12px] md:text-[13px] font-semibold tracking-[4px] md:tracking-[6px] text-[#777]";
@@ -38,7 +39,7 @@ export const Note = ({ children }: { children: ReactNode }) => (
   <span className="font-normal text-[#777]"> {children}</span>
 );
 
-export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, features, specs, photos, install = true, records }: Props) {
+export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, features, specs, photos, install = true, records, keywords }: Props) {
   return (
     <main className="ko-site bg-white">
       <section className="mx-auto flex max-w-[1280px] flex-col justify-between gap-5 px-6 pb-10 pt-14 md:flex-row md:flex-wrap md:items-end md:gap-8 md:px-8 md:pb-16 md:pt-[120px]">
@@ -75,6 +76,16 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
               <span className="font-medium md:col-span-2">{s.v}</span>
             </div>
           ))}
+          {keywords && keywords.length > 0 && (
+            <div className="flex flex-col gap-3 pt-6">
+              <h3 className="m-0 text-[14px] font-semibold text-[#777]">적용 분야</h3>
+              <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
+                {keywords.map((k) => (
+                  <li key={k} className="border border-[#E0E0E0] px-3 py-1.5 text-[13px] text-[#444]">{k}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
 

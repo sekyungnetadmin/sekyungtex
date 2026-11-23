@@ -45,6 +45,7 @@ export default function Page() {
         { k: "원사", v: <>HDPE · UHMWPE<Note>(그 외 소재 주문 제작)</Note></> },
         { k: "색상", v: "녹색 · 검정 · 흰색" },
       ]}
+      keywords={["어망", "어업용 그물", "그물 원단", "양식장 그물", "HDPE 그물", "UHMWPE 그물"]}
       photos={[
         { src: IMG.fishNet, alt: "어망 원단" },
         { src: IMG.fishSea, alt: "바다 위 그물" },

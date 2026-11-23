@@ -58,6 +58,7 @@ export default function Page() {
     { k: "색상", v: "빨강 · 파랑" },
     { k: "적용", v: "슬로프 · 리프트 주변 · 안전구역" }
         ]}
+        keywords={["스키장 안전망", "스키 보호망", "슬로프 안전 펜스", "리프트 주변 보호망", "스키망"]}
         photos={[
     { src: IMG.skiNet, alt: "스키장 안전망 원단" },
     { src: IMG.skiRoll, alt: "스키망 원단" },
