@@ -84,8 +84,8 @@ export default function MainKo() {
       <section id="products" className="mx-auto flex max-w-[1280px] flex-col gap-8 px-6 md:gap-12 pt-20 md:px-8 md:pt-[140px]">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="flex flex-col gap-4">
-            <span className={LABEL}>사업영역</span>
-            <h2 className={H2}>Business</h2>
+            <h2 className={`${LABEL} m-0`}>사업영역 · 주요 제품</h2>
+            <p className={`${H2} m-0`}>Business</p>
           </div>
           <p className="m-0 max-w-[380px] text-[16px] leading-[1.8] text-[#555]">스포츠 · 산업안전 · 수산</p>
         </div>
@@ -118,8 +118,8 @@ export default function MainKo() {
           <Image src={IMG.knitting} alt="세경네트 제망 공장" fill sizes="100vw" className="object-cover" />
           <span className="absolute inset-0 bg-gradient-to-b from-black/55 to-black/85" />
           <div className="relative flex flex-col gap-4 px-6 pb-10 pt-16 md:px-14 md:pb-14 md:pt-[120px]">
-            <span className="ko-en text-[13px] font-semibold tracking-[6px] text-[#D4D4D4]">생산 공정</span>
-            <h2 className={`${H2} text-white`}>Manufacturing Process</h2>
+            <h2 className="ko-en m-0 text-[13px] font-semibold tracking-[6px] text-[#D4D4D4]">그물 생산 공정</h2>
+            <p className={`${H2} m-0 text-white`}>Manufacturing Process</p>
             <p className="m-0 max-w-[620px] text-[15px] leading-[1.8] text-[#D4D4D4] md:text-[16px]">
               세경네트는 부산 사하구에서 골프망, 야구망, 축구망, 건설 안전망, 스키장 안전망, 어망을 원사부터 직접 생산하는 그물 제조업체입니다.
             </p>
@@ -143,8 +143,8 @@ export default function MainKo() {
       {posts.length > 0 ? (
         <section className="mx-auto grid max-w-[1280px] grid-cols-1 items-start gap-8 px-6 py-20 md:grid-cols-3 md:gap-12 md:py-[140px] md:px-8">
           <div className="flex flex-col gap-4">
-            <span className={LABEL}>소식 · 정보</span>
-            <h2 className={H2}>News</h2>
+            <h2 className={`${LABEL} m-0`}>소식 · 정보</h2>
+            <p className={`${H2} m-0`}>News</p>
             <Link href="/ko/news" className="mt-2 self-start border-b-2 border-[#FFC107] pb-1 text-[15px] font-bold">
               전체 글 보기
             </Link>

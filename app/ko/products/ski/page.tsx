@@ -39,6 +39,7 @@ export default function Page() {
       <ProductPage
         en="SKI NET"
         kr="스키장 안전망"
+        sub="스키장 슬로프 안전 보호망 제조"
         lead={<>스키장 슬로프와 리프트 주변,<br />현장에 맞춰 제작합니다.</>}
         hero={IMG.skiSlope}
         heroPos="center 40%"

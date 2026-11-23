@@ -57,6 +57,7 @@ export default function Page() {
       <ProductPage
         en="GOLF NET"
         kr="골프망"
+        sub="골프 연습장 안전망 제조"
         lead={<>골프연습장의 현장에 맞춰<br />재단하고 설치합니다.</>}
         hero={IMG.golfTowerNew}
         heroPos="center 70%"

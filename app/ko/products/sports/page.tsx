@@ -37,6 +37,7 @@ export default function Page() {
       <ProductPage
         en="BASEBALL NET"
         kr="야구망"
+        sub="야구장 비구방지망 제조"
         lead={<>야구장 비구방지망,<br />현장 규격에 맞춰 제작합니다.</>}
         hero={IMG.baseballHero}
         heroAlt="야구장 비구방지망 설치 현장"

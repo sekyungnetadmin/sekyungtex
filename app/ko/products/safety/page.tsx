@@ -49,6 +49,7 @@ export default function Page() {
       <ProductPage
         en="SAFETY NET"
         kr="안전망 · 축구망"
+        sub="건설 추락방지망 · 축구장 비구방지망 제조"
         lead={<>축구장·풋살장 비구방지망,<br />건설 현장 추락·낙하물 방지망.</>}
         hero={IMG.safetyFlat}
         heroAlt="안전망 원단"

@@ -7,6 +7,7 @@ export type Spec = { k: string; v: ReactNode };
 type Props = {
   en: string;
   kr: string;
+  sub?: string;
   lead: ReactNode;
   hero: string;
   heroAlt: string;
@@ -39,13 +40,16 @@ export const Note = ({ children }: { children: ReactNode }) => (
   <span className="font-normal text-[#777]"> {children}</span>
 );
 
-export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, features, specs, photos, install = true, records, keywords }: Props) {
+export default function ProductPage({ en, kr, sub, lead, hero, heroAlt, heroPos, features, specs, photos, install = true, records, keywords }: Props) {
   return (
     <main className="ko-site bg-white">
       <section className="mx-auto flex max-w-[1280px] flex-col justify-between gap-5 px-6 pb-10 pt-14 md:flex-row md:flex-wrap md:items-end md:gap-8 md:px-8 md:pb-16 md:pt-[120px]">
         <div className="flex flex-col gap-3 md:gap-5">
           <span className={LABEL}>{en}</span>
-          <h1 className="m-0 text-[42px] font-black leading-[1.05] tracking-[-2px] md:text-[80px] md:tracking-[-4px]">{kr}</h1>
+          <h1 className="m-0 flex flex-col gap-3">
+            <span className="text-[42px] font-black leading-[1.05] tracking-[-2px] md:text-[80px] md:tracking-[-4px]">{kr}</span>
+            {sub && <span className="text-[15px] font-semibold tracking-[-0.2px] text-[#555] md:text-[17px]">{sub}</span>}
+          </h1>
         </div>
         <p className="m-0 max-w-[420px] text-[16px] leading-[1.75] text-[#555] md:text-[17px]">{lead}</p>
       </section>
@@ -58,6 +62,9 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
       </section>
 
       <section className="mx-auto grid max-w-[1280px] grid-cols-1 gap-7 px-6 py-14 md:grid-cols-3 md:gap-12 md:px-8 md:py-[120px]">
+        <h2 className={`${LABEL} m-0 md:col-span-3`}>
+          FEATURES <span className="ml-2 font-sans text-[13px] font-semibold tracking-normal text-[#999]">{kr} 제품 특징</span>
+        </h2>
         {features.map((f, i) => (
           <div key={f.title} className="flex flex-col gap-2 border-t border-[#111] pt-4 md:gap-3.5 md:pt-6">
             <span className="ko-en text-[13px] font-semibold tracking-[2px] text-[#777]">0{i + 1}</span>
@@ -68,7 +75,9 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
       </section>
 
       <section className="mx-auto grid max-w-[1280px] grid-cols-1 items-start gap-4 px-6 pb-14 md:grid-cols-3 md:gap-12 md:px-8 md:pb-[120px]">
-        <span className={LABEL}>SPEC</span>
+        <h2 className={`${LABEL} m-0`}>
+          SPEC <span className="ml-2 font-sans text-[13px] font-semibold tracking-normal text-[#999]">{kr} 규격</span>
+        </h2>
         <div className="flex flex-col md:col-span-2">
           {specs.map((s) => (
             <div key={s.k} className="grid grid-cols-[80px_1fr] gap-3 border-b border-[#E0E0E0] py-3.5 text-[15px] md:grid-cols-3 md:gap-4 md:py-[18px] md:text-[16px]">
@@ -78,7 +87,7 @@ export default function ProductPage({ en, kr, lead, hero, heroAlt, heroPos, feat
           ))}
           {keywords && keywords.length > 0 && (
             <div className="flex flex-col gap-3 pt-6">
-              <h3 className="m-0 text-[14px] font-semibold text-[#777]">적용 분야</h3>
+              <h3 className="m-0 text-[14px] font-semibold text-[#777]">{kr} 적용 분야</h3>
               <ul className="m-0 flex list-none flex-wrap gap-2 p-0">
                 {keywords.map((k) => (
                   <li key={k} className="border border-[#E0E0E0] px-3 py-1.5 text-[13px] text-[#444]">{k}</li>

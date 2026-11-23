@@ -30,6 +30,7 @@ export default function Page() {
     <ProductPage
       en="FISHING NET"
       kr="어망 · 양식망"
+      sub="어업용 그물 원단 제조"
       lead={<>요구사항에 따라<br />그물 원단을 제작합니다.</>}
       hero={IMG.fishFarm}
       heroAlt="해상 양식장"
