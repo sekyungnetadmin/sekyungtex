@@ -2,6 +2,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { Analytics } from '@vercel/analytics/react';
 import GoogleAnalytics from './GoogleAnalytics';
+import NoImageSave from './NoImageSave';
 
 export const metadata = {
   title: "SekyungNET - Industrial Sports Netting Manufacturer",
@@ -36,6 +37,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <NoImageSave />
         <Analytics />
       </body>
     </html>

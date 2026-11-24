@@ -148,3 +148,11 @@ body {
 .ko-prose th { border-bottom: 2px solid #111; }
 .ko-prose a { text-decoration: underline; }
 .ko-prose strong { font-weight: 700; color: #111; }
+
+/* 사진 저장 방지: 모바일 길게 누르기 메뉴·선택·드래그 막기 */
+img, picture, video {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
