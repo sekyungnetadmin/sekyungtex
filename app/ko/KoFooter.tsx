@@ -41,6 +41,7 @@ export default function KoFooter() {
           <span>
             T. {CONTACT.tel} · F. {CONTACT.fax} · © {new Date().getFullYear()} Sekyung Net
           </span>
+          <a href="/ko/privacy" className="font-semibold text-[#D4D4D4] hover:text-white">개인정보처리방침</a>
         </div>
       </footer>
     </div>

@@ -33,6 +33,10 @@ export async function POST(req: Request) {
     // 스팸 방지용 숨김 칸 — 사람은 비워둡니다
     if (String(fd.get("website") || "")) return NextResponse.json({ ok: true });
 
+    if (fd.get("agree") !== "yes") {
+      return NextResponse.json({ ok: false, error: "개인정보 수집 · 이용에 동의해주세요." }, { status: 400 });
+    }
+
     const kind = fd.get("kind") === "catalog" ? "catalog" : "quote";
     const get = (k: string) => String(fd.get(k) || "").trim().slice(0, 2000);
 
