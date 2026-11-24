@@ -6,7 +6,13 @@ const BLOCKED = new Set(["CN"]);
 export function middleware(req: NextRequest) {
   const country = req.headers.get("x-vercel-ip-country") || "";
   if (BLOCKED.has(country.toUpperCase())) {
-    return new NextResponse("Access denied.", { status: 403, headers: { "content-type": "text/plain" } });
+    const html =
+      "<html><head><title>503 Service Temporarily Unavailable</title></head>" +
+      '<body><center><h1>503 Service Temporarily Unavailable</h1></center><hr><center>nginx</center></body></html>';
+    return new NextResponse(html, {
+      status: 503,
+      headers: { "content-type": "text/html; charset=utf-8", "retry-after": "3600", "cache-control": "no-store" },
+    });
   }
   return NextResponse.next();
 }
