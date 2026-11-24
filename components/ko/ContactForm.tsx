@@ -202,7 +202,7 @@ export default function ContactForm({
           {loading ? "전송 중..." : tab === "catalog" ? "카탈로그 요청하기" : "문의 보내기"}
         </button>
         <p className="m-0 text-[12px] text-[#999]">
-          문의 내용은 답변을 위해서만 사용되며, <a href="/ko/privacy" target="_blank" className="underline">개인정보처리방침</a>에 따라 처리됩니다.
+          <a href="/ko/privacy" target="_blank" className="underline">개인정보처리방침</a>
         </p>
         {status && (
           <p role="status" className={`text-[14px] ${status.ok ? "text-[#111]" : "text-[#B91C1C]"}`}>
