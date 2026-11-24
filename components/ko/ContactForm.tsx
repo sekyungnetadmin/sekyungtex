@@ -194,21 +194,6 @@ export default function ContactForm({
           </>
         )}
 
-        <div className="flex flex-col gap-2 border border-[#E0E0E0] bg-[#FAFAFA] px-4 py-4 text-[13px] leading-[1.7] text-[#555]">
-          <p className="m-0 font-semibold text-[#111]">개인정보 수집 · 이용 안내</p>
-          <ul className="m-0 list-disc pl-5">
-            <li>목적: 견적 · 카탈로그 요청에 대한 답변</li>
-            <li>항목: 회사명, 담당자명, 연락처, 이메일, 첨부파일</li>
-            <li>보관: 문의 처리 후 3년간 보관 후 파기</li>
-            <li>동의를 거부할 수 있으며, 거부 시 문의 답변이 어렵습니다.</li>
-          </ul>
-          <label className="mt-1 flex cursor-pointer items-center gap-2 text-[14px] font-semibold text-[#111]">
-            <input type="checkbox" name="agree" value="yes" required className="h-4 w-4 accent-[#111]" />
-            개인정보 수집 · 이용에 동의합니다. (필수)
-          </label>
-          <a href="/ko/privacy" target="_blank" className="self-start text-[12px] text-[#777] underline">개인정보처리방침 보기</a>
-        </div>
-
         <button
           type="submit"
           disabled={loading}
@@ -216,6 +201,9 @@ export default function ContactForm({
         >
           {loading ? "전송 중..." : tab === "catalog" ? "카탈로그 요청하기" : "문의 보내기"}
         </button>
+        <p className="m-0 text-[12px] text-[#999]">
+          문의 내용은 답변을 위해서만 사용되며, <a href="/ko/privacy" target="_blank" className="underline">개인정보처리방침</a>에 따라 처리됩니다.
+        </p>
         {status && (
           <p role="status" className={`text-[14px] ${status.ok ? "text-[#111]" : "text-[#B91C1C]"}`}>
             {status.msg}
